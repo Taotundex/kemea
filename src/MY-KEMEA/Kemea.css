@@ -1,0 +1,48 @@
+.kemea .hero {
+    background: url(../images/my-kemea-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+}
+.kemea .hero .inner{
+    width: 50%;
+}
+.kemea .hero h2 {
+    font-weight: 600;
+    font-size: 40px;
+}
+.kemea .hero p {
+    font-weight: 400;
+    font-size: 15px;
+    padding: 15px 0;
+}
+.kemea .btns button {
+    width: 175px;
+    height: 50px;
+    border: 1px solid white;
+    font-size: 14px;
+}
+
+
+.allcontents .content {
+    background: #F7F7F7;
+}
+.allcontents .content h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #191C1F;
+}
+.allcontents .content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #191C1F;
+}
+
+
+.support .text h2 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #191C1F;
+}

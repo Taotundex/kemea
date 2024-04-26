@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './HOME/Home';
+import Mykemea from './MY-KEMEA/My-kemea';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -19,7 +20,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/products" element={<Products />} /> */}
+          <Route path="/my-kemea" element={<Mykemea />} />
         </Routes>
         {/* <div>
           {detailing}
