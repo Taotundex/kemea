@@ -1,0 +1,55 @@
+.homepage .lists {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+}
+.homepage .lists form {
+    height: 45px;
+    width: 225px;
+    border: 1px solid #191C1F;
+    padding: 0 15px;
+}
+.homepage .lists form input {
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+.homepage .lists .buy button {
+    font-size: 14px;
+    background: white;
+    width: 60px;
+    border: 1px solid black;
+}
+.homepage .lists .myfilter {
+    width: 120px;
+    height: 45px;
+    border: 1px solid #191C1F;
+    padding: 0 10px;
+}
+.homepage .lists .searchBtn button{
+    width: 120px;
+    height: 45px;
+    border: 1px solid #0666EB;
+    background: #0666EB;
+    color: white;
+}
+.homepage .secondList button{
+    font-size: 14px;
+    width: 150px;
+    height: 45px;
+    border: 1px solid #0666EB;
+    background: #0666EB;
+    color: white;
+}
+.custom-icon{
+    font-size: 24px;
+}
+.homepage .btm select{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #E9ECEF;
+    background: white;
+    font-size: 12px;
+    padding: 0 15px;
+    outline: none;
+}
