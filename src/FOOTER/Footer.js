@@ -5,7 +5,7 @@ import { TbCurrencyShekel } from "react-icons/tb";
 
 function Footer() {
   return (
-    <div className='footer'>
+    <div className='homeFooter'>
         <div className='container'>
             <div className='d-flex justify-content-between align-items-center py-3'>
                 <ul className='d-flex justify-content-between align-items-center gap-5 me-5'>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Heading from '../HEADING/Heading';
-import Footer from '../FOOTER/Footer';
+import Footer from './Footer';
 import Kemea from './Kemea';
 
 function Mykemea() {
@@ -9,6 +9,7 @@ function Mykemea() {
         <Heading />
         <Kemea />
         <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }

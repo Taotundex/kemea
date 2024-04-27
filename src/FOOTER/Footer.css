@@ -5,7 +5,7 @@ ul {
 .list {
     list-style-type: none;
 }
-.footer {
+.homeFooter {
     width: 100%;
     position: fixed;
     bottom: 10px;
