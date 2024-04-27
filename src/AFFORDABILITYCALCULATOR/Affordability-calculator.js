@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Affordability-calculator.css'
 import { RiArrowRightSLine } from "react-icons/ri";
 import { PiDotOutlineFill } from "react-icons/pi";
@@ -120,6 +121,63 @@ function Affordabilitycalculator() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+
+        <div className="how">
+          <div className="head">
+            <h2>How we calculate how much house you can afford ?</h2>
+          </div>
+          <div className="details">
+            <ol>
+              <li>
+                RÉFÉRENCEMENT ET DERÉFÉRENCEMENT DES ANNONCEURS :
+                <ol className="numerals">
+                  <li>(i) Référencement des Annonceurs :
+                    <p>La diffusion d’annonces sur le Site est réservée aux Annonceurs définis ci-dessous :</p>
+                    <ol className="numerals">
+                      <li>Annonceurs professionnels ayant souscrit à titre payant un contrat de diffusion d’annonces de vente de biens immobiliers avec la société DCF et entrant dans l’une des catégories suivantes :
+                        <ul>
+                          <li>les professionnels de l’immobilier détenant une carte de transaction ou de gestion conformément à la loi Hoguet n° 70-9 du 2 janvier 1970,</li>
+                          <li>les notaires,</li>
+                          <li>les avocats exerçant à titre accessoire l’activité de mandataire en transactions immobilières,</li>
+                          <li>les huissiers,</li>
+                          <li>les promoteurs immobiliers,</li>
+                          <li>les constructeurs.</li>
+                        </ul>
+                      </li>
+                      <li>Référencement des Annonces :
+                        <p>Pour être référencée sur le Site et donc diffusée, une Annonce doit impérativement respecter les règles décrites ci-dessous.</p>
+                        <div className="one">
+                          <p className="ps-5 text-decoration-underline">Contenu de l’Annonce</p>
+                          <p>Le bien doit être diffusé dans sa catégorie et être conforme aux produits de diffusion souscrits par l’Annonceur. Sur le Site, l’Annonce ne peut porter que sur :</p>
+                          <ul className='dash'>
+                            <li>la vente et la location de biens anciens, ayant déjà fait l’objet d’un transfert de propriété;</li>
+                            <li>la vente de lots associés à des programmes immobiliers neufs, n’ayant pas encore fait l’objet d’un transfert de propriété.</li>
+                          </ul>
+                          <p><Link to='https://www.support.myselogerpro.com/hc/fr/articles/360006057939-Charte-SeLoger'>https://support.myselogerpro.com/hc/fr/articles/360006057939-Charte-SeLoger</Link></p>
+                        </div>
+                        <div className="one">
+                          <p className="ps-5 text-decoration-underline">Contenu de l’Annonce</p>
+                          <p>Toute Annonce contenant des éléments qui sembleraient contraires aux dispositions légales ou réglementaires, aux bonnes mœurs, aux règles de diffusion de notre Site ou susceptible de heurter les utilisateurs sera immédiatement refusée par la société DCF, donc non référencée sur le Site.</p>
+                          <p>Est notamment strictement interdit :</p>
+                          <ul>
+                            <li>Tout contenu rédigé en langue étrangère comportant des termes ou des descriptions sans lien avec le contenu proposé ;</li>
+                            <li>Tout contenu comportant des termes ou des descriptions sans lien avec le contenu proposé ;</li>
+                            <li>Tout contenu portant sur un bien immobilier ou programme de construction fictif ;</li>
+                            <li>Tout contenu frauduleux, ou visant à tromper l’Utilisateur ;</li>
+                            <li>Tout contenu à caractère politique, religieux ou haineux ;</li>
+                            <li>Tout contenu à caractère promotionnel et/ou publicitaire ;</li>
+                            <li>Toute image ou photographie sans lien avec l’offre proposée, non autorisée, contrefaisante, ou encore à caractère pornographique.</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
