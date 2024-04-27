@@ -1,0 +1,116 @@
+.affordabilitycalculator .head h2 {
+    font-weight: 900;
+    font-size: 24px;
+    /* padding: 5px 0; */
+    line-height: 35px;
+    color: #191C1F;
+}
+.affordabilitycalculator .head .line {
+    background: #191C1F80;
+    width: 70px;
+    height: 2px;
+}
+.calc .left h5 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+}
+.calc .left form .input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    border-radius: 10px;
+}
+.calc .left form label {
+    color: #4B4F72;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+}
+.calc .left form input {
+    width: 100%;
+    color: #191C1F;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.calc .left form .input div {
+    width: 50px;
+    color: #E2E2E2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.calc .left form small {
+    color: #999999;
+    font-size: 12px;
+}
+
+
+
+.calc .right h1 {
+    font-weight: 600;
+    font-size: 75px;
+    color: #333333;
+}
+.calc .right h1 span {
+    font-size: 50px;
+    color: #CCCCCC;
+}
+.calc .right .payments {
+    border-bottom: 1px solid #E2E2E2;
+}
+.calc .right .payments h3 {
+    font-size: 18px;
+    color: #191C1F;
+    font-weight: 400;
+}
+.calc .cur span, .span {
+    color: #CCCCCC;
+    font-weight: 900;
+}
+.calc .cur .span1 {
+    color: #CCCCCC;
+    font-weight: 500;
+}
+.calc .con {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+
+
+.slider {
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slider input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #28C937, #FFB92E, #FF8C4B, #FF2000);
+}
+
+.slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #65C0CF;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.btm {
+    color: #191C1F;
+    font-size: 16px;
+    font-weight: 400;
+}
