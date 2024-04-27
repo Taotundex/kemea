@@ -1,7 +1,7 @@
 import React from 'react';
 import './Kemea.css';
 import supportImg from '../images/supoort-img.png';
-import allImg from '../images/2023, 19_08_12 GMT+3.png'
+import allImg from '../images/allimages.png';
 
 function Kemea() {
   return (
@@ -70,7 +70,7 @@ function Kemea() {
             <p>Research, real estate lists,  and more futures in one place.</p>
           </div>
           <div className="img py-3">
-            <img src={allImg} width='100%' alt="" />
+            <img src={allImg} width='100%' alt="All images" />
           </div>
           <div className="d-flex gap-3 justify-content-center">
             <button className='rounded-5 bg-transparent text-dark'>iphone</button>
