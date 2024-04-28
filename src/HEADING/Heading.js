@@ -22,14 +22,14 @@ function Heading() {
                             <NavDropdown.Item as={Link} to="/homes-for-sales">Homes for Sales</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/new-projects">New Projects</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/exceptional-properties">Exceptional properties</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/assisted-search-services">My Kemea - assisted search services</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/affordability-calculator">Affordability calculator</NavDropdown.Item>
                         </NavDropdown>
                             <NavDropdown title="Rent" id="navbarScrollingDropdown">
                             <NavDropdown.Item as={Link} to="/homes-for-rent">Homes for rent</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/short-term-rent">Short Term rent</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/exceptional-properties-rent">Exceptional properties</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/assisted-search-services-rent">My Kemea - assisted search services</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/my-kemea">My Kemea</Nav.Link>
                             <NavDropdown title="Promote with us" id="navbarScrollingDropdown">

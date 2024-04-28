@@ -9,7 +9,7 @@ function Kemea() {
         <div className="my-5 hero  rounded-3 container d-flex align-items-center justify-content-center">
             <div className='text-center mx-auto text-light inner'>
                 <h2>Discover My Kemea Experience</h2>
-                <p>Discover our exclusive selection of real estate projects by registering for free, or opt for a personalized real estate hunting service to find your property. Registration on the Kemea platform is non-binding.</p>
+                <p className='text-light'>Discover our exclusive selection of real estate projects by registering for free, or opt for a personalized real estate hunting service to find your property. Registration on the Kemea platform is non-binding.</p>
                 <div className='d-flex gap-3 btns align-items-center justify-content-center'>
                     <button className='btn-outline-light rounded-5 bg-transparent text-light'>Log in</button>
                     <button className='bg-white rounded-5'>Sign up</button>

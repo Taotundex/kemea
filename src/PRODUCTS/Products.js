@@ -36,6 +36,158 @@ function Products() {
                         </div>
                     </div>
                 </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-3 col-md-4 col-6">
+                    <div className='card'>
+                        <Link to='/' className="img">
+                            <img src={product1} alt='Product1' width='100%' />
+                            <div className='reaction' onClick={handleReactionClick}>
+                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            </div>
+                        </Link>
+                        <div className='details py-2 px-1'>
+                            <h4>Cottage - Eliezer Yaffe St.</h4>
+                            <h5>Ra’anana, Israël</h5>
+                            <p>150 m² - 3 rooms - 1 parking </p>
+                            <h3>22 700 000 ₪ </h3>
+                            <button className='d-flex align-items-center justify-content-center gap-2 call rounded-5 bg-white'>
+                                <IoCallOutline />Show phone number
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Container>
     </div>
