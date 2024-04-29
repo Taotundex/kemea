@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from '../HEADING/Heading';
 import HomeContent from './HomeContent';
-import Footer from '../FOOTER/Footer';
+import Footer from './Footer';
 import Products from '../PRODUCTS/Products';
 
 function Home() {

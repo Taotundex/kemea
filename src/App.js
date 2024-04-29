@@ -5,6 +5,11 @@ import Mykemea from './MY-KEMEA/My-kemea';
 import Calculator from './AFFORDABILITYCALCULATOR/Calculator';
 import Login from './ACCOUNT/Login';
 import Signup from './ACCOUNT/Signup';
+import Myconfidentialité from './POLICY/MyConfidentialité';
+import Myconditionsgénérales from './POLICY/MyConditionsGénérales';
+import Myfonctionnementdenotresite from './POLICY/MyFonctionnementDeNotreSite';
+import Myinfossurlentreprise from './POLICY/MyInfosSurLentreprise';
+import MyDescription from './HOME/MyDescription';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -27,6 +32,11 @@ function App() {
           <Route path="/affordability-calculator" element={<Calculator />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/description" element={<MyDescription />} />
+          <Route path="/confidentialité" element={<Myconfidentialité />} />
+          <Route path="/conditions-générales" element={<Myconditionsgénérales />} />
+          <Route path="/fonctionnement-du-site" element={<Myfonctionnementdenotresite />} />
+          <Route path="/infos-sur-lentreprise" element={<Myinfossurlentreprise />} />
         </Routes>
         {/* <div>
           {detailing}

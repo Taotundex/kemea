@@ -37,7 +37,7 @@ function Login() {
                                 </div>
                                 <Link to="" className='small mt-2 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
                                 <button type='submit' className='my-5'>Log in</button>
-                                <p>Don’t have an account ? <Link to='signup' className='small text-decoration-none'>Sign up</Link></p>
+                                <p>Don’t have an account ? <Link to='/signup' className='small text-decoration-none'>Sign up</Link></p>
                             </form>
                         </div>
                     </div>

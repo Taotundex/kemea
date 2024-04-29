@@ -4,7 +4,6 @@ import './Products.css'
 import Container from 'react-bootstrap/Container';
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { IoCallOutline } from "react-icons/io5";
-// import Card from 'react-bootstrap/Card';
 import product1 from '../images/Group → Link → 7cfc6a37-460a-4aea-add7-52c3c71151e9.jpeg.png';
 
 
@@ -19,7 +18,7 @@ function Products() {
             <div className="row g-4">
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -38,7 +37,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -57,7 +56,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -76,7 +75,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -95,7 +94,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -114,7 +113,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -133,7 +132,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -152,7 +151,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -171,7 +170,7 @@ function Products() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/' className="img">
+                        <Link to='/description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}

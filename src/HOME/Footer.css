@@ -1,0 +1,15 @@
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.list {
+    list-style-type: none;
+}
+.homeFooter {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    background: white;
+    border-top: 1px solid #DDDDDD;
+}

@@ -1,30 +1,62 @@
-import React from 'react'
+import React from 'react' 
+import { Link } from 'react-router-dom'
+import icon from '../images/icon.png'
 import './Footer.css'
-import { GoGlobe } from "react-icons/go";
-import { TbCurrencyShekel } from "react-icons/tb";
+import { BsArrowRightShort } from "react-icons/bs";
+import { GrFacebookOption } from "react-icons/gr";
+import { LiaLinkedinIn } from "react-icons/lia";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className='homeFooter'>
-        <div className='container'>
-            <div className='d-flex justify-content-between align-items-center py-3'>
-                <ul className='d-flex justify-content-between align-items-center gap-5 me-5'>
-                    <li className='list'>&copy; 2023 Kemea</li>
-                    <li>Confidentialité</li>
-                    <li>Conditions générales</li>
-                    <li>Fonctionnement du site</li>
-                    <li>Infos sur l'entreprise</li>
-                </ul>
-                <ul className='d-flex justify-content-between align-items-center gap-3 ms-5'>
-                    <li className='d-flex justify-content-between align-items-center gap-2'>
-                        <GoGlobe />
-                        Français (FR)
-                    </li>
-                    <li className='d-flex justify-content-between align-items-center gap-2'>
-                        <TbCurrencyShekel />
-                        NIS
-                    </li>
-                </ul>
+    <div className='kermeaFooter'>
+        <div className="container">
+            <div className="row py-5">
+                <div className="col col-lg-6 col-md-12 col-12">
+                    <div className="subscribe">
+                        <form action="subscribe" className='mb-5'>
+                            <h4 className='fs-6 fw-semibold mb-3'>Subscribe to our newsletter</h4>
+                            <div className="d-flex align-items-center">
+                                <input type="text" name="subscribe" id="subscribe" placeholder='Your email' />
+                                <button>
+                                    <BsArrowRightShort className='arrow' />
+                                </button>
+                            </div>
+                        </form>
+                        <div className="mt-5 d-flex align-items-center gap-2">
+                            <LiaLinkedinIn className='icon fs-4' />
+                            <GrFacebookOption className='icon fs-4' />
+                            <FaInstagram className='icon fs-4' />
+                        </div>
+                    </div>
+                </div>
+                <div className="col col-lg-3 col-md-6 col-6">
+                    <div className="services">
+                        <h4 className='fs-6 fw-semibold mb-3'>Services</h4>
+                        <ul>
+                            <li><Link className='links' to='/services'>Buy</Link></li>
+                            <li><Link className='links' to='/services'>Rent</Link></li>
+                            <li><Link className='links' to='/services'>Sell</Link></li>
+                            <li><Link className='links' to='/my-kermea'>My Kermea</Link></li>
+                            <li><Link className='links' to='/kermea-pro'>Kermea Pro</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col col-lg-3 col-md-6 col-6">
+                    <div className="legal">
+                        <h4 className='fs-6 fw-semibold mb-3'>Legal</h4>
+                        <ul>
+                            <li><Link className='links' to='/terms-of-service'>Terms of Service</Link></li>
+                            <li><Link className='links' to='/privacy-policy'>Privacy Policy</Link></li>
+                            <li><Link className='links' to='/cookies-policy'>Cookies Policy</Link></li>
+                            <li><Link className='links' to='/legal-notice'>Legal Notice</Link></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="copyright py-4 d-flex align-items-center gap-2 fs-5">
+                <img src={icon} width='100%' alt="" />
+                &copy; kemea 2023
             </div>
         </div>
     </div>

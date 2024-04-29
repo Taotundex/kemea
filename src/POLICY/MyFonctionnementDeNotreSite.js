@@ -1,17 +1,16 @@
 import React from 'react'
 import Heading from '../HEADING/Heading';
 import Footer from '../FOOTER/Footer';
-import Kemea from './Kemea';
+import FonctionnementDeNotreSite from './FonctionnementDeNotreSite';
 
-function Mykemea() {
+function Myconditionsgénérales() {
   return (
     <div>
         <Heading />
-        <Kemea />
+        <FonctionnementDeNotreSite />
         <Footer />
-        {/* <Footer /> */}
     </div>
   )
 }
 
-export default Mykemea
+export default Myconditionsgénérales

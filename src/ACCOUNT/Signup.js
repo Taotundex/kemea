@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { ReactCountryFlag } from 'react-country-flag';
 import { Link } from 'react-router-dom'
 import './Account.css'
 import signupImg from '../images/signup-img.png'
 
 function Signup() {
+    const [countryCode, setCountryCode] = useState('');
+
+  const handleCountryChange = (event) => {
+    setCountryCode(event.target.value);
+  };
+
   return (
     <div className='account'>
         <div className="row g-0">
@@ -48,8 +55,42 @@ function Signup() {
                                     <label htmlFor="email">E-mail</label>
                                     <input type="email" name="email" id="email" placeholder='Ex: david.doe@mail.com' />
                                 </div>
-                                <Link to="" className='small mt-2 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
-                                <button type='submit' className='my-5'>Sign up</button>
+                                <div className="input">
+                                    <label htmlFor="password">Password</label>
+                                    <input type="password" name="password" id="password" placeholder='............' />
+                                </div>
+                                <div className="input">
+                                    <label htmlFor="number">Phone Number</label>
+                                    <div className="d-flex align-items-center">
+                                        <div className="d-flex align-items-center myflag">
+                                            <div className="flag">
+                                                {countryCode && (
+                                                    <div>
+                                                    <ReactCountryFlag countryCode={countryCode} size="50px" />
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <select onChange={handleCountryChange}>
+                                                <option > ----- </option>
+                                                <option value="US">+1</option>
+                                                <option value="CA">+1</option>
+                                                <option value="GB">+44</option>
+                                            </select>
+                                        </div>
+                                        <input type="tel" name="number" id="number" />
+                                    </div>
+                                </div>
+                                <div className="py-2">
+                                    <div className="inputs d-flex gap-2">
+                                        <input type="checkbox" name="receiveCommunication" id="receiveCommunication" />
+                                        <p>Receive Kemea communications</p>
+                                    </div>
+                                    <div className="inputs d-flex gap-2">
+                                        <input type="checkbox" name="terms" id="terms" />
+                                        <p>I accept the <Link to='/'>Terms of Service</Link> and the <Link to='/'>Kemea Privacy Policy.</Link></p>
+                                    </div>
+                                </div>
+                                <button type='submit' className='my-3'>Sign up</button>
                             </form>
                         </div>
                     </div>

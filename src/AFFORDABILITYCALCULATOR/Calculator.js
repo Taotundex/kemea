@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '../MY-KEMEA/Footer'
 import Heading from '../HEADING/Heading'
 import Affordabilitycalculator from './Affordability-calculator'
+import Footer from '../FOOTER/Footer'
 
 function Calculator() {
   return (
