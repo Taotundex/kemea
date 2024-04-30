@@ -10,6 +10,7 @@ import Myconditionsgénérales from './POLICY/MyConditionsGénérales';
 import Myfonctionnementdenotresite from './POLICY/MyFonctionnementDeNotreSite';
 import Myinfossurlentreprise from './POLICY/MyInfosSurLentreprise';
 import MyDescription from './HOME/MyDescription';
+import MyLanding from './LANDING/MyLanding';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -27,7 +28,8 @@ function App() {
   return (
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<MyLanding/>} />
+          <Route path="/home" element={<Home />} />
           <Route path="/my-kemea" element={<Mykemea />} />
           <Route path="/affordability-calculator" element={<Calculator />} />
           <Route path="/login" element={<Login />} />

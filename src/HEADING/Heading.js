@@ -14,7 +14,7 @@ function Heading() {
     <div>
         <Navbar expand="lg" className="py-3 nav">
             <Container>
-                <Navbar.Brand as={Link} to="/"><img src={logo} alt='Logo' /></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/home"><img src={logo} alt='Logo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav className="me-auto my-2 my-lg-0">

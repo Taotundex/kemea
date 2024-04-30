@@ -36,7 +36,7 @@ function Login() {
                                     <input type="password" name="password" id="password" placeholder='............' />
                                 </div>
                                 <Link to="" className='small mt-2 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
-                                <button type='submit' className='my-5'>Log in</button>
+                                <Link to='/home'><button type='submit' className='my-5'>Log in</button></Link>
                                 <p>Don’t have an account ? <Link to='/signup' className='small text-decoration-none'>Sign up</Link></p>
                             </form>
                         </div>
