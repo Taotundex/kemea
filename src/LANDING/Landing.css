@@ -1,0 +1,247 @@
+.hero img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0 !important;
+}
+.office {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: white;
+    border: 1px solid #0000004D;
+    margin-top: -53px;
+    z-index: 1 !important;
+    border-radius: 20px;
+}
+.office .prop h3 {
+    color: #1D234E;
+    font-weight: 500;
+    font-size: 24px;
+}
+.office .prop p {
+    color: #1D234E;
+    font-weight: 400;
+    font-size: 14px;
+}
+.office .schedule {
+    background: #F4F4F4;
+    width: 300px;
+}
+.office .schedule p{
+    color: #191C1F;
+    font-size: 14px;
+}
+.office .contact .d-flex{
+    color: #191C1F;
+    font-size: 16px;
+    line-height: 30px;
+}
+.office .contact button{
+    width: 100%;
+    height: 45px;
+    background: #0666EB;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #0666EB;
+    border-radius: 45px;
+    margin-top: 15px;
+}
+
+.sidebar{
+    border: 1px solid #DDDDDD;
+    border-radius: 15px;
+}
+.heading {
+    font-size: 16px !important;
+    color: #191C1F !important;
+    font-weight: 500 !important;
+    width: 100%;
+    margin-bottom: 10px !important;
+}
+.input {
+    margin: 20px 0;
+}
+.input label {
+    color: #191C1FCC;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+}
+.input select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #E2E8F0;
+    background: transparent;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.input label input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E2E8F0;
+    background: transparent;
+    border-radius: 0;
+    margin-right: 10px;
+}
+.input label input[type='radio'] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #E2E8F0;
+    background: transparent;
+    margin-right: 10px;
+}
+
+
+.apartments .head {
+    border-bottom: 3px solid #E5E6E1;
+}
+.apartments .head .links {
+    font-size: 15px;
+    height: 35px;
+    padding: 0 20px;
+    border-bottom: 3px solid transparent;
+    color: #6F6F6D;
+    text-decoration: none;
+}
+.apartments .head .active {
+    border-bottom: 3px solid #191C1F;
+    color: #191C1F !important;
+}
+.apartments .head select {
+    font-size: 12px;
+    height: 30px;
+    width: 125px;
+    padding: 0 10px;
+    border-radius: 30px;
+    border: 1px solid #E9ECEF;
+    color: #191C1F;
+    font-weight: 400;
+    margin-bottom: 5px;
+    outline: none;
+}
+.house {
+    height: 275px;
+    width: 100%;
+    border: 1px solid #E5E6E1;
+    border-radius: 15px;
+    position: relative;
+}
+.house h4 {
+    color: #191C1F;
+    font-weight: 400;
+    font-size: 18px;
+}
+.house h3 {
+    color: #191C1F;
+    font-weight: 500;
+    font-size: 24px;
+}
+.house h3 span {
+    color: #D62F2F;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+.house h3 b{
+    color: #D62F2F;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none !important;
+}
+.house .text {
+    position: relative;
+    height: 100%;
+}
+.house .text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #191C1F;
+}
+.house .left .d-flex {
+    font-size: 14px;
+    font-weight: 400;
+    color: #191C1F;
+}
+.house .foot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #E5E6E1;
+    width: 100%;
+}
+
+
+.house .swiper {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.house .swiper-slide {
+    color: #FFFFFF !important;
+    font-size: 13px !important;
+    background: #fff !important;
+    display: flex !important;
+    justify-content: right !important;
+    align-items: center !important;
+}
+
+.house .swiper-slide img {
+    display: block !important;
+    height: 273px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 13px 0 0 13px !important;
+}
+.house .swiper-pagination {
+    width: fit-content !important;
+    color: white !important;
+}
+.house .swiper-pagination-fraction {
+    left: 275px !important;
+}
+.house .swiper-button-prev, .house .swiper-button-next {
+    color: #FFFFFF !important;
+}
+.house .swiper-button-prev:after, .house .swiper-button-next:after {
+    font-weight: 900;
+    font-size: 30px !important;
+}
+
+.cont h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0A1629;
+}
+.agent {
+    border: 1px solid #DDDDDD;
+}
+.agent img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 3px;
+    border: 2px solid #0666EB;
+}
+.agent .cont button {
+    font-size: 13px;
+    font-weight: 400;
+    color: #0A1629;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #1D234E;
+    border-radius: 40px;
+}
+.success {
+    border: 1px solid #28C937 !important;
+    background: #28C937 !important;
+    color: white !important;
+}
+.message-success {
+    color: #28C937 !important;
+    cursor: pointer;
+}

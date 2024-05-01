@@ -19,16 +19,16 @@ function Heading() {
                     <Navbar.Collapse id="navbarScroll">
                     <Nav className="me-auto my-2 my-lg-0">
                         <NavDropdown title="Buy" id="navbarScrollingDropdown">
-                            <NavDropdown.Item as={Link} to="/homes-for-sales">Homes for Sales</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/home">Homes for Sales</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/new-projects">New Projects</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/exceptional-properties">Exceptional properties</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/affordability-calculator">Affordability calculator</NavDropdown.Item>
                         </NavDropdown>
                             <NavDropdown title="Rent" id="navbarScrollingDropdown">
-                            <NavDropdown.Item as={Link} to="/homes-for-rent">Homes for rent</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/home">Homes for rent</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/short-term-rent">Short Term rent</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/exceptional-properties-rent">Exceptional properties</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/exceptional-properties">Exceptional properties</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/my-kemea">My Kemea</Nav.Link>
