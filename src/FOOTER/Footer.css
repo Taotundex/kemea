@@ -8,6 +8,7 @@
     padding-top: 400px;
 }
 .kermeaFooter .container form .d-flex {
+    background: white;
     border: 1px solid #191C1F;
     border-radius: 45px;
     height: 50px;
@@ -60,4 +61,14 @@
 }
 .kermeaFooter .copyright img {
     width: 20px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .kermeaFooter {
+        padding-top: 200px;
+    }
+    .kermeaFooter .container form .d-flex {
+        width: 100%;
+    }
 }

@@ -1,16 +1,16 @@
 import React from 'react'
 import Heading from '../HEADING/Heading'
-import Landing from './Landing'
 import Footer from '../FOOTER/Footer'
+import NadlanPage from './NadlanPage'
 
-function MyLanding() {
+function MyNadlanProject() {
   return (
     <div>
         <Heading />
-        <Landing />
+        <NadlanPage />
         <Footer />
     </div>
   )
 }
 
-export default MyLanding
+export default MyNadlanProject

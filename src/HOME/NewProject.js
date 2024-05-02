@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import { IoFilterOutline } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 function NewProject() {
   return (
@@ -55,13 +56,13 @@ function NewProject() {
                             <IoMdNotificationsOutline className="custom-icon" />Add an alert
                         </button>
                         <div className="d-flex align-items-center justify-content-center gap-2">
-                            <a>
+                            <Link to=''>
                                 List
-                            </a>
+                            </Link>
                             <div className="vr"></div>
-                            <a>
+                            <Link to=''>
                                 Map
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

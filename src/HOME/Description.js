@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 // import { Doughnut } from 'react-chartjs-2';
 import './Description.css';
+import descImg1 from '../images/Group → Link → 7cfc6a37-460a-4aea-add7-52c3c71151e9.jpeg.png'
+import descImg2 from '../images/Group → Link → c9e14430-7cc9-49ae-9cff-9176f3007864.jpg.png'
+import descImg3 from '../images/Group → Link → d6cb196f-6cde-4d6e-ab96-862b02c3d059.jpg.png'
+import descImg4 from '../images/Group → Link → db5f28f5-c390-426f-af73-bb33ff57c198.jpg.png'
+import descImg5 from '../images/Group → Link → 7cfc6a37-460a-4aea-add7-52c3c71151e9.jpeg.png'
 import remaxSm from '../images/remax-sm.png';
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { FiDownload } from "react-icons/fi";
@@ -110,13 +115,13 @@ function Description() {
                     </div>
                 </div>
             </div>
-            {/* <div className="prod-images">
+            <div className="prod-images pb-5">
                 <div className="d-flex gap-3">
                     <div className="main-img">
                         <img src={descImg1} width='100%' alt="" />
                     </div>
                     <div className="other-img d-flex gap-3">
-                        <div className="one d-flex flex-column gap-3">
+                        <div className="one d-flex flex-column">
                             <div className="img">
                                 <img src={descImg2} width='100%' alt="" />
                             </div>
@@ -124,7 +129,7 @@ function Description() {
                                 <img src={descImg3} width='100%' alt="" />
                             </div>
                         </div>
-                        <div className="one d-flex flex-column gap-3">
+                        <div className="one d-flex flex-column">
                             <div className="img">
                                 <img src={descImg4} width='100%' alt="" />
                             </div>
@@ -134,7 +139,7 @@ function Description() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             <div className="row g-5">
                 <div className="col col-lg-8 col-md-6 col-12">

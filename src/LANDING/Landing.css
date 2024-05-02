@@ -7,12 +7,14 @@
 .office {
     position: relative;
     height: 200px;
-    width: 100%;
+    width: 100% !important;
     background: white;
     border: 1px solid #0000004D;
     margin-top: -53px;
     z-index: 1 !important;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
 .office .prop h3 {
     color: #1D234E;
@@ -48,6 +50,11 @@
     margin-top: 15px;
 }
 
+
+.for-sale h2{
+    font-size: 24px;
+    font-weight: 500;
+}
 .sidebar{
     border: 1px solid #DDDDDD;
     border-radius: 15px;
@@ -244,4 +251,78 @@
 .message-success {
     color: #28C937 !important;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 767px) {
+    p{
+        font-size: 12px !important;
+    }
+    h4 {
+        font-size: 16px !important;
+    }
+    h3 {
+        font-size: 18px !important;
+    }
+    h2 {
+        font-size: 20px !important;
+    }
+    .hero img {
+        height: 250px;
+    }
+    .office {
+        height: 100% !important;
+        padding: 20px !important;
+        margin-top: -53px;
+    }
+    .office .schedule {
+        width: 100%;
+    }
+    .office .loc {
+        font-size: 12px !important;
+    }
+    .office .contact .d-flex{
+        font-size: 14px;
+    }
+    .office .contact button{
+        font-size: 16px;
+    }
+    .heading {
+        font-size: 14px !important;
+    }
+    .input select {
+        font-size: 14px;
+    }
+    .input label input[type='checkbox'], .input label input[type='radio'] {
+        width: 15px;
+        height: 15px;
+    }
+    .apartments .head {
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .apartments .head::-webkit-scrollbar {
+        display: none;
+    }
+    .apartments .head .links {
+        font-size: 14px;
+    }
+    .house {
+        height: 100%;
+    }
+    .house img{
+        height: 200px !important;
+    }
+    .house h3 span, .house h3 b {
+        font-size: 12px;
+    }
+    .house .top {
+        margin-bottom: 35px;
+    }
+    .house .foot span {
+        display: none !important;
+    }
+    .house .foot .d-flex {
+        text-transform: capitalize;
+    }
 }

@@ -18,7 +18,7 @@ function NewProducts() {
             <div className="row g-4">
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -37,7 +37,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction-sale d-flex justify-content-between align-items-center' onClick={handleReactionClick}>
                                 <p>Sale</p>
@@ -57,7 +57,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -76,7 +76,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -95,7 +95,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -114,7 +114,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -133,7 +133,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -152,7 +152,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
@@ -171,7 +171,7 @@ function NewProducts() {
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
-                        <Link to='/description' className="img">
+                        <Link to='/new-project-description' className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}

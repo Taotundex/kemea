@@ -17,13 +17,13 @@ function Products() {
         <Container>
             <div className="row g-4">
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -33,16 +33,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -52,16 +52,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -71,16 +71,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -90,16 +90,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -109,16 +109,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -128,16 +128,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -147,16 +147,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -166,16 +166,16 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <div className='card'>
-                        <Link to='/description' className="img">
+                    <Link to='/description' className='card'>
+                        <div className="img">
                             <img src={product1} alt='Product1' width='100%' />
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
-                        </Link>
+                        </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -185,7 +185,7 @@ function Products() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </Container>

@@ -47,28 +47,28 @@ function Landing() {
     setMessageSent(!messageSent);
   };
   return (
-    <div>
+    <div style={{overflowX: 'hidden'}}>
         <div className="hero">
             <img src={RemaxHero} width='100%' alt="" />
         </div>
         <div className="container">
-            <div className="office px-4">
+            <div className="office px-4 mb-5">
                 <div className="row g-3 d-flex align-items-center">
-                    <div className="col col-lg-2 col-md-3 col-5">
+                    <div className="col col-lg-2 col-md-3 col-4">
                         <div className="img">
                             <img src={RemaxSm} width='100%' alt="" />
                         </div>
                     </div>
-                    <div className="col col-lg-3 col-md-5 col-7">
+                    <div className="col col-lg-3 col-md-5 col-8">
                         <div className="prop">
                             <h3>RE/MAX Ra’annna</h3>
                             <p>152 Properties  <span>· Member since 2023</span></p>
-                            <div className="d-flex gap-2 text-primary">
+                            <div className="d-flex gap-2 text-primary loc">
                                 <MdLocationOn className='fs-4' /> Ahuza St 70, Ra'anana
                             </div>
                         </div>
                     </div>
-                    <div className="col col-lg-4 col-md-6 col-7">
+                    <div className="col col-lg-4 col-md-6 col-12">
                         <div className="schedule p-3 rounded-4">
                             <div className="d-flex justify-content-between">
                                 <p>Sunday - Monday</p>
@@ -84,7 +84,7 @@ function Landing() {
                             </div>
                         </div>
                     </div>
-                    <div className="col col-lg-3 col-md-6 col-7">
+                    <div className="col col-lg-3 col-md-6 col-12">
                         <div className="contact p-3 rounded-4">
                             <Link to='/' className="d-flex align-items-center gap-2 text-decoration-underline">
                                 <RiExternalLinkLine className='fs-6 text-decoration-none' />See their website
@@ -95,7 +95,7 @@ function Landing() {
                             <div className='request' onClick={handleContactClick}>
                                 {isContact ? 
                                     <button className="success req d-flex align-items-center justify-content-center gap-2">
-                                        <IoCheckmarkCircleSharp className='fs-4' />Message sent
+                                        <IoCheckmarkCircleSharp className='fs-4' /><span>Message</span> sent
                                     </button>
                                  : 
                                     <button>Contact</button>}
@@ -321,8 +321,8 @@ function Landing() {
                                     <div className="lists d-flex align-items-center">
                                         <Link className={activeTab === 'buy' ? 'links active' : 'links'} onClick={() => handleClick('buy')} to="/">Buy</Link>
                                         <Link className={activeTab === 'rent' ? 'links active' : 'links'} onClick={() => handleClick('rent')} to="/">Rent</Link>
-                                        <Link className={activeTab === 'new' ? 'links active' : 'links'} onClick={() => handleClick('new')}  to="/">New properties</Link>
-                                        <Link className={activeTab === 'agents' ? 'links active' : 'links'} onClick={() => handleClick('agents')} to="/">Our Agents</Link>
+                                        <Link className={activeTab === 'new' ? 'links active' : 'links'} onClick={() => handleClick('new')}  to="/">New<nobr> properties</nobr></Link>
+                                        <Link className={activeTab === 'agents' ? 'links active' : 'links'} onClick={() => handleClick('agents')} to="/">Our<nobr> Agents</nobr></Link>
                                     </div>
                                     <select name="order" id="order">
                                         <option>Default order</option>
@@ -786,7 +786,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -860,7 +860,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -934,7 +934,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1008,7 +1008,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1082,7 +1082,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1156,7 +1156,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1172,17 +1172,6 @@ function Landing() {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div className="more mx-auto">
-                                                    <div className="d-flex justify-content-between w-25 m-auto">
-                                                        <p>View more results:</p>
-                                                        {/* <div className="d-flex">
-                                                            <p>1</p>
-                                                            <p>2</p>
-                                                            <p>3</p>
-                                                        </div> */}
-                                                        <p>Next</p>
                                                     </div>
                                                 </div>
                                                 <div className="more mx-auto">
@@ -1256,7 +1245,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1330,7 +1319,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1404,7 +1393,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1478,7 +1467,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1552,7 +1541,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1626,7 +1615,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1642,17 +1631,6 @@ function Landing() {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div className="more mx-auto">
-                                                    <div className="d-flex justify-content-between w-25 m-auto">
-                                                        <p>View more results:</p>
-                                                        {/* <div className="d-flex">
-                                                            <p>1</p>
-                                                            <p>2</p>
-                                                            <p>3</p>
-                                                        </div> */}
-                                                        <p>Next</p>
                                                     </div>
                                                 </div>
                                                 <div className="more mx-auto">
@@ -1726,7 +1704,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1800,7 +1778,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1874,7 +1852,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                                 <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -1948,7 +1926,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2022,7 +2000,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2096,7 +2074,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2112,17 +2090,6 @@ function Landing() {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div className="more mx-auto">
-                                                    <div className="d-flex justify-content-between w-25 m-auto">
-                                                        <p>View more results:</p>
-                                                        {/* <div className="d-flex">
-                                                            <p>1</p>
-                                                            <p>2</p>
-                                                            <p>3</p>
-                                                        </div> */}
-                                                        <p>Next</p>
                                                     </div>
                                                 </div>
                                                 <div className="more mx-auto">
@@ -2200,7 +2167,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2274,7 +2241,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2348,7 +2315,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2422,7 +2389,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2496,7 +2463,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -2570,466 +2537,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="more mx-auto">
-                                                    <div className="d-flex justify-content-between w-25 m-auto">
-                                                        <p>View more results:</p>
-                                                        {/* <div className="d-flex">
-                                                            <p>1</p>
-                                                            <p>2</p>
-                                                            <p>3</p>
-                                                        </div> */}
-                                                        <p>Next</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <div className="my-5">
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3118,7 +2626,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3192,7 +2700,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3266,7 +2774,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3340,7 +2848,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3414,7 +2922,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3488,7 +2996,466 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="more mx-auto">
+                                                    <div className="d-flex justify-content-between w-25 m-auto">
+                                                        <p>View more results:</p>
+                                                        {/* <div className="d-flex">
+                                                            <p>1</p>
+                                                            <p>2</p>
+                                                            <p>3</p>
+                                                        </div> */}
+                                                        <p>Next</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="my-5">
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3581,7 +3548,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3655,7 +3622,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3729,7 +3696,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3803,7 +3770,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3877,7 +3844,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -3951,466 +3918,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="more mx-auto">
-                                                    <div className="d-flex justify-content-between w-25 m-auto">
-                                                        <p>View more results:</p>
-                                                        {/* <div className="d-flex">
-                                                            <p>1</p>
-                                                            <p>2</p>
-                                                            <p>3</p>
-                                                        </div> */}
-                                                        <p>Next</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <div className="my-5">
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
-                                                                                </div>
-                                                                            ) : (
-                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
-                                                                                <BiSolidMessageDetail className='fs-5' />Contact
-                                                                            </div>
-                                                                        ) }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="right d-flex gap-2">
-                                                                        <CiHeart className='fs-5' />
-                                                                        <AiOutlineDownload className='fs-5' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="house mb-5">
-                                                    <div className="row g-0">
-                                                        <div className="col col-lg-4 col-md-6 col-12">
-                                                            <Swiper pagination={{
-                                                                    type: 'fraction',
-                                                                }}
-                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image1} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image2} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                                <SwiperSlide>
-                                                                    <img src={image3} width='100%' alt="" />
-                                                                </SwiperSlide>
-                                                            </Swiper>
-                                                        </div>
-                                                        <div className="col col-lg-8 col-md-6 col-12">
-                                                            <div className="text">
-                                                                <div className="top p-4">
-                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
-                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
-                                                                    <div className="d-flex gap-2">
-                                                                        <small>250 m²</small>
-                                                                        <small>5 bdr.</small>
-                                                                        <small>5 baths</small>
-                                                                    </div>
-                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
-                                                                </div>
-                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
-                                                                    <div className="left d-flex gap-3">
-                                                                        <div className="d-flex align-items-center gap-2">
-                                                                            <FaPhoneAlt className='fs-6' />See the phone number
-                                                                        </div>
-                                                                        <div onClick={handleMessageClick}>
-                                                                            {messageSent ? (
-                                                                                <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -4499,7 +4007,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -4573,7 +4081,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -4647,7 +4155,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -4721,7 +4229,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -4795,7 +4303,7 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -4869,7 +4377,466 @@ function Landing() {
                                                                         <div onClick={handleMessageClick}>
                                                                             {messageSent ? (
                                                                                 <div className='message-success d-flex align-items-center gap-2'>
-                                                                                    <IoCheckmarkCircleSharp className='fs-5' />Message sent
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="more mx-auto">
+                                                    <div className="d-flex justify-content-between w-25 m-auto">
+                                                        <p>View more results:</p>
+                                                        {/* <div className="d-flex">
+                                                            <p>1</p>
+                                                            <p>2</p>
+                                                            <p>3</p>
+                                                        </div> */}
+                                                        <p>Next</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="my-5">
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
+                                                                                </div>
+                                                                            ) : (
+                                                                            <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
+                                                                                <BiSolidMessageDetail className='fs-5' />Contact
+                                                                            </div>
+                                                                        ) }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="right d-flex gap-2">
+                                                                        <CiHeart className='fs-5' />
+                                                                        <AiOutlineDownload className='fs-5' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="house mb-5">
+                                                    <div className="row g-0">
+                                                        <div className="col col-lg-4 col-md-6 col-12">
+                                                            <Swiper pagination={{
+                                                                    type: 'fraction',
+                                                                }}
+                                                                navigation={true} modules={[Pagination, Navigation]} className="mySwiper" >
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image1} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image2} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                                <SwiperSlide>
+                                                                    <img src={image3} width='100%' alt="" />
+                                                                </SwiperSlide>
+                                                            </Swiper>
+                                                        </div>
+                                                        <div className="col col-lg-8 col-md-6 col-12">
+                                                            <div className="text">
+                                                                <div className="top p-4">
+                                                                    <h4>Detached house - Ben Gurion St. Tel-Aviv, Israel</h4>
+                                                                    <h3>73 000 ₪ <span>76 000 ₪  </span><b><IoIosArrowRoundDown className='fs-5 ms-2' />4%</b></h3>
+                                                                    <div className="d-flex gap-2">
+                                                                        <small>250 m²</small>
+                                                                        <small>5 bdr.</small>
+                                                                        <small>5 baths</small>
+                                                                    </div>
+                                                                    <p>Beautiful and spacious townhouse in a building of 2 houses, to reform, with many possibilities, located in one of the main and widest streets</p>
+                                                                </div>
+                                                                <div className="foot px-4 py-3 d-flex align-items-center justify-content-between">
+                                                                    <div className="left d-flex gap-3">
+                                                                        <div className="d-flex align-items-center gap-2">
+                                                                            <FaPhoneAlt className='fs-6' />See the phone number
+                                                                        </div>
+                                                                        <div onClick={handleMessageClick}>
+                                                                            {messageSent ? (
+                                                                                <div className='message-success d-flex align-items-center gap-2'>
+                                                                                    <IoCheckmarkCircleSharp className='fs-5' /><span>Message</span> sent
                                                                                 </div>
                                                                             ) : (
                                                                             <div className='d-flex align-items-center gap-2' style={{cursor: 'pointer'}}>
@@ -4903,7 +4870,7 @@ function Landing() {
                                     </Swiper>
                                 </div>
                                 <div className="agents" style={{ display: activeTab === 'agents' ? 'block' : 'none' }}>
-                                    <div className="row my-5">
+                                    <div className="row my-5 g-4">
                                         <div className="col col-lg-4 col-md-6 col-12">
                                             <div className="agent d-flex align-items-center gap-2 p-3 rounded-4">
                                                 <img src={photo} width='100%' alt="" />

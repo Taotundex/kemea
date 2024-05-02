@@ -1,9 +1,16 @@
-/* .description .prod-images .main-img {
+img{
+    object-fit: cover !important;
+}
+.prod-images img {
+    border-radius: 15px;
+}
+.description .prod-images .main-img {
     width: 50%;
     height: 500px;
 }
 .description .prod-images .main-img img{
-    width: auto;
+    width: 100%;
+    height: 100%;
 }
 .description .prod-images .other-img {
     width: 50%;
@@ -11,12 +18,22 @@
 }
 .description .prod-images .other-img .one {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
-.description .prod-images .other-img .img img{
-    width: fit-content;
-    height: auto;
-} */
+.description .prod-images .other-img .one .img{
+    width: 100%;
+    height: 50%;
+}
+.description .prod-images .other-img .one .img:first-child{
+    padding-bottom: 7px;
+}
+.description .prod-images .other-img .one .img:last-child{
+    padding-top: 7px;
+}
+.description .prod-images .other-img .one .img img{
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -326,4 +343,54 @@ footer .footer {
     color: #6A6A6F;    
     font-weight: 400;
     font-size: 12px;
+}
+.profile {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #2196F3;
+}
+.levy {
+    width: 150px !important;
+    height: 80px !important;
+}
+.names h4{
+    font-weight: 500;
+    font-size: 20px;
+    color: #191C1F;
+    line-height: 0px;
+}
+.names p{
+    line-height: 15px;
+    font-size: 14px !important;
+    font-weight: 400;
+    font-size: #75808A !important;
+}
+
+table {
+    width: 100%;
+    /* border: 1px solid #E2E8F0;
+    border-radius: 8px; */
+}
+td {
+    border: 1px solid #E2E8F0 !important;
+    padding: 15px;
+}
+td label {
+    color: #0F1D40 !important;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+td select {
+    font-size: 14px;
+    color: #191C1F;
+    border: none;
+    width: 100%;
+    height: 30px;
+    outline: none;
+}
+tr {
+    border: 1px solid #E2E8F0 !important;
 }

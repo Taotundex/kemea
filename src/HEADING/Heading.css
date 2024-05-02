@@ -1,3 +1,8 @@
 .nav {
     border-bottom: 1px solid #DDDDDD;
 }
+.mx-4:hover{
+    text-decoration: underline;
+    color: #0666EB !important;
+    transition: .5s ease;
+}

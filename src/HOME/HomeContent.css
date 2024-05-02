@@ -3,11 +3,11 @@
     top: 0;
     left: 0;
 }
-.homepage .lists form {
+.homepage .lists .form {
     height: 45px;
     width: 225px;
     border: 1px solid #191C1F;
-    padding: 0 15px;
+    padding: 3px 15px;
 }
 .homepage .lists form input {
     border: none;
@@ -19,13 +19,25 @@
     font-size: 14px;
     background: white;
     width: 60px;
-    border: 1px solid black;
+    border: 1px solid #191C1F;
+}
+.homepage .firstList .select select {
+    width: 150px;
+    height: 45px;
+    border-radius: 45px;
+    padding: 0 10px;
+    border: 1px solid #191C1F;
 }
 .homepage .lists .myfilter {
     width: 120px;
     height: 45px;
     border: 1px solid #191C1F;
     padding: 0 10px;
+    transition: .5s ease;
+}
+.homepage .lists .myfilter:hover {
+    background: #191C1F;
+    color: white;
 }
 .homepage .lists .searchBtn button{
     width: 120px;

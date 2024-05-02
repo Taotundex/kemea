@@ -3,6 +3,7 @@
 }
 .card {
     border: none !important;
+    text-decoration: none !important;
 }
 .card .img {
     position: relative;
