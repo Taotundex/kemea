@@ -39,8 +39,8 @@ function Heading() {
                         </NavDropdown>
                     </Nav>
                     <Form className="d-flex">
-                        <Link to='/login'><Button variant="btn">Login</Button></Link>
-                        <Link to='/signup'><Button className='rounded-5 px-4' variant="btn btn-primary">Signup</Button></Link>
+                        <Link to='/user-login'><Button variant="btn">Login</Button></Link>
+                        <Link to='/user-signup'><Button className='rounded-5 px-4' variant="btn btn-primary">Signup</Button></Link>
                     </Form>
                 </Navbar.Collapse>
             </Container>

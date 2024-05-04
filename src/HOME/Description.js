@@ -95,7 +95,7 @@ function Description() {
     //     setMap(newMap);
     // }, [map]);
   return (
-    <div className='description'>
+    <div className='description' style={{overflowX: 'hidden'}}>
         <div className="container">
             <div className="head py-3">
                 <h2>Cottage - Eliezer Yaffe St.</h2>
@@ -116,7 +116,7 @@ function Description() {
                 </div>
             </div>
             <div className="prod-images pb-5">
-                <div className="d-flex gap-3">
+                <div className="d-flex gap-3 prod-gap">
                     <div className="main-img">
                         <img src={descImg1} width='100%' alt="" />
                     </div>
@@ -157,7 +157,7 @@ function Description() {
                                 <h3>Combien me coûtera ce bien chaque mois ?</h3>
                                 <div className="sm-line mb-4"></div>
                                 <form action="" className='py-4'>
-                                    <div className="row g-4">
+                                    <div className="row g-lg-4 g-md-3 g-0">
                                         <div className="col col-lg-6 col-md-6 col-12">
                                             <div className="input">
                                                 <label htmlFor="Prix du bien">Prix du bien</label>
@@ -381,9 +381,9 @@ function Description() {
                                 <p>Cordially</p>
                             </div>
                             <form action="">
-                                <input type="text" name="name" id="Name *" />
-                                <input type="email" name="email" id="E-mail *" />
-                                <input type="number" name="number" id="Phone number" />
+                                <input type="text" name="name" id='name' placeholder="Name *" />
+                                <input type="email" name="email" id='email' placeholder="E-mail *" />
+                                <input type="text" name="number" id='number' placeholder="Phone number" />
                                 <button type='submit'>Send</button>
                                 <p>To the office website</p>
                             </form>

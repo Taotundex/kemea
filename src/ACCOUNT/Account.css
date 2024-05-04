@@ -38,10 +38,12 @@
 }
 .account .login {
     width: 70%;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+    margin-top: 125px;
 }
 .account .login .top h2 {
     line-height: 50px;
@@ -79,7 +81,7 @@
 .account .login form button {
     width: 100%;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 14px;
     color: #ffffff;
     background: #0047FF;
@@ -117,4 +119,71 @@
     font-size: 14px;
     font-weight: 400;
     text-align: left !important;
+}
+
+
+
+.to-know {
+    background: #191C1F;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+}
+.know {
+    width: 80%;
+    /* height: ; */
+}
+.know h1 {
+    margin-bottom: 35px;
+    font-size: 40px;
+    font-weight: 500;
+}
+.know .d-flex {
+    font-size: 20px;
+    font-weight: 40;
+}
+.or {
+    background: white !important;
+    color: #191C1F !important;
+    font-size: 16px !important;
+    border: 1px solid #191C1F !important;
+}
+
+
+@media screen and (max-width: 767px) {
+    .account .row {
+        position: relative;
+    }
+    .account .right {
+        background: #ffffffe6;
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        border: 5px solid #ffffff;
+        height: 90vh;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+    }
+    .account .head {
+        margin-right: 25px;
+    }
+    .account .login {
+        width: 80%;
+        height: 90vh;
+    }
+    .account .login .top h2 {
+        font-size: 36px !important;
+    }
+    .account .login .top p {
+        margin-top: 20px;
+        font-size: 14px !important;
+    }
+    .account .login form label {
+        margin: 10px 0 2px 0 !important;
+    }
 }

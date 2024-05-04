@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import { IoFilterOutline } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 function HomeContent() {
   return (
@@ -14,9 +15,9 @@ function HomeContent() {
                 <p>Kemea supports your property research in Israel at every stage</p>
             </div>
             <div className='d-flex gap-5 lists sticky-top py-3 bg-white'>
-                <dive className='firstList'>
-                    <dive className='d-flex gap-3'>
-                        <form className='d-flex align-items-center border-1 border-black rounded-5' >
+                <div className='firstList'>
+                    <div className='d-flex gap-3 listing'>
+                        <form className='d-flex align-items-center border-1 border-black rounded-5 form' >
                             <IoSearchOutline className="custom-icon" />
                             <input type='text' name='search' id='search' placeholder='In what city?' />
                         </form>
@@ -48,21 +49,21 @@ function HomeContent() {
                                 Search
                             </button>
                         </div>
-                    </dive>
-                </dive>
+                    </div>
+                </div>
                 <div className='secondList'>
                     <div className='d-flex gap-3'>
                         <button className="btn btn-primary rounded-5 d-flex d-flex align-items-center justify-content-center gap-2">
                             <IoMdNotificationsOutline className="custom-icon" />Add an alert
                         </button>
                         <div className="d-flex align-items-center justify-content-center gap-2">
-                            <a>
+                            <Link to=''>
                                 List
-                            </a>
+                            </Link>
                             <div className="vr"></div>
-                            <a>
+                            <Link to=''>
                                 Map
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ function ShortTermDescription() {
         setIsLiked(!isLiked);
     };
   return (
-    <div className='description'>
+    <div className='description' style={{overflowX: 'hidden'}}>
         <div className="container">
             <div className="head py-3">
                 <h2>Cottage - Eliezer Yaffe St.</h2>
@@ -46,7 +46,7 @@ function ShortTermDescription() {
                 </div>
             </div>
             <div className="prod-images pb-5">
-                <div className="d-flex gap-3">
+                <div className="d-flex gap-3 prod-gap">
                     <div className="main-img">
                         <img src={descImg1} width='100%' alt="" />
                     </div>

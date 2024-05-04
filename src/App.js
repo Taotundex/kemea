@@ -16,6 +16,10 @@ import MyShortTermRent from './HOME/MyShortTermRent';
 import MyShortTermDescription from './HOME/MyShortTermDescription';
 import MyNewProjectDescription from './HOME/MyNewProjectDescription';
 import MyNadlanProject from './NADLAN/MyNadlanPage';
+import UserLogin from './ACCOUNT/UserLogin';
+import UserSignup from './ACCOUNT/UserSignup';
+import UserHeading from './USERS/HEADING/UserHeading';
+import MyUserHome from './USERS/HOME/MyUserHome';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -42,6 +46,8 @@ function App() {
           <Route path="/affordability-calculator" element={<Calculator />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/user-login" element={<UserLogin />} />
+          <Route path="/user-signup" element={<UserSignup />} />
           <Route path="/description" element={<MyDescription />} />
           <Route path="/short-term-description" element={<MyShortTermDescription />} />
           <Route path="/new-project-description" element={<MyNewProjectDescription />} />
@@ -49,6 +55,11 @@ function App() {
           <Route path="/conditions-générales" element={<Myconditionsgénérales />} />
           <Route path="/fonctionnement-du-site" element={<Myfonctionnementdenotresite />} />
           <Route path="/infos-sur-lentreprise" element={<Myinfossurlentreprise />} />
+
+
+
+          <Route path="/user-heading" element={<UserHeading />} />
+          <Route path="/user-home" element={<MyUserHome />} />
         </Routes>
         {/* <div>
           {detailing}

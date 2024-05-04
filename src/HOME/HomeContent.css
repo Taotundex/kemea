@@ -66,3 +66,18 @@
     padding: 0 15px;
     outline: none;
 }
+
+
+
+@media screen and (max-width: 767px) {
+    .homepage h2 {
+        font-size: 36px !important;
+    }
+    .homepage .lists{
+        width: 100% !important;
+        overflow-x: scroll !important;
+    }
+    .homepage .lists::-webkit-scrollbar {
+        display: none !important;
+    }
+}

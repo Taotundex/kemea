@@ -2,22 +2,23 @@ import React from 'react';
 import './Kemea.css';
 import supportImg from '../images/supoort-img.png';
 import allImg from '../images/allimages.png';
+import { Link } from 'react-router-dom';
 
 function Kemea() {
   return (
-    <div className='kemea'>
-        <div className="my-5 hero  rounded-3 container d-flex align-items-center justify-content-center">
+    <div className='kemea' style={{overflowX: 'hidden'}}>
+        <div className="my-lg-5 my-md-4 my-3 hero  rounded-3 container d-flex align-items-center justify-content-center">
             <div className='text-center mx-auto text-light inner'>
                 <h2>Discover My Kemea Experience</h2>
                 <p className='text-light'>Discover our exclusive selection of real estate projects by registering for free, or opt for a personalized real estate hunting service to find your property. Registration on the Kemea platform is non-binding.</p>
                 <div className='d-flex gap-3 btns align-items-center justify-content-center'>
-                    <button className='btn-outline-light rounded-5 bg-transparent text-light'>Log in</button>
-                    <button className='bg-white rounded-5'>Sign up</button>
+                    <Link to='/login'><button className='btn-outline-light rounded-5 bg-transparent text-light'>Log in</button></Link>
+                    <Link to='/signup'><button className='bg-white rounded-5'>Sign up</button></Link>
                 </div>
             </div>
         </div>
-        <div className="container allcontents pb-5">
-          <div className="row">
+        <div className="container allcontents pb-lg-5 pb-md-4 pb-3">
+          <div className="row g-lg-4 g-md-3 g-2">
             <div className="col col-lg-3 col-md-4 col-6">
               <div className="content rounded-4 px-3 py-4">
                 <h4>Accélérez votre achat.</h4>
@@ -44,7 +45,7 @@ function Kemea() {
             </div>
           </div>
         </div>
-        <div className="container support py-5">
+        <div className="container support py-lg-5 py-md-4 py-3">
           <div className="row d-flex align-items-center g-5">
             <div className="col col-lg-6 col-md-5 col-12">
               <div className="text">
@@ -64,12 +65,12 @@ function Kemea() {
             </div>
           </div>
         </div>
-        <div className="container my-5 download">
-          <div className="head mb-4 text-center">
+        <div className="container my-lg-5 my-md-4 my-3 download">
+          <div className="head mb-lg-4 mb-3 text-center">
             <h2>Download our app</h2>
             <p>Research, real estate lists,  and more futures in one place.</p>
           </div>
-          <div className="img py-3">
+          <div className="img py-lg-3 py-2">
             <img src={allImg} width='100%' alt="All images" />
           </div>
           <div className="d-flex gap-3 justify-content-center">

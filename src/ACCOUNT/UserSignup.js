@@ -2,22 +2,38 @@ import React, { useState } from 'react'
 import { ReactCountryFlag } from 'react-country-flag';
 import { Link } from 'react-router-dom'
 import './Account.css'
-import signupImg from '../images/signup-img.png'
+import { RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from 'react-icons/ri';
 
-function Signup() {
+
+function UserSignup() {
     const [countryCode, setCountryCode] = useState('');
 
   const handleCountryChange = (event) => {
     setCountryCode(event.target.value);
   };
-
   return (
     <div className='account'>
         <div className="row g-0">
-            <div className="col col-lg-7 col-md-6 col-12 left">
-                <img src={signupImg} width="100%" alt="" />
+            <div className="col col-lg-6 col-md-6 col-12 left">
+                <div className="to-know">
+                    <div className="know">
+                        <h1>By entering in your Kemea account...</h1>
+                        <div className="py-4 d-flex align-items-center gap-2">
+                            <RiNumber1 className='fs-3' />Our hunters take care of everything for you.
+                        </div>
+                        <div className="py-4 d-flex align-items-center gap-2">
+                            <RiNumber2 className='fs-3' />The consultation is free and without obligation.
+                        </div>
+                        <div className="py-4 d-flex align-items-center gap-2">
+                            <RiNumber3 className='fs-3' />We accompany you until the signing of the deed
+                        </div>
+                        <div className="py-4 d-flex align-items-center gap-2">
+                            <RiNumber4 className='fs-3' />We give you access to the Off Market.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="col col-lg-5 col-md-6 col-12">
+            <div className="col col-lg-6 col-md-6 col-12">
                 <div className="right">
                     <div className="mylogin">
                         <div className="head d-flex align-items-center gap-2 mt-4 ms-auto" style={{width: 'fit-content'}}>
@@ -26,30 +42,20 @@ function Signup() {
                                     <option value="EN">EN</option>
                                 </select>
                             </form>
-                            <Link to="/login"><button>Log in</button></Link>
+                            <Link to="/user-login"><button>Log in</button></Link>
                         </div>
                         <div className="login" style={{marginTop: '75px'}}>
                             <div className='top text-center'>
                                 <h2>Registration</h2>
                             </div>
                             <form action="">
-                                <div className="row gx-lg-4 gx-md-3 gx-0">
-                                    <div className="col col-lg-6 col md-12 col-12">
-                                        <div className="input">
-                                            <label htmlFor="companyname">Company Name</label>
-                                            <input type="text" name="companyname" id="companyname" placeholder='Remax' />
-                                        </div>
-                                    </div>
-                                    <div className="col col-lg-6 col md-12 col-12">
-                                        <div className="input">
-                                            <label htmlFor="name">Name</label>
-                                            <input type="text" name="name" id="name" placeholder='John Doe' />
-                                        </div>
-                                    </div>
+                                <div className="input">
+                                    <label htmlFor="firstname">First name</label>
+                                    <input type="text" name="firstname" id="firstname" placeholder='Juliette' />
                                 </div>
                                 <div className="input">
-                                    <label htmlFor="licenseNumber">License Number</label>
-                                    <input type="text" name="licenseNumber" id="licenseNumber" placeholder='xxx - xxx - xxx' />
+                                    <label htmlFor="lastname">Last name</label>
+                                    <input type="text" name="lastname" id="lastname" placeholder='Dupont' />
                                 </div>
                                 <div className="input">
                                     <label htmlFor="email">E-mail</label>
@@ -101,4 +107,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default UserSignup

@@ -42,18 +42,18 @@ function NadlanPage() {
         <div className="container">
             <div className="office px-4 mb-5">
                 <div className="row g-3 d-flex align-items-center w-100">
-                    <div className="col col-lg-2 col-md-3 col-5">
+                    <div className="col col-lg-2 col-md-3 col-4">
                         <div className="img">
                             <img src={levyImg} width='100%' alt="" />
                         </div>
                     </div>
-                    <div className="col col-lg-3 col-md-5 col-7">
+                    <div className="col col-lg-3 col-md-5 col-8">
                         <div className="prop">
                             <h3>Guy and Doron Nadlan</h3>
                             <p>3 Projects  <span>· Member since 2023</span></p>
                         </div>
                     </div>
-                    <div className="col col-lg-4 col-md-6 col-7">
+                    <div className="col col-lg-4 col-md-6 col-12">
                         <div className="schedule p-3 rounded-4">
                             <div className="d-flex justify-content-between">
                                 <p>Sunday - Monday</p>
@@ -69,7 +69,7 @@ function NadlanPage() {
                             </div>
                         </div>
                     </div>
-                    <div className="col col-lg-3 col-md-6 col-7">
+                    <div className="col col-lg-3 col-md-6 col-12">
                         <div className="contact p-3 rounded-4">
                             <Link to='/' className="d-flex align-items-center gap-2 text-decoration-underline">
                                 <RiExternalLinkLine className='fs-6 text-decoration-none' />See their website

@@ -14,6 +14,7 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    z-index: 0 !important;
 }
 .card .reaction-sale p {
     position: absolute;
@@ -57,4 +58,45 @@
     height: 40px;
     border: 1px solid #191C1F;
     font-size: 14px;
+}
+
+
+
+
+@media screen and (max-width: 767px) {   
+    .card .img {
+        height: 225px;
+    }
+    .card .img img{
+        border-radius: 5px;
+    } 
+    .card .reaction-sale p {
+        top: 7px;
+        left: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        padding: 3px 7px;
+    }
+    .card .img .heart{
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+    }
+    .card .details h4 {
+        font-size: 16px !important;
+        height: 50px;
+    }
+    .card .details h5 {
+        font-size: 14px !important;
+    }
+    .card .details p {
+        font-size: 10px !important;
+    }
+    .card .details h3 {
+        font-size: 20px;
+    }
+    .card .details .call {
+        width: 100%;
+    }
+    
 }

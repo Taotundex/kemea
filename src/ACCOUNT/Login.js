@@ -12,15 +12,15 @@ function Login() {
             </div>
             <div className="col col-lg-5 col-md-6 col-12">
                 <div className="right">
-                    <div className="head d-flex align-items-center gap-2 mt-4 ms-auto" style={{width: 'fit-content'}}>
-                        <form action="">
-                            <select name="language" id="language">
-                                <option value="EN">EN</option>
-                            </select>
-                        </form>
-                        <Link to="/signup"><button>Sign up</button></Link>
-                    </div>
-                    <div className="mylogin">
+                    <div className="mylogin" style={{overflowY: 'hidden'}}>
+                        <div className="head d-flex align-items-center gap-2 mt-4 ms-auto" style={{width: 'fit-content'}}>
+                            <form action="">
+                                <select name="language" id="language">
+                                    <option value="EN">EN</option>
+                                </select>
+                            </form>
+                            <Link to="/signup"><button>Sign up</button></Link>
+                        </div>
                         <div className="login">
                             <div className='top text-center'>
                                 <h2>Login <br />to Kemea Pro</h2>
@@ -35,9 +35,9 @@ function Login() {
                                     <label htmlFor="password">Password</label>
                                     <input type="password" name="password" id="password" placeholder='............' />
                                 </div>
-                                <Link to="" className='small mt-2 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
+                                <Link to="" className='small mt-lg-2 mt-0 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
                                 <Link to='/home'><button type='submit' className='my-5'>Log in</button></Link>
-                                <p>Don’t have an account ? <Link to='/signup' className='small text-decoration-none'>Sign up</Link></p>
+                                <p>Don not have an account ? <Link to='/signup' className='small text-decoration-none'>Sign up</Link></p>
                             </form>
                         </div>
                     </div>

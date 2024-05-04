@@ -26,6 +26,7 @@
 }
 
 
+
 .allcontents .content {
     background: #F7F7F7;
 }
@@ -73,4 +74,51 @@
     font-size: 16px;
     height: 50px;
     border: 1px solid #191C1F;
+    transition: .5s ease;
+}
+.download .d-flex button:hover {
+    color: white;
+    background-image: #191C1F;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .kemea .hero {
+        height: 300px;
+    }
+    .kemea .hero .inner{
+        width: 95%;
+    }
+    .kemea .hero h2 {
+        font-size: 24px !important;
+    }
+    .kemea .btns button {
+        width: 150px;
+        height: 45px;
+    }
+    .allcontents .content h4 {
+        font-size: 16px !important;
+        height: 40px;
+    }
+    .allcontents .content {
+        padding: 10px 15px !important;
+    }
+    .support .text h2 {
+        font-size: 30px !important;
+        line-height: 30px;
+    }
+    .support .img img {
+        height: 300px;
+    }
+    .download .img img {
+        width: 100%;
+        height: 200px;
+    }
+    .download .d-flex button {
+        padding: 0 25px;
+        font-size: 14px;
+        height: 40px;
+    }
 }

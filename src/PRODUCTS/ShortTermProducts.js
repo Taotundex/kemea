@@ -15,11 +15,13 @@ function NewProducts() {
   return (
     <div className='products'>
         <Container>
-            <div className="row g-4">
+            <div className="row g-lg-4 g-md-3 g-2">
                 <div className="col-lg-3 col-md-4 col-6">
-                    <Link to='/short-term-description' className='card'>
+                    <div className='card'>
                         <div className="img">
-                            <img src={product1} alt='Product1' width='100%' />
+                            <Link to='/short-term-description'>
+                                <img src={product1} alt='Product1' width='100%' />
+                            </Link>
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
@@ -33,12 +35,14 @@ function NewProducts() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </Link>
+                    </div>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <Link to='/short-term-description' className='card'>
+                    <div className='card'>
                         <div className="img">
-                            <img src={product1} alt='Product1' width='100%' />
+                            <Link to='/short-term-description'>
+                                <img src={product1} alt='Product1' width='100%' />
+                            </Link>
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
@@ -52,12 +56,14 @@ function NewProducts() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </Link>
+                    </div>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <Link to='/short-term-description' className='card'>
+                    <div className='card'>
                         <div className="img">
-                            <img src={product1} alt='Product1' width='100%' />
+                            <Link to='/short-term-description'>
+                                <img src={product1} alt='Product1' width='100%' />
+                            </Link>
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
@@ -71,12 +77,14 @@ function NewProducts() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </Link>
+                    </div>
                 </div>
                 <div className="col-lg-3 col-md-4 col-6">
-                    <Link to='/short-term-description' className='card'>
+                    <div className='card'>
                         <div className="img">
-                            <img src={product1} alt='Product1' width='100%' />
+                            <Link to='/short-term-description'>
+                                <img src={product1} alt='Product1' width='100%' />
+                            </Link>
                             <div className='reaction' onClick={handleReactionClick}>
                                 {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
                             </div>
@@ -90,7 +98,7 @@ function NewProducts() {
                                 <IoCallOutline />Show phone number
                             </button>
                         </div>
-                    </Link>
+                    </div>
                 </div>
             </div>
         </Container>
