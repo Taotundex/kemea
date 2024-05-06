@@ -53,7 +53,7 @@ function Landing() {
         </div>
         <div className="container">
             <div className="office px-4 mb-5">
-                <div className="row g-3 d-flex align-items-center">
+                <div className="row g-3 d-flex align-items-center w-100">
                     <div className="col col-lg-2 col-md-3 col-4">
                         <div className="img">
                             <img src={RemaxSm} width='100%' alt="" />

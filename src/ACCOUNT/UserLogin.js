@@ -37,7 +37,7 @@ function UserLogin() {
                                     <option value="EN">EN</option>
                                 </select>
                             </form>
-                            <Link to="/user-signup"><button>Sign up</button></Link>
+                            <Link to="/signup"><button>Sign up</button></Link>
                         </div>
                         <div className="login">
                             <div className='top text-center'>

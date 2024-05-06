@@ -18,8 +18,12 @@ import MyNewProjectDescription from './HOME/MyNewProjectDescription';
 import MyNadlanProject from './NADLAN/MyNadlanPage';
 import UserLogin from './ACCOUNT/UserLogin';
 import UserSignup from './ACCOUNT/UserSignup';
-import UserHeading from './USERS/HEADING/UserHeading';
+import UserHeading from './HEADING/UserHeading';
 import MyUserHome from './USERS/HOME/MyUserHome';
+import MyExceptionalProperties from './USERS/HOME/MyExceptionalProperties';
+import MySellOut from './PROMOTE/MySellOut';
+import MyStudy from './STUDY/MyStudy';
+import MyFavorites from './FAVORITES/MyFavorites';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -42,12 +46,13 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/my-kemea" element={<Mykemea />} />
           <Route path="/new-projects" element={<MyNewProject />} />
+          <Route path="/exceptional-properties" element={<MyExceptionalProperties />} />
           <Route path="/short-term-rent" element={<MyShortTermRent />} />
           <Route path="/affordability-calculator" element={<Calculator />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/user-login" element={<UserLogin />} />
-          <Route path="/user-signup" element={<UserSignup />} />
+          <Route path="/pro-login" element={<Login />} />
+          <Route path="/pro-signup" element={<Signup />} />
+          <Route path="/login" element={<UserLogin />} />
+          <Route path="/signup" element={<UserSignup />} />
           <Route path="/description" element={<MyDescription />} />
           <Route path="/short-term-description" element={<MyShortTermDescription />} />
           <Route path="/new-project-description" element={<MyNewProjectDescription />} />
@@ -55,7 +60,9 @@ function App() {
           <Route path="/conditions-générales" element={<Myconditionsgénérales />} />
           <Route path="/fonctionnement-du-site" element={<Myfonctionnementdenotresite />} />
           <Route path="/infos-sur-lentreprise" element={<Myinfossurlentreprise />} />
-
+          <Route path="/sell-out" element={<MySellOut />} />
+          <Route path='/study' element={<MyStudy />} />
+          <Route path='/favorites' element={<MyFavorites />} />
 
 
           <Route path="/user-heading" element={<UserHeading />} />

@@ -1,17 +1,15 @@
 import React from 'react'
-import './HomeContent.css'
-import Container from 'react-bootstrap/Container';
-import { IoFilterOutline } from "react-icons/io5";
-import { IoSearchOutline } from "react-icons/io5";
-import { IoMdNotificationsOutline } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap'
+import { IoMdNotificationsOutline } from 'react-icons/io'
+import { IoFilterOutline, IoSearchOutline } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
-function NewProject() {
+function ExceptionalProperties() {
   return (
     <div className='homepage'>
         <Container>
             <div className="py-4">
-                <h2>New Projects</h2>
+                <h2>Exceptional Properties</h2>
             </div>
             <div className='d-flex gap-5 lists sticky-top py-3 bg-white'>
                 <dive className='firstList'>
@@ -83,4 +81,4 @@ function NewProject() {
   )
 }
 
-export default NewProject
+export default ExceptionalProperties

@@ -13,6 +13,9 @@
     display: none;
 }
 .account .right select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     border: none;
     background: transparent;
     color: #1D234E;
@@ -98,6 +101,9 @@
     height: 18px !important;
 }
 .account .input select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     width: fit-content;
 }
 .account .input .myflag {

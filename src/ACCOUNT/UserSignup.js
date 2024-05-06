@@ -42,7 +42,7 @@ function UserSignup() {
                                     <option value="EN">EN</option>
                                 </select>
                             </form>
-                            <Link to="/user-login"><button>Log in</button></Link>
+                            <Link to="/login"><button>Log in</button></Link>
                         </div>
                         <div className="login" style={{marginTop: '75px'}}>
                             <div className='top text-center'>
