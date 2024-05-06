@@ -24,6 +24,7 @@ import MyExceptionalProperties from './USERS/HOME/MyExceptionalProperties';
 import MySellOut from './PROMOTE/MySellOut';
 import MyStudy from './STUDY/MyStudy';
 import MyFavorites from './FAVORITES/MyFavorites';
+import MyRentOut from './PROMOTE/MyRentOut';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -61,6 +62,7 @@ function App() {
           <Route path="/fonctionnement-du-site" element={<Myfonctionnementdenotresite />} />
           <Route path="/infos-sur-lentreprise" element={<Myinfossurlentreprise />} />
           <Route path="/sell-out" element={<MySellOut />} />
+          <Route path="/rent-out" element={<MyRentOut />} />
           <Route path='/study' element={<MyStudy />} />
           <Route path='/favorites' element={<MyFavorites />} />
 
