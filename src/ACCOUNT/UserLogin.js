@@ -54,7 +54,7 @@ function UserLogin() {
                                     <input type="password" name="password" id="password" placeholder='............' />
                                 </div>
                                 <Link to="" className='small mt-lg-2 mt-0 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
-                                <Link to='/home'><button type='submit' className='my-5'>Log in</button></Link>
+                                <Link to='/user-home'><button type='submit' className='my-5'>Log in</button></Link>
                                 <center className="mb-4">or</center>
                                 <button className="or d-flex align-items-center justify-content-center my-2 gap-2">
                                     <FaGoogle />Continue with Google

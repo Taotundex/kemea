@@ -24,3 +24,15 @@
 .navdrop-items {
     line-height: 35px;
 }
+.save {
+    border-radius: 40pc;
+    height: 40px;
+    width: fit-content;
+    padding: 0 15px;
+    border: 1px solid #DDDDDD;
+    color: #1D234E;
+    font-size: 14px;
+}
+.navbar-nav .nav-link.dropdown-toggle::after {
+    display: none;
+}

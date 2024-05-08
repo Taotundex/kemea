@@ -1,0 +1,98 @@
+.pro .header {
+    background: #F9F8F9;
+    color: #1D234E;
+    font-weight: 500;
+    font-size: 25px;
+}
+.pro form {
+    border: 1px solid #B0B0B0;
+    background: #F9F8F9;
+    height: 40px;
+    width: 400px;
+    border-radius: 40px;
+    padding: 0 10px;
+}
+.pro form input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+.pro .ads .button {
+    height: 45px;
+    padding: 0 20px;
+    width: fit-content;
+    border: 1px solid #0047FF;
+    background: #0047FF;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.pro .head button {
+    height: 40px;
+    padding: 0 20px;
+    width: fit-content;
+    border: 1px solid #1D234E;
+    background: white;
+    border-radius: 40px;
+    font-size: 14px;
+}
+.pro input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+}
+.pro table {
+    width: 100%;
+    border: none !important;
+}
+.pro .table th {
+    color: #717171;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 20px 10px;
+    width: fit-content;
+    border: none !important;
+    border-bottom: 1px solid #B0B0B0 !important;
+}
+.pro .table tr {
+    border: none !important;
+    border-bottom: 1px solid #B0B0B0 !important;
+}
+.pro .table td {
+    padding: 20px 10px;
+    width: fit-content;
+    align-items: center;
+    border: none !important;
+}
+.pro .table td .d-flex {
+    color: #1D234E;
+    /* width: fit-content !important; */
+    font-size: 14px;
+    font-weight: 400;
+}
+.pro .table button {
+    width: fit-content;
+    padding: 0 20px;
+    height: 40px;
+    border: 1px solid #1D234E;
+    background: white;
+    color: #1D234E;
+    border-radius: 10px;
+}
+.pro .house {
+    width: 55px;
+    height: 40px;
+    border-radius: 5px;
+    background: #B0B0B0;
+    color: white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px !important;
+}
+.pro table tr img {
+    width: 55px;
+    height: 40px;
+    border-radius: 5px;
+}

@@ -1,0 +1,16 @@
+.rent-property .btns button {
+    height: 50px;
+    width: fit-content;
+    padding: 0 50px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.rent-property .btns button:first-child {
+    border: 1px solid #1D234E;
+    color: #1D234E;
+}
+.rent-property .btns button:last-child {
+    border: 1px solid #1D234E;
+    background: #1D234E;
+    color: white;
+}

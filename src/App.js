@@ -18,13 +18,16 @@ import MyNewProjectDescription from './HOME/MyNewProjectDescription';
 import MyNadlanProject from './NADLAN/MyNadlanPage';
 import UserLogin from './ACCOUNT/UserLogin';
 import UserSignup from './ACCOUNT/UserSignup';
-import UserHeading from './HEADING/UserHeading';
 import MyUserHome from './USERS/HOME/MyUserHome';
 import MyExceptionalProperties from './USERS/HOME/MyExceptionalProperties';
 import MySellOut from './PROMOTE/MySellOut';
 import MyStudy from './STUDY/MyStudy';
 import MyFavorites from './FAVORITES/MyFavorites';
 import MyRentOut from './PROMOTE/MyRentOut';
+import MyProHome from './PRO/MyProHome';
+import MyPublish from './PRO/MyPublish';
+import MyRentProperty from './PRO/MyRentProperty';
+import MyRentHome from './HOME/MyRentHome';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -42,33 +45,42 @@ function App() {
   return (
       <div className="App">
         <Routes>
-          <Route path="/" element={<MyLanding/>} />
-          <Route path="/nadlan" element={<MyNadlanProject />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/my-kemea" element={<Mykemea />} />
-          <Route path="/new-projects" element={<MyNewProject />} />
-          <Route path="/exceptional-properties" element={<MyExceptionalProperties />} />
-          <Route path="/short-term-rent" element={<MyShortTermRent />} />
-          <Route path="/affordability-calculator" element={<Calculator />} />
-          <Route path="/pro-login" element={<Login />} />
-          <Route path="/pro-signup" element={<Signup />} />
-          <Route path="/login" element={<UserLogin />} />
-          <Route path="/signup" element={<UserSignup />} />
-          <Route path="/description" element={<MyDescription />} />
-          <Route path="/short-term-description" element={<MyShortTermDescription />} />
-          <Route path="/new-project-description" element={<MyNewProjectDescription />} />
           <Route path="/confidentialité" element={<Myconfidentialité />} />
           <Route path="/conditions-générales" element={<Myconditionsgénérales />} />
           <Route path="/fonctionnement-du-site" element={<Myfonctionnementdenotresite />} />
           <Route path="/infos-sur-lentreprise" element={<Myinfossurlentreprise />} />
-          <Route path="/sell-out" element={<MySellOut />} />
-          <Route path="/rent-out" element={<MyRentOut />} />
+          
+          <Route path="/home" element={<Home />} />
+          <Route path="/description" element={<MyDescription />} />
+          <Route path="/new-projects" element={<MyNewProject />} />
+          <Route path="/new-project-description" element={<MyNewProjectDescription />} />
+          <Route path="/my-kemea" element={<Mykemea />} />
+          <Route path="/affordability-calculator" element={<Calculator />} />
+
+
+          <Route path="/rent-home" element={<MyRentHome />} />
+          <Route path="/short-term-rent" element={<MyShortTermRent />} />
+          <Route path="/short-term-description" element={<MyShortTermDescription />} />
+
+          <Route path="/" element={<MyLanding/>} />
+          <Route path="/nadlan" element={<MyNadlanProject />} />
+
+          <Route path="/login" element={<UserLogin />} />
+          <Route path="/signup" element={<UserSignup />} />
+          <Route path="/user-home" element={<MyUserHome />} />
+          <Route path="/exceptional-properties" element={<MyExceptionalProperties />} />
           <Route path='/study' element={<MyStudy />} />
           <Route path='/favorites' element={<MyFavorites />} />
+          <Route path="/sell-out" element={<MySellOut />} />
+          <Route path="/rent-out" element={<MyRentOut />} />
 
 
-          <Route path="/user-heading" element={<UserHeading />} />
-          <Route path="/user-home" element={<MyUserHome />} />
+
+          <Route path="/pro-login" element={<Login />} />
+          <Route path="/pro-signup" element={<Signup />} />
+          <Route path='/pro-home' element={<MyProHome />} />
+          <Route path='/pro-publish' element={<MyPublish />} />
+          <Route path='/rent-property' element={<MyRentProperty />} />
         </Routes>
         {/* <div>
           {detailing}

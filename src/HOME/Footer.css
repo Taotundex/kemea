@@ -12,16 +12,44 @@ ul {
 .homeFooter {
     width: 100%;
     position: fixed;
-    bottom: 10px;
+    bottom: 0px;
     left: 0;
     background: white;
     border-top: 1px solid #DDDDDD;
 }
 
 
+@media screen and (max-width: 1199px) {
+    .homeFooter {
+        bottom: 0px;
+    }
+    .homeFooter .container {
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .homeFooter .container::-webkit-scrollbar{
+        display: none;
+    }
+    ul {
+        gap: 15px !important;
+    }
+    li {
+        font-size: 12px;
+        width: 150px !important;
+    }
+    .list {
+        font-size: 14px;
+    }
+    .lang {
+        gap: 15px;
+    }
+    .lang li{
+        width: fit-content !important;
+    }
+}
 @media screen and (max-width: 767px) {
     .homeFooter {
-        bottom: 5px;
+        bottom: 0px;
     }
     .homeFooter .container {
         width: 100%;

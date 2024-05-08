@@ -21,14 +21,14 @@ function Heading() {
                         <NavDropdown className='mx-3' title="Buy" id="navbarScrollingDropdown">
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/home">Homes for Sales</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/new-projects">New Projects</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/exceptional-properties">Exceptional properties</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="">Exceptional properties</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/affordability-calculator">Affordability calculator</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown className='mx-3' title="Rent" id="navbarScrollingDropdown">
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/home">Homes for rent</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/rent-home">Homes for rent</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/short-term-rent">Short Term rent</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/exceptional-properties">Exceptional properties</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="">Exceptional properties</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link className='mx-3' as={Link} to="/my-kemea">My Kemea</Nav.Link>
@@ -50,8 +50,8 @@ function Heading() {
                             </div>
                         </NavDropdown>                
                     </Nav>
-                    <Form className="d-flex">
-                        <Link to='/login'><Button variant="btn">Login</Button></Link>
+                    <Form className="d-flex gap-3">
+                        <Link to='/login'><Button variant="btn" className='px-4 border-0'>Login</Button></Link>
                         <Link to='/signup'><Button className='rounded-5 px-4' variant="btn btn-primary">Signup</Button></Link>
                     </Form>
                 </Navbar.Collapse>

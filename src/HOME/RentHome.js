@@ -6,7 +6,8 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
-function HomeContent() {
+
+function RentHome() {
     // const [isSelect, setIsSelect] = useState(false);
     // const handleSelectClick = () => {
     //     setIsSelect(!isSelect);
@@ -26,8 +27,8 @@ function HomeContent() {
                             <input type='text' name='search' id='search' placeholder='In what city?' />
                         </form>
                         <div className='d-flex buy'>
-                            <Link to='/home' className='text-decoration-none'><button className='rounded-start-5 bg-dark text-white'>Buy</button></Link>
-                            <Link to='/rent-home' className='text-decoration-none'><button className='rounded-end-5'>Rent</button></Link>
+                            <Link to='/home' className='text-decoration-none'><button className='rounded-start-5'>Buy</button></Link>
+                            <Link to='/rent-home' className='text-decoration-none'><button className='rounded-end-5 bg-dark text-white'>Rent</button></Link>
                         </div>
                         {/* <div className="select">
                             <div className="options">
@@ -115,4 +116,4 @@ function HomeContent() {
   )
 }
 
-export default HomeContent
+export default RentHome

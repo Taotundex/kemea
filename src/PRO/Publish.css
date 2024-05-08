@@ -1,0 +1,29 @@
+.publish .container .details {
+    width: 50%;
+    padding: 75px 0 100px 0;
+}
+.publish h1 {
+    font-size: 50px;
+    color: #1D234E;
+    font-weight: 500;
+}
+.publish p {
+    font-size: 25px;
+    color: #1D234E;
+    font-weight: 400;
+    margin: 40px 0;
+}
+.publish .property {
+    width: fit-content;
+    padding: 25px 35px;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    color: #222222;
+    text-decoration: none;
+    font-size: 18px;
+}
+.publish .property:hover {
+    border: 1px solid #0047FF;
+    background: #0047FF;
+    color: white;
+}
