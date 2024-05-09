@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom';
 import ReactCountryFlag from 'react-country-flag'
 // import '../ACCOUNT/Account.css'
 
-function RentProperty() {
+function SellProperty() {
     const [countryCode, setCountryCode] = useState('');
 
   const handleCountryChange = (event) => {
@@ -411,7 +411,7 @@ function RentProperty() {
                                 <IoIosArrowBack />Back
                             </button>
                         {/* </Link> */}
-                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center border-0 justify-content-center" onClick={handleNext}>
+                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center justify-content-center" onClick={handleNext}>
                             Next<IoIosArrowForward />
                         </button>
                     </div>
@@ -512,7 +512,7 @@ function RentProperty() {
                                 <IoIosArrowBack />Back
                             </button>
                         {/* </Link> */}
-                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center justify-content-center bg-primary">
+                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center border-0 justify-content-center bg-primary">
                             Send<IoIosArrowForward />
                         </button>
                     </div>
@@ -523,4 +523,4 @@ function RentProperty() {
   )
 }
 
-export default RentProperty
+export default SellProperty

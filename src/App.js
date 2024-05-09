@@ -27,6 +27,7 @@ import MyRentOut from './PROMOTE/MyRentOut';
 import MyProHome from './PRO/MyProHome';
 import MyPublish from './PRO/MyPublish';
 import MyRentProperty from './PRO/MyRentProperty';
+import MySellProperty from './PRO/MySellProperty';
 import MyRentHome from './HOME/MyRentHome';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
@@ -81,6 +82,7 @@ function App() {
           <Route path='/pro-home' element={<MyProHome />} />
           <Route path='/pro-publish' element={<MyPublish />} />
           <Route path='/rent-property' element={<MyRentProperty />} />
+          <Route path='/sell-property' element={<MySellProperty />} />
         </Routes>
         {/* <div>
           {detailing}

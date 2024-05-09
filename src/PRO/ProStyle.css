@@ -46,6 +46,12 @@
     width: 100%;
     border: none !important;
 }
+.pro .mytable {
+    overflow-X: scroll !important;
+}
+.pro .mytable::-webkit-scrollbar{
+    display: none;
+}
 .pro .table th {
     color: #717171;
     font-size: 12px;
@@ -95,4 +101,11 @@
     width: 55px;
     height: 40px;
     border-radius: 5px;
+}
+.head {
+    width: 100%;
+    overflow-X: scroll !important;
+}
+.head::-webkit-scrollbar{
+    display: none;
 }

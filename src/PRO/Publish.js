@@ -13,7 +13,7 @@ function Publish() {
                 <h1>It’s easy to publish an ad <br />on Kemea</h1>
                 <p>Fill a form with some quick questions, <br />we will check it and then publish it !</p>
                 <div className="d-flex align-items-center justify-content-center gap-5">
-                    <Link to='' className="property d-flex flex-column gap-2">
+                    <Link to='/sell-property' className="property d-flex flex-column gap-2">
                         <PiHouseLine className='fs-4 m-auto' />
                         I want to sell a property 
                     </Link>

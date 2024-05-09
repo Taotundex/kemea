@@ -17,22 +17,24 @@ function ProHome() {
             </div>
         </h2>
         <div className="container">
-            <div className="d-flex align-items-center justify-content-between py-3 ads">
-                <h4>2 ads</h4>
-                <Link to='/pro-publish' className="button d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-                    <GoPlus className='fs-5' />Créer une annonce
-                </Link>
+            <div className='myads'>
+                <div className="d-flex align-items-center justify-content-between py-3 ads">
+                    <h4>2 ads</h4>
+                    <Link to='/pro-publish' className="button d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                        <GoPlus className='fs-5' />Créer une annonce
+                    </Link>
+                </div>
+                <div className="d-flex align-items-center gap-4 head">
+                    <form action="" className='d-flex align-items-center gap-1'>
+                        <RiSearchLine />
+                        <input type="text" name="search" id="search" placeholder='Rechercher' />
+                    </form>
+                    <button>Vente</button>
+                    <button>Achat</button>
+                    <button>Annonces à actualiser</button>
+                </div>
             </div>
-            <div className="d-flex align-items-center gap-4 head">
-                <form action="" className='d-flex align-items-center gap-1'>
-                    <RiSearchLine />
-                    <input type="text" name="search" id="search" placeholder='Rechercher' />
-                </form>
-                <button>Vente</button>
-                <button>Achat</button>
-                <button>Annonces à actualiser</button>
-            </div>
-            <div className="mytable">
+            <div className="mytable w-100">
                 <table class="table my-4 w-100">
                     <thead>
                         <tr>
