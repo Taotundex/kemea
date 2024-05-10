@@ -99,11 +99,11 @@ function HomeContent() {
                                 </option>
                             </select> */}
                         </form>
-                        <div className='select'>
-                        <select ref={selectRef} id='select' style={{width: '150px', height: '100%'}}>
+                        <form className='select'>
+                            <select ref={selectRef} id='select' style={{width: '150px', height: '100%'}}>
                                 <option value='select'>Price Range</option>
                             </select>
-                        </div>
+                        </form>
                         <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5'>
                             <IoFilterOutline className="custom-icon" />All filter
                         </div>
