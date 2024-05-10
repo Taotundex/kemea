@@ -1,0 +1,115 @@
+.plan .hero {
+    height: 300px;
+    width: 100%;
+    background: #0047FF;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.empty {
+    height: 75px;
+    background: #F7FAFC;
+}
+.plan .hero h1 {
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 100px;
+}
+.plan .hero small {
+    font-size: 16px;
+    font-weight: 500;
+}
+.plan .all-plans .starter {
+    border: 1px solid #E9EEF1;
+    border-radius: 10px;
+    margin-top: -25px;
+    background: white;
+}
+.plan .all-plans .growth {
+    border: 1px solid #E9EEF1;
+    border-radius: 10px;
+    margin-top: -90px;
+    background: white;
+}
+.plan .all-plans h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #353E44;
+}
+.plan .all-plans h2 {
+    font-size: 47px;
+    font-weight: 800;
+    color: #353E44;
+    margin: 35px 0;
+}
+.plan .all-plans p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4F5C65;
+    line-height: 25px;
+}
+.plan .all-plans ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    color: #353e44b9;
+    font-weight: 500;
+    font-size: 14px;
+}
+.plan .all-plans ul li .check{
+    color: #3CBA58;
+    font-size: 22px;
+}
+.plan .all-plans ul li.light {
+    opacity: 0.2;
+}
+.plan .all-plans .starter button {
+    margin-top: 50px;
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    border: 2px solid #0047FF;
+    color: #0047FF;
+    outline: none;
+    background: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.plan .all-plans .growth button {
+    margin-top: 50px;
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    border: 2px solid #0047FF;
+    color: white;
+    outline: none;
+    background: #0047FF;
+    font-size: 20px;
+    font-weight: 600;
+}
+.plan .all-plans .growth h6 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    /* width: fit-content; */
+    /* padding: 5px 10px; */
+    width: 110px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    background: #0047FF;
+    font-size: 14px;
+    font-weight: 500;
+}
+.plan .all-plans .last {
+    color: #4F5C65;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+}

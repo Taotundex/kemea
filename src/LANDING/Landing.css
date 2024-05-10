@@ -1,3 +1,21 @@
+.hero {
+    position: relative;
+    height: 600px;
+    width: 100%;
+}
+.hero .mod1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: fit-content;
+    padding: 15px 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+}
 .hero img {
     height: 600px;
     width: 100%;
@@ -15,6 +33,31 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
+}
+.office .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.office .img .mod{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000033;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.office .img .mod .mod2{
+    width: fit-content;
+    padding: 5px 15px;
+    border: 1px solid #1D234E;
+    color: #1D234E;
+    background: white;
+    border-radius: 7px;
 }
 .office .prop h3 {
     color: #1D234E;
@@ -72,7 +115,7 @@
 .input {
     margin: 20px 0;
 }
-.input label {
+.for-sale .input label {
     color: #191C1FCC;
     font-size: 14px;
     font-weight: 400;
@@ -80,15 +123,15 @@
     align-items: center;
     margin: 12px 0;
 }
-.input select {
+.for-sale .input select {
     width: 100%;
     height: 40px;
     border: 1px solid #E2E8F0;
     background: transparent;
-    border-radius: 10px;
+    border-radius: 10px !important;
     padding: 0 10px;
 }
-.input label input[type='checkbox'] {
+.for-sale .input label input[type='checkbox'] {
     width: 20px;
     height: 20px;
     border: 1px solid #E2E8F0;
@@ -96,7 +139,7 @@
     border-radius: 0;
     margin-right: 10px;
 }
-.input label input[type='radio'] {
+.for-sale .input label input[type='radio'] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -256,7 +299,9 @@
     cursor: pointer;
 }
 
-
+button {
+    outline: none !important;
+}
 @media screen and (max-width: 767px) {
     p{
         font-size: 12px !important;
@@ -293,10 +338,10 @@
     .heading {
         font-size: 14px !important;
     }
-    .input select {
+   .for-sale .input select {
         font-size: 14px;
     }
-    .input label input[type='checkbox'], .input label input[type='radio'] {
+   .for-sale .input label input[type='checkbox'],.for-sale .input label input[type='radio'] {
         width: 15px;
         height: 15px;
     }

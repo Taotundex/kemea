@@ -29,6 +29,9 @@ import MyPublish from './PRO/MyPublish';
 import MyRentProperty from './PRO/MyRentProperty';
 import MySellProperty from './PRO/MySellProperty';
 import MyRentHome from './HOME/MyRentHome';
+import MyPlan from './PRO/MyPlan';
+import MyProfile from './PRO/MyProfile';
+import MyNotification from './PRO/MyNotification';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -81,6 +84,9 @@ function App() {
           <Route path="/pro-signup" element={<Signup />} />
           <Route path='/pro-home' element={<MyProHome />} />
           <Route path='/pro-publish' element={<MyPublish />} />
+          <Route path='/plan' element={<MyPlan />} />
+          <Route path='/profile' element={<MyProfile />} />
+          <Route path='/notifications' element={<MyNotification />} />
           <Route path='/rent-property' element={<MyRentProperty />} />
           <Route path='/sell-property' element={<MySellProperty />} />
         </Routes>

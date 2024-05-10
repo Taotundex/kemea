@@ -1,0 +1,34 @@
+.notification button {
+    height: 55px;
+    padding: 0 35px;
+    border-radius: 10px;
+    background: #1D234E;
+    color: white;
+    border: 1px solid #1D234E;
+    font-size: 16px;
+    outline: none;
+    margin-top: 20px;
+}
+.notification .together {
+    height: 35px;
+    border-radius: 35px;
+    background: #F9F8F9;
+    border: 1px solid #B0B0B0;
+}
+.notification .together input {
+    width: 100%;
+    outline: none;
+    padding: 0 10px;
+    background: transparent;
+}
+.notification h3 {
+    color: #1D234E;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.notification p {
+    color: #717171;
+    font-size: 14px;
+    font-weight: 500;
+}

@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import './HomeContent.css'
 import Container from 'react-bootstrap/Container';
 import { IoFilterOutline } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import $ from 'jquery'; // Import jQuery (ensure it's installed)
+// import 'select2/dist/css/select2.min.css'; // Import Select2 CSS
 
 function HomeContent() {
     // const [isSelect, setIsSelect] = useState(false);
     // const handleSelectClick = () => {
     //     setIsSelect(!isSelect);
     // };
+    const selectRef = useRef(null);
+
+  useEffect(() => {
+    // Initialize Select2
+    $(selectRef.current).select2();
+
+    // Ensure to destroy Select2 on component unmount to avoid memory leaks
+    return () => {
+      $(selectRef.current).select2('destroy');
+    };
+  }, []); // Run only once on component mount
   return (
     <div className='homepage'>
         <Container>
@@ -57,17 +70,37 @@ function HomeContent() {
                             </div>
                         </div> */}
                         <form className='select'>
-                            <select className='select'>
+                            <select ref={selectRef} className='select' style={{width: '150px', height: '100%'}}>
+                                <option value="apartment">
+                                    <label htmlFor="apartment" className='d-flex'>
+                                        <input type="checkbox" id="apartment1" name="apartment1" value="apartment1" />
+                                        Apartment 1
+                                    </label>
+                                </option>
+                                <option value="apartment">
+                                    <label htmlFor="apartment" className='d-flex'>
+                                        <input type="checkbox" id="apartment1" name="apartment1" value="apartment1" />
+                                        Apartment 1
+                                    </label>
+                                </option>
+                                <option value="apartment">
+                                    <label htmlFor="apartment" className='d-flex'>
+                                        <input type="checkbox" id="apartment1" name="apartment1" value="apartment1" />
+                                        Apartment 1
+                                    </label>
+                                </option>
+                            </select>
+                            {/* <select className='select'>
                                 <option value='select'>
                                     <label htmlFor="apartment1" className='d-flex'>
                                         <input type="checkbox" id="apartment1" name="apartment1" value="apartment1" />
                                         Apartment 1
                                     </label>
                                 </option>
-                            </select>
+                            </select> */}
                         </form>
                         <div className='select'>
-                            <select name='select' id='select'>
+                        <select ref={selectRef} id='select' style={{width: '150px', height: '100%'}}>
                                 <option value='select'>Price Range</option>
                             </select>
                         </div>

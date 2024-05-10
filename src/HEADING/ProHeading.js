@@ -2,22 +2,19 @@ import React from 'react';
 import './Heading.css'
 import { Link } from 'react-router-dom';
 import Prologo from '../images/kemea-pro-logo.png'
-// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-// import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { FaRegUser, FaUserCircle } from 'react-icons/fa';
 import { MdOutlineNotificationsActive } from 'react-icons/md';
 import { FiLogOut } from 'react-icons/fi';
-import { IoArrowForward } from 'react-icons/io5';
+import { IoIosArrowForward } from 'react-icons/io';
 
 function ProHeading() {
   return (
     <div>
-        <Navbar expand="lg" className="py-3 nav text-center">
+        <Navbar expand="lg" className="py-3 nav text-center fixed-top bg-white">
             <Container>
                 <Navbar.Brand as={Link} to="/home" className='me-lg-5 me-0'><img src={Prologo} alt='Logo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -28,11 +25,13 @@ function ProHeading() {
                         <Nav.Link className='mx-3' as={Link} to="/profile">Profile Page</Nav.Link>
                     </Nav>
                     <div className="btn-group">
-                        <p className='ms-2'>EN <IoArrowForward className='me-1' /></p>
-                        <div className="d-flex align-items-center gap-2 hamburger-list" data-bs-toggle="dropdown" aria-expanded="false">
-                            <RxHamburgerMenu className='hamburger' />
-                            <FaUserCircle className='user' />
-                        </div>
+                        {/* <div className="d-flex align-items-center gap-4"> */}
+                            <div className='d-flex align-items-center gap-2 me-4'>EN<IoIosArrowForward /></div>
+                            <div className="d-flex align-items-center gap-2 hamburger-list" data-bs-toggle="dropdown" aria-expanded="false">
+                                <RxHamburgerMenu className='hamburger' />
+                                <FaUserCircle className='user' />
+                            </div>
+                        {/* </div> */}
                         <ul class="dropdown-menu dropdown-menu-lg-end">
                             <li>
                                 <Link to='/notifications' className='text-decoration-none'>

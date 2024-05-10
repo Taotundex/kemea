@@ -7,6 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'swiper/swiper-bundle.css';
+import 'select2/dist/css/select2.min.css';
+import 'select2'; // This imports the JavaScript functionality of Select2
+
 
 
 
