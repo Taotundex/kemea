@@ -5,6 +5,10 @@ import Container from 'react-bootstrap/Container';
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { IoCallOutline } from "react-icons/io5";
 import product1 from '../images/Group → Link → 7cfc6a37-460a-4aea-add7-52c3c71151e9.jpeg.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 
 function NewProducts() {
@@ -20,10 +24,17 @@ function NewProducts() {
                     <div className='card'>
                         <div className="img">
                             <Link to='/short-term-description'>
-                                <img src={product1} alt='Product1' width='100%' />
+                            <Swiper spaceBetween={0} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                </Swiper>
                             </Link>
-                            <div className='reaction' onClick={handleReactionClick}>
-                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            <div className="reaction-sale d-flex justify-content-end align-items-center">
+                                <div className='react-icon' onClick={handleReactionClick}>
+                                    {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                                </div>
                             </div>
                         </div>
                         <div className='details py-2 px-1'>
@@ -41,10 +52,17 @@ function NewProducts() {
                     <div className='card'>
                         <div className="img">
                             <Link to='/short-term-description'>
-                                <img src={product1} alt='Product1' width='100%' />
+                            <Swiper spaceBetween={0} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                </Swiper>
                             </Link>
-                            <div className='reaction' onClick={handleReactionClick}>
-                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            <div className="reaction-sale d-flex justify-content-end align-items-center">
+                                <div className='react-icon' onClick={handleReactionClick}>
+                                    {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                                </div>
                             </div>
                         </div>
                         <div className='details py-2 px-1'>
@@ -62,10 +80,17 @@ function NewProducts() {
                     <div className='card'>
                         <div className="img">
                             <Link to='/short-term-description'>
-                                <img src={product1} alt='Product1' width='100%' />
+                            <Swiper spaceBetween={0} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                </Swiper>
                             </Link>
-                            <div className='reaction' onClick={handleReactionClick}>
-                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            <div className="reaction-sale d-flex justify-content-end align-items-center">
+                                <div className='react-icon' onClick={handleReactionClick}>
+                                    {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                                </div>
                             </div>
                         </div>
                         <div className='details py-2 px-1'>
@@ -83,10 +108,17 @@ function NewProducts() {
                     <div className='card'>
                         <div className="img">
                             <Link to='/short-term-description'>
-                                <img src={product1} alt='Product1' width='100%' />
+                            <Swiper spaceBetween={0} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                </Swiper>
                             </Link>
-                            <div className='reaction' onClick={handleReactionClick}>
-                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            <div className="reaction-sale d-flex justify-content-end align-items-center">
+                                <div className='react-icon' onClick={handleReactionClick}>
+                                    {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                                </div>
                             </div>
                         </div>
                         <div className='details py-2 px-1'>

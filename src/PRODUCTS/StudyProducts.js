@@ -5,6 +5,10 @@ import { GoHeart, GoHeartFill } from 'react-icons/go'
 import { IoCallOutline } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 import { Container } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 function StudyProducts() {
     const [isLiked, setIsLiked] = useState(false);
@@ -18,13 +22,20 @@ function StudyProducts() {
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
                         <div className="img">
-                            <Link to=''>
-                                <img src={product1} alt='Product1' width='100%' />
+                        <Link to=''>
+                        <Swiper spaceBetween={0} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                </Swiper>
                             </Link>
-                            <div className='reaction' onClick={handleReactionClick}>
-                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            <div className="reaction-sale d-flex justify-content-end align-items-center">
+                                <div className='react-icon' onClick={handleReactionClick}>
+                                    {isLiked ? <GoHeartFill className='heart' /> : <GoHeart className='heart text-primary' />}
+                                </div>
                             </div>
-                        </div>
+                      </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
@@ -39,13 +50,20 @@ function StudyProducts() {
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
                         <div className="img">
-                            <Link to=''>
-                                <img src={product1} alt='Product1' width='100%' />
+                        <Link to=''>
+                        <Swiper spaceBetween={0} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                    <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
+                                </Swiper>
                             </Link>
-                            <div className='reaction' onClick={handleReactionClick}>
-                                {isLiked ? <GoHeartFill className='heart text-primary' /> : <GoHeart className='heart' />}
+                            <div className="reaction-sale d-flex justify-content-end align-items-center">
+                                <div className='react-icon' onClick={handleReactionClick}>
+                                    {isLiked ? <GoHeartFill className='heart' /> : <GoHeart className='heart text-primary' />}
+                                </div>
                             </div>
-                        </div>
+                      </div>
                         <div className='details py-2 px-1'>
                             <h4>Cottage - Eliezer Yaffe St.</h4>
                             <h5>Ra’anana, Israël</h5>
