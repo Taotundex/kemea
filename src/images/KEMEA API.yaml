@@ -1,0 +1,2509 @@
+openapi: 3.0.3
+info:
+  title: KEMEA API
+  version: 1.0.0
+  description: "\n    Welcome to KEMEA API, \n    A real estate api\n    "
+paths:
+  /api/v1/auth/change/email:
+    post:
+      operationId: auth_change_email_create
+      description: "\n        This endpoint allows an authenticated user to change\
+        \ their account's email address and user can change after 10 days.\n     \
+        \   The request should include the following data:\n\n        - `email_address`:\
+        \ The user's new email address.\n        - `otp`: The code sent\n        "
+      summary: Change account email address
+      tags:
+      - Email Change
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangeEmail'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChangeEmail'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangeEmail'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Email changed successfully.
+              examples:
+                SuccessfulResponse:
+                  value:
+                    status: success
+                    message: Email changed successfully.
+                  summary: Successful response
+          description: Email changed successfully.
+        '403':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: You can't use your previous email
+                code: old_email
+              examples:
+                OldEmailResponse:
+                  value:
+                    status: failure
+                    message: You can't use your previous email
+                    code: old_email
+                  summary: Old email response
+          description: You can't use your previous email
+        '400':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Invalid OTP
+                code: incorrect_otp
+              examples:
+                InvalidOTPResponse:
+                  value:
+                    status: failure
+                    message: Invalid OTP
+                    code: incorrect_otp
+                  summary: Invalid OTP response
+                ExpiredOTPResponse:
+                  value:
+                    status: failure
+                    message: OTP has expired
+                    code: expired_otp
+                  summary: Expired OTP response
+          description: OTP Error
+        '404':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Not found
+                code: non_existent
+              examples:
+                NoOtpFoundResponse:
+                  value:
+                    status: failure
+                    message: No OTP found for this account
+                    code: non_existent
+                  summary: No otp found response
+          description: Not OTP found
+  /api/v1/auth/change/forgot-password/{token}:
+    post:
+      operationId: auth_change_forgot_password_create
+      description: "\n        This endpoint allows the unauthenticated user to change\
+        \ their password after requesting for a code.\n        The request should\
+        \ include the following data:\n        - `token`: Pass in the encrypted token\
+        \ you got from the previous endpoint.\n        - `password`: The new password.\n\
+        \        - `confirm_password`: The new password again.\n        "
+      summary: Change password for forgotten password
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      tags:
+      - Password Change
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Password updated successfully.
+              examples:
+                PasswordUpdatedResponse:
+                  value:
+                    status: success
+                    message: Password updated successfully.
+                  summary: Password updated response
+          description: Password updated successfully
+  /api/v1/auth/change/new-password:
+    post:
+      operationId: auth_change_new_password_create
+      description: "\n        This endpoint allows the authenticated user to change\
+        \ their password.\n        The request should include the following data:\n\
+        \n        - `password`: The new password.\n        - `confirm_password`: The\
+        \ new password again.\n        "
+      summary: Change password for authenticated users
+      tags:
+      - Password Change
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Password updated successfully
+              examples:
+                PasswordUpdatedResponse:
+                  value:
+                    status: success
+                    message: Password updated successfully
+                  summary: Password updated response
+          description: Password updated successfully
+  /api/v1/auth/company-account/create:
+    post:
+      operationId: auth_company_account_create_create
+      description: "\n                This endpoint allows a user to register as an\
+        \ agent on the platform\n                "
+      summary: Agent Registration
+      tags:
+      - Registration
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompanyRegister'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CompanyRegister'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CompanyRegister'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompanyProfile'
+          description: Registration successful, check your email for verification.
+        '409':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                AgentConflictResponse:
+                  value:
+                    status: failure
+                    message: Account already exists and has an company profile
+                    code: already_exists
+                  summary: Agent Conflict response
+                NormalConflictResponse:
+                  value:
+                    status: failure
+                    message: Account already exists and has a normal profile
+                    code: already_exists
+                  summary: Normal Conflict response
+          description: Account already exists and has an company profile
+  /api/v1/auth/login:
+    post:
+      operationId: auth_login_create
+      description: "\n        This endpoint authenticates a registered and verified\
+        \ user and provides the necessary authentication tokens.\n        "
+      summary: Login
+      tags:
+      - Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Login'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Login'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Login'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                AgentResponse:
+                  value:
+                    status: success
+                    message: Logged in successfully
+                    data:
+                      tokens:
+                        access: token
+                        refresh: refresh token
+                      profile_data:
+                        user_id: 59af4ef1-8e58-47cf-9f1a-e7bae786b883
+                        id: 542ee57a-7a5e-4332-a9a7-4de9a775e570
+                        full_name: John Doe
+                        company_name: Doecomp
+                        email: ayflix0@gmail.com
+                        image: ''
+                        background_image: ''
+                        phone_number: '+2348099691398'
+                        license_number: '121234575'
+                        location: ''
+                        website: ''
+                  summary: Agent response
+                NormalResponse:
+                  value:
+                    status: success
+                    message: Logged in successfully
+                    data:
+                      tokens:
+                        access: token
+                        refresh: refresh token
+                      profile_data:
+                        user_id: 59af4ef1-8e58-47cf-9f1a-e7bae786b883
+                        id: 542ee57a-7a5e-4332-a9a7-4de9a775e570
+                        full_name: Doe
+                        email: a@gmail.com
+                        phone_number: '+2348099691398'
+                        image: ''
+                        date_of_birth: '2024-10-05'
+                  summary: Normal response
+          description: Logged in successfully
+        '400':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Verify your email first
+                code: invalid_credentials
+              examples:
+                UnverifiedEmailResponse:
+                  value:
+                    status: failure
+                    message: Verify your email first
+                    code: unverified_email
+                  summary: Unverified email response
+          description: Invalid credentials
+        '401':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Invalid credentials
+                code: invalid_credentials
+              examples:
+                InvalidCredentials:
+                  value:
+                    status: failure
+                    message: Invalid credentials
+                    code: invalid_credentials
+                  summary: Invalid credentials
+          description: Invalid credentials
+  /api/v1/auth/logout:
+    post:
+      operationId: auth_logout_create
+      description: "\n        This endpoint logs out an authenticated user by blacklisting\
+        \ their access token.\n        The request should include the following data:\n\
+        \n        - `refresh`: The refresh token used for authentication.\n      \
+        \  "
+      summary: Logout
+      tags:
+      - Logout
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenBlacklist'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TokenBlacklist'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TokenBlacklist'
+        required: true
+      responses:
+        '400':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Token is blacklisted
+                code: invalid_entry
+              examples:
+                BlacklistedTokenResponse:
+                  value:
+                    status: failure
+                    message: Token is blacklisted
+                    code: invalid_entry
+                  summary: Blacklisted token response
+          description: Token is blacklisted
+        '200':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Logged out successfully
+              examples:
+                LogoutSuccessfulResponse:
+                  value:
+                    status: success
+                    message: Logged out successfully
+                  summary: Logout successful response
+          description: Logged out successfully
+  /api/v1/auth/new-email/verify/code:
+    post:
+      operationId: auth_new_email_verify_code_create
+      description: "\n        This endpoint allows an authenticated user to send a\
+        \ verification code to new email they want to change to.\n        The request\
+        \ should include the following data:\n\n        - `email_address`: The user's\
+        \ new email address.\n        "
+      summary: Send email change verification code
+      tags:
+      - Email Change
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendNewEmailVerificationCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SendNewEmailVerificationCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SendNewEmailVerificationCode'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Verification code sent successfully. Please check your new
+                  email.
+              examples:
+                VerificationSuccessfulResponse:
+                  value:
+                    status: success
+                    message: Verification code sent successfully. Please check your
+                      new email.
+                  summary: Verification successful response
+          description: Verification code sent successfully. Please check your new
+            email.
+        '409':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Account with this email already exists
+                code: already_exists
+              examples:
+                ConflictResponse:
+                  value:
+                    status: failure
+                    message: Account with this email already exists
+                    code: already_exists
+                  summary: Conflict response
+          description: Account with this email already exists
+  /api/v1/auth/refresh/token:
+    post:
+      operationId: auth_refresh_token_create
+      description: "\n        This endpoint allows a user to refresh an expired access\
+        \ token.\n        The request should include the following data:\n\n     \
+        \   - `refresh`: The refresh token.\n        "
+      summary: Refresh token
+      tags:
+      - Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRefresh'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TokenRefresh'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TokenRefresh'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenRefresh'
+          description: Refreshed successfully
+  /api/v1/auth/request/forgot-password/code:
+    post:
+      operationId: auth_request_forgot_password_code_create
+      description: "\n        This endpoint allows a user to request a verification\
+        \ code to reset their password if forgotten.\n        The request should include\
+        \ the following data:\n\n        - `email`: The user's email address.\n  \
+        \      "
+      summary: Request new password code for forgot password
+      tags:
+      - Password Change
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestNewPasswordCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RequestNewPasswordCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RequestNewPasswordCode'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '404':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Account not found
+                code: non_existent
+              examples:
+                AccountNotFoundResponse:
+                  value:
+                    status: failure
+                    message: Account not found
+                    code: non_existent
+                  summary: Account not found response
+          description: Account not found
+        '200':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Password code sent successfully
+              examples:
+                PasswordCodeSentResponse:
+                  value:
+                    status: success
+                    message: Password code sent successfully
+                  summary: Password code sent response
+          description: Password code sent successfully
+  /api/v1/auth/resend/email/verify/code/resend:
+    post:
+      operationId: auth_resend_email_verify_code_resend_create
+      description: "\n        This endpoint allows a registered user to send or resend\
+        \ email verification code to their registered email address.\n        The\
+        \ request should include the following data:\n\n        - `email_address`:\
+        \ The user's email address.\n        "
+      summary: Send / resend email verification code
+      tags:
+      - Email Verification
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResendEmailVerificationCode'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ResendEmailVerificationCode'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ResendEmailVerificationCode'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Verification code sent successfully. Please check your mail.
+              examples:
+                VerificationSuccessfulResponse:
+                  value:
+                    status: success
+                    message: Verification code sent successfully. Please check your
+                      mail.
+                  summary: Verification successful response
+                AlreadyVerifiedResponse:
+                  value:
+                    status: error
+                    message: Email already verified
+                    error_code: already_verified
+                  summary: Already verified response
+          description: Verification code sent successfully. Please check your mail.
+        '404':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: User with this email not found
+                code: non_existent
+              examples:
+                EmailNotFoundResponse:
+                  value:
+                    status: failure
+                    message: User with this email not found
+                    code: non_existent
+                  summary: Email not found response
+          description: User with this email not found
+  /api/v1/auth/user-account/create:
+    post:
+      operationId: auth_user_account_create_create
+      description: "\n                This endpoint allows a user to register as a\
+        \ normal user on the platform\n                "
+      summary: User Registration
+      tags:
+      - Registration
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NormalRegister'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/NormalRegister'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/NormalRegister'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalProfile'
+          description: Registration successful, check your email for verification.
+        '409':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                AgentConflictResponse:
+                  value:
+                    status: failure
+                    message: Account already exists and has an company profile
+                    code: already_exists
+                  summary: Agent Conflict response
+                NormalConflictResponse:
+                  value:
+                    status: failure
+                    message: Account already exists and has a normal profile
+                    code: already_exists
+                  summary: Normal Conflict response
+          description: Account already exists and has an company profile
+  /api/v1/auth/user-profile/details:
+    get:
+      operationId: auth_user_profile_details_retrieve
+      description: "\n        This endpoint allows a user to retrieve his/her normal\
+        \ profile. \n        Note: Also use this endpoint for the admin section too\
+        \ for the user section\n        "
+      summary: Retrieve user profile
+      tags:
+      - Normal Profile
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                NormalProfileResponse:
+                  value:
+                    status: success
+                    message: Retrieved profile successfully
+                    data:
+                      user_id: 7ce89870-e34c-4c39-85ea-275693a997e8
+                      id: b1996656-f69d-4ae9-8bef-63e09c8de681
+                      full_name: Jop Doe
+                      email: admin@gmail.com
+                      phone_number: '+2347627322'
+                      date_of_birth: '2020-12-12'
+                      image: https://google.com
+                  summary: Normal profile response
+          description: Fetched successfully
+    patch:
+      operationId: auth_user_profile_details_partial_update
+      description: "\n        This endpoint allows a user to update his/her user profile.\n\
+        \        "
+      summary: Update user profile
+      tags:
+      - Normal Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedNormalProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedNormalProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedNormalProfile'
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                NormalProfileResponse:
+                  value:
+                    status: success
+                    message: Updated profile successfully
+                    data:
+                      user_id: 0cf8dd0c-29ca-4b95-a9c7-529993d3891f
+                      id: 0a445bca-a6d0-427e-9f36-da780132d0db
+                      full_name: John Doe
+                      company_name: Corpoann
+                      email: ayflix@gmail.com
+                      image: url
+                      background_image: url
+                      phone_number: '+23345662323'
+                      license_number: '2323232424'
+                      location: Canadsa
+                      website: htttps://google.com
+                  summary: Normal profile response
+          description: Updated profile successfully
+  /api/v1/auth/verify/email:
+    post:
+      operationId: auth_verify_email_create
+      description: "\n        This endpoint allows a registered user to verify their\
+        \ email address with an OTP.\n        The request should include the following\
+        \ data:\n\n        - `email_address`: The user's email address.\n        -\
+        \ `otp`: The otp sent to the user's email address.\n        "
+      summary: Email verification
+      tags:
+      - Email Verification
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VerifyEmail'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VerifyEmail'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VerifyEmail'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Email verification successful or already verified.
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Email verification successful
+                  summary: Success response
+                AlreadyVerifiedResponse:
+                  value:
+                    status: error
+                    message: Email already verified
+                    code: verified_user
+                  summary: Already verified response
+          description: Email verification successful or already verified.
+        '400':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Invalid OTP
+                code: incorrect_otp
+              examples:
+                InvalidOTPResponse:
+                  value:
+                    status: failure
+                    message: Invalid OTP
+                    code: incorrect_otp
+                  summary: Invalid OTP response
+                ExpiredOTPResponse:
+                  value:
+                    status: failure
+                    message: OTP has expired
+                    code: expired_otp
+                  summary: Expired OTP response
+          description: OTP Error
+        '404':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Not found
+                code: non_existent
+              examples:
+                EmailNotFoundResponse:
+                  value:
+                    status: failure
+                    message: User with this email not found
+                    code: non_existent
+                  summary: Email not found response
+                NoOtpFoundResponse:
+                  value:
+                    status: failure
+                    message: No OTP found for this account
+                    code: non_existent
+                  summary: No otp found response
+                NoOTPSecretFoundResponse:
+                  value:
+                    status: failure
+                    message: No OTP secret found for this account
+                    code: non_existent
+                  summary: No OTP secret found response
+          description: Not found
+  /api/v1/auth/verify/forgot-password/code:
+    post:
+      operationId: auth_verify_forgot_password_code_create
+      description: "\n        This endpoint allows a user to verify the verification\
+        \ code they got to reset the password if forgotten.\n        The user will\
+        \ be stored in the token which will be gotten to make sure it is the right\
+        \ user that is\n        changing his/her password\n\n        The request should\
+        \ include the following data:\n\n        - `email`: The user's email\n   \
+        \     - `otp`: The verification code sent to the user's email.\n        "
+      summary: Verify forgot password code for unauthenticated users
+      tags:
+      - Password Change
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VerifyEmail'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VerifyEmail'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VerifyEmail'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                status: success
+                message: Otp verified successfully.
+              examples:
+                OtpVerifiedResponse:
+                  value:
+                    status: success
+                    message: Otp verified successfully
+                    data: <token>
+                  summary: Otp verified response
+          description: Otp verified successfully.
+        '400':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Invalid OTP
+                code: incorrect_otp
+              examples:
+                InvalidOTPResponse:
+                  value:
+                    status: failure
+                    message: Invalid OTP
+                    code: incorrect_otp
+                  summary: Invalid OTP response
+                ExpiredOTPResponse:
+                  value:
+                    status: failure
+                    message: OTP has expired
+                    code: expired_otp
+                  summary: Expired OTP response
+          description: OTP Error
+        '404':
+          content:
+            application/json:
+              schema:
+                status: failure
+                message: Not found
+                code: non_existent
+              examples:
+                EmailNotFoundResponse:
+                  value:
+                    status: failure
+                    message: User with this email not found
+                    code: non_existent
+                  summary: Email not found response
+                NoOtpFoundResponse:
+                  value:
+                    status: failure
+                    message: No OTP found for this account
+                    code: non_existent
+                  summary: No otp found response
+                NoOTPSecretFoundResponse:
+                  value:
+                    status: failure
+                    message: No OTP secret found for this account
+                    code: non_existent
+                  summary: No OTP secret found response
+          description: Not found
+  /api/v1/property/ads/categories:
+    get:
+      operationId: property_ads_categories_retrieve
+      description: "\n        This endpoint allows an authenticated agent to retrieve\
+        \ all ad categories\n        "
+      summary: Retrieve ad categories
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved ad categories
+                    data:
+                    - id: 057dc877-064b-449a-a178-35d02cf80aa1
+                      name: Buy
+                    - id: 5680d436-a4b0-4970-badd-deb735f8dbb4
+                      name: Rent
+                  summary: Success response
+          description: Successfully retrieved ad categories
+  /api/v1/property/company-profile/details:
+    get:
+      operationId: property_company_profile_details_retrieve
+      description: "\n        This endpoint allows an authenticated agent to retrieve\
+        \ their profile alongside their listed accepted properties\n        "
+      summary: Retrieve company profile
+      parameters:
+      - in: query
+        name: features
+        schema:
+          type: array
+          items:
+            type: string
+            enum:
+            - Air Conditioner
+            - Garden
+            - Oven
+            - Pool
+        description: Features
+      - in: query
+        name: floors
+        schema:
+          type: integer
+        description: Number of floors
+      - in: query
+        name: last_24_hours
+        schema:
+          type: boolean
+        description: Filter by properties posted in the last 24 hours
+      - in: query
+        name: last_month
+        schema:
+          type: boolean
+        description: Filter by properties posted in the last month
+      - in: query
+        name: last_week
+        schema:
+          type: boolean
+        description: Filter by properties posted in the last week
+      - in: query
+        name: price_max
+        schema:
+          type: number
+          format: float
+        description: Maximum price
+      - in: query
+        name: price_min
+        schema:
+          type: number
+          format: float
+        description: Minimum price
+      - in: query
+        name: property_type
+        schema:
+          type: string
+          enum:
+          - Apartment
+          - House
+          - Villa
+        description: Type of property
+      - in: query
+        name: rooms
+        schema:
+          type: integer
+        description: Number of rooms
+      - in: query
+        name: surface_build_max
+        schema:
+          type: number
+          format: float
+        description: Maximum surface price
+      - in: query
+        name: surface_build_min
+        schema:
+          type: number
+          format: float
+        description: Minimum surface price
+      tags:
+      - Company Profile
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved company profile
+                    data:
+                      agent_info:
+                        user_id: 59af4ef1-8e58-47cf-9f1a-e7bae786b883
+                        id: 542ee57a-7a5e-4332-a9a7-4de9a775e570
+                        full_name: John Doe
+                        company_name: John Realtor
+                        email: admin@gmail.com
+                        image: /media/static/profile_images/Screenshot_from_2024-05-12_17-43-24_GbVly18.png
+                        background_image: /media/static/profile_bg_images/Screenshot_from_2024-05-12_17-43-48_SUuDb6j.png
+                        phone_number: 0803764632
+                        license_number: JHFD77WJK
+                        location: Rub
+                        website: https://google.com
+                      total_number_of_ads: 1
+                      ads:
+                      - property:
+                          id: 8e99122a-6646-4d72-bb94-872ba44bf953
+                          media_urls:
+                          - /media/property_media/7179060_1F5N9rZ.jpg
+                          - /media/property_media/7179095_Lxd9Y9v.jpg
+                          - /media/property_media/7179104_oWThtIz.jpg
+                          discounted_price: 926250
+                          lister: 59af4ef1-8e58-47cf-9f1a-e7bae786b883
+                          lister_name: admin@gmail.com
+                          property_type: 6aec02ba-8c5c-445d-bca4-6d3a555095b5
+                          property_type_name: Apartment
+                          property_state: c3b37a05-3978-452d-b118-35ec6e754613
+                          property_state_name: Renovated
+                          ad_category: 057dc877-064b-449a-a178-35d02cf80aa1
+                          ad_category_name: Buy
+                          features:
+                          - dab34afa-5a47-4834-8838-3e443d0818ed
+                          feature_names:
+                          - Pool
+                          name: Crazy Boe
+                          city: ibadan
+                          floors: 10
+                          ground_level: true
+                          street: lautech street
+                          street_number: 9
+                          area: lautech area
+                          number_of_rooms: 10
+                          surface_build: 800
+                          total_surface: 9000
+                          price: 975000
+                          discount: 5
+                          entry_date: '2023-09-12'
+                          number_of_balcony: 1
+                          car_parking: 5
+                          description: this is a new thing
+                          matterport_view_link: https://dertuyio.com,
+                          name_of_lister: Montan Doe
+                          reachable_phone_number: '+234902245678'
+                          ad_status: APPROVED
+                          terminated: false
+                        first_media_url: /media/property_media/7179060_1F5N9rZ.jpg
+                  summary: Success response
+          description: Successfully retrieved company profile
+    patch:
+      operationId: property_company_profile_details_partial_update
+      description: "\n        This endpoint allows an authenticated agent to update\
+        \ their profile\n        "
+      summary: Update company profile
+      tags:
+      - Company Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedCompanyProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedCompanyProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedCompanyProfile'
+      security:
+      - jwtAuth: []
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully updated company profile
+                    data:
+                      user_id: 59af4ef1-8e58-47cf-9f1a-e7bae786b883
+                      id: 542ee57a-7a5e-4332-a9a7-4de9a775e570
+                      full_name: John Fow
+                      company_name: John Realtor
+                      email: ayflix0@gmail.com
+                      image: /media/static/profile_images/Screenshot_from_2024-05-12_17-43-24_GbVly18.png
+                      background_image: /media/static/profile_bg_images/Screenshot_from_2024-05-12_17-43-48_SUuDb6j.png
+                      phone_number: 0803764632
+                      license_number: JHFD77WJK
+                      location: Rub
+                      website: https://google.com
+                  summary: Success response
+          description: Successfully updated company profile
+  /api/v1/property/company/agent/{agent_id}/update:
+    patch:
+      operationId: property_company_agent_update_partial_update
+      description: "\n        This endpoint allows an authenticated company to update\
+        \ its workers agent profile\n        "
+      summary: Update company agent
+      parameters:
+      - in: path
+        name: agent_id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Company Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedRegisterCompanyAgent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedRegisterCompanyAgent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedRegisterCompanyAgent'
+      security:
+      - jwtAuth: []
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully updated company agent
+                    data:
+                      full_name: GadDam
+                      phone_number: '+4456788'
+                      profile_picture: /media/static/profile_images/company_agents/Screenshot_from_2024-05-12_17-43-24_hDaIgcA.png
+                  summary: Success response
+          description: Successfully updated company agent
+  /api/v1/property/company/agents/all:
+    get:
+      operationId: property_company_agents_all_retrieve
+      description: "\n        This endpoint allows an authenticated company to retrieve\
+        \ all their company agents\n        "
+      summary: Retrieve all company agents
+      tags:
+      - Company Profile
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved company agents
+                    data:
+                    - id: 47442d0c-779d-4a86-afd9-0434789f9cad
+                      full_name: Baba Doe
+                      phone_number: '+2349584745323'
+                      profile_picture: /media/static/profile_images/company_agents/Screenshot_from_2024-05-12_17-43-24_hDaIgcA.png
+                    - id: 4a961d6b-6c57-40c0-9910-45d7c7b6e124
+                      full_name: Baba
+                      phone_number: '+23495847453'
+                      profile_picture: /media/static/profile_images/company_agents/Screenshot_from_2024-05-12_17-43-24.png
+                  summary: Success response
+          description: Successfully retrieved company agents
+  /api/v1/property/company/dashboard:
+    get:
+      operationId: property_company_dashboard_retrieve
+      description: "\n        This endpoint allows an authenticated agent to view\
+        \ their dashboard that contains their active property ads\n        "
+      summary: Agent dashboard
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved agent dashboard
+                    data:
+                      full_name: Ayomide Alonge
+                      num_of_property_ads: 1
+                      all_property_ads:
+                      - id: 691f0273-4c27-40ad-a809-3d7d0fb968d1
+                        name: Property 10
+                        property_type__name: Apartment
+                        ad_category__name: Buy
+                        ad_status: PENDING
+                  summary: Success response
+          description: Successfully retrieved agent dashboard
+  /api/v1/property/create/ad:
+    post:
+      operationId: property_create_ad_create
+      description: "\n        This endpoint allows an authenticated agent to create\
+        \ a new property ad\n        Use this endpoint for both buy and sell.\n  \
+        \      "
+      summary: Create property ad
+      tags:
+      - Agent Dashboard
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreatePropertyAd'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CreatePropertyAd'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CreatePropertyAd'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PropertyAd'
+          description: Successfully created property ad
+        '409':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                ConflictResponse:
+                  value:
+                    status: failure
+                    message: Property already exists
+                    code: already_exists
+                  summary: Conflict response
+          description: Property already exists
+  /api/v1/property/create/agents:
+    post:
+      operationId: property_create_agents_create
+      description: "\n        This endpoints allows a company to register all agents\
+        \ that are working for them\n        "
+      summary: Register company agents
+      tags:
+      - Company Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterCompanyAgent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RegisterCompanyAgent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RegisterCompanyAgent'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully registered company agent
+                    data:
+                      company_id: 542ee57a-7a5e-4332-a9a7-4de9a775e570
+                      company_name: Doe Realtor
+                      full_name: Baba
+                      phone_number: '+23495847453'
+                      image: /media/static/profile_images/company_agents/Screenshot_from_2024-05-12_17-43-24.png
+                  summary: Success response
+          description: Successfully registered company agent
+  /api/v1/property/dashboard/search:
+    get:
+      operationId: property_dashboard_search_retrieve
+      description: "\n        This endpoint allows an authenticated agent to search\
+        \ their dashboard that contains their active property ads\n        "
+      summary: Search agent dashboard
+      parameters:
+      - in: query
+        name: search
+        schema:
+          type: string
+        description: Search query
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved searched results
+                    data:
+                    - id: 8e99122a-6646-4d72-bb94-872ba44bf953
+                      name: Crazy Boe
+                      property_type__name: Apartment
+                      ad_category__name: Buy
+                      ad_status: PENDING
+                    - id: dd4f6e39-a852-4687-8c90-2b2917169530
+                      name: Hanna Montana
+                      property_type__name: Apartment
+                      ad_category__name: Buy
+                      ad_status: PENDING
+                    - id: 691f0273-4c27-40ad-a809-3d7d0fb968d1
+                      name: Property 10
+                      property_type__name: Apartment
+                      ad_category__name: Buy
+                      ad_status: PENDING
+                  summary: Success response
+          description: Successfully retrieved search results
+  /api/v1/property/favorite/all:
+    get:
+      operationId: property_favorite_all_retrieve
+      description: "\n        This endpoint allows an authenticated user to retrieve\
+        \ all their favorite properties\n        "
+      summary: Retrieve all favorite properties
+      tags:
+      - Favorites
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved favorite properties
+                    data:
+                    - media_urls:
+                      - /media/property_media/7179060_1F5N9rZ.jpg
+                      - /media/property_media/7179095_Lxd9Y9v.jpg
+                      - /media/property_media/7179104_oWThtIz.jpg
+                      discounted_price: 926250
+                      lister: admin@gmail.com
+                      lister_name: John Doe
+                      property_type: 6aec02ba-8c5c-445d-bca4-6d3a555095b5
+                      property_type_name: Apartment
+                      property_state: c3b37a05-3978-452d-b118-35ec6e754613
+                      property_state_name: Renovated
+                      ad_category: 057dc877-064b-449a-a178-35d02cf80aa1
+                      ad_category_name: Buy
+                      features:
+                      - dab34afa-5a47-4834-8838-3e443d0818ed
+                      feature_names:
+                      - Pool
+                  summary: Success response
+          description: Successfully retrieved favorite properties
+  /api/v1/property/favorite/properties/{id}:
+    post:
+      operationId: property_favorite_properties_create
+      description: "\n        This endpoint allows an authenticated user to add a\
+        \ property to their favorite properties\n        "
+      summary: Add property to favorite properties
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Favorites
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully added property to favorites
+                  summary: Success response
+          description: Successfully added property to favorites
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                ErrorResponse:
+                  value:
+                    status: failure
+                    message: Property not found
+                    code: non_existent
+                  summary: Error response
+          description: Property not found
+        '409':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                ConflictResponse:
+                  value:
+                    status: failure
+                    message: Property already exists in favorites
+                    code: already_exists
+                  summary: Conflict response
+          description: Property already exists in favorites
+    delete:
+      operationId: property_favorite_properties_destroy
+      description: "\n        This endpoint allows an authenticated user to delete\
+        \ a property from their favorite properties\n        "
+      summary: Delete property from favorite properties
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Favorites
+      security:
+      - jwtAuth: []
+      responses:
+        '204':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully deleted property to favorites
+                  summary: Success response
+          description: Successfully deleted property to favorites
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                ErrorResponse:
+                  value:
+                    status: failure
+                    message: Property not found in favorites list
+                    code: non_existent
+                  summary: Error response
+          description: Property not found
+  /api/v1/property/features:
+    get:
+      operationId: property_features_retrieve
+      description: "\n        This endpoint allows an authenticated agent to retrieve\
+        \ all property features\n        "
+      summary: Retrieve property features
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved property features
+                    data:
+                    - id: 7d288e86-0db7-486e-b80a-106f267f0ffe
+                      name: Storeroom
+                    - id: c6e1f24f-c7ee-417b-85d8-3e9baac54874
+                      name: Terrace
+                    - id: dab34afa-5a47-4834-8838-3e443d0818ed
+                      name: Pool
+                    - id: 3e6e7296-3ca4-4757-a252-ce0f34452162
+                      name: Garden
+                    - id: cf4a37ea-71ee-4b0b-a0f7-2b711353c755
+                      name: On the street
+                    - id: 81bad5cf-875a-4654-b1bd-cfa93b6924cb
+                      name: Elevator
+                    - id: 1c8818f3-3f6f-48e8-9f70-24d729219eeb
+                      name: Wardrobes
+                    - id: bf9bb2af-a162-4872-aafa-533d15fcbd03
+                      name: Air-Conditioner
+                  summary: Success response
+          description: Successfully retrieved property features
+  /api/v1/property/property/details/{id}:
+    get:
+      operationId: property_property_details_retrieve
+      description: "\n            This endpoint allows an authenticated user to retrieve\
+        \ a property ad details\n            "
+      summary: Retrieve property ad details
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PropertyAd'
+          description: Successfully retrieved property ad
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                ErrorResponse:
+                  value:
+                    status: failure
+                    message: Property not found
+                    code: non_existent
+                  summary: Error response
+          description: Property not found
+  /api/v1/property/property/filter/agent:
+    get:
+      operationId: property_property_filter_agent_retrieve
+      description: This endpoint allows an authenticated normal user to filter properties.
+      summary: Filter property ads
+      parameters:
+      - in: query
+        name: ad_category
+        schema:
+          type: string
+        description: Type of property ad
+      tags:
+      - Property
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: Successfully retrieved filtered properties
+  /api/v1/property/retrieve/update/delete/ad/{id}:
+    get:
+      operationId: property_retrieve_update_delete_ad_retrieve
+      description: "\n            This endpoint allows an authenticated agent to retrieve\
+        \ a property ad details\n            Use this endpoint for both buy and sell\n\
+        \            "
+      summary: Retrieve property ad
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PropertyAd'
+          description: Successfully retrieved property ad
+    patch:
+      operationId: property_retrieve_update_delete_ad_partial_update
+      description: "\n        This endpoint allows an authenticated agent to update\
+        \ a property ad\n        Use this endpoint for both buy and sell\n        "
+      summary: Update property ad
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Agent Dashboard
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedCreatePropertyAd'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedCreatePropertyAd'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedCreatePropertyAd'
+      security:
+      - jwtAuth: []
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PropertyAd'
+          description: Successfully updated property ad
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                OtherError:
+                  value:
+                    status: failure
+                    message: An error occurred while updating the property ad
+                    code: other_error
+                  summary: Other error
+          description: An error occurred while updating the property ad
+    delete:
+      operationId: property_retrieve_update_delete_ad_destroy
+      description: "\n            This endpoint allows an authenticated agent to delete\
+        \ a property ad\n            "
+      summary: Delete property ad
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '204':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully deleted property ad
+                  summary: Success response
+          description: Successfully deleted property ad
+  /api/v1/property/state:
+    get:
+      operationId: property_state_retrieve
+      description: "\n        This endpoint allows an authenticated agent to retrieve\
+        \ all property states\n        "
+      summary: Retrieve property states
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved property states
+                    data:
+                    - id: 37b76a58-1d46-4799-9d18-ec66d816effc
+                      name: Good condition
+                    - id: 22f06048-4afc-4cb1-accc-66580c0618ec
+                      name: New
+                    - id: c3b37a05-3978-452d-b118-35ec6e754613
+                      name: Renovated
+                  summary: Success response
+          description: Successfully retrieved property states
+  /api/v1/property/terminate/ad/{property_id}:
+    get:
+      operationId: property_terminate_ad_retrieve
+      description: "\n        This endpoint allows an authenticated agent to terminate\
+        \ an active property ad\n        "
+      summary: Terminate property ad
+      parameters:
+      - in: path
+        name: property_id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully terminated property ad
+                  summary: Success response
+          description: Successfully terminated property ad
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                BadRequest:
+                  value:
+                    status: failure
+                    message: Ad already terminated
+                    code: not_allowed
+                  summary: Bad request
+          description: Ad already terminated
+  /api/v1/property/types:
+    get:
+      operationId: property_types_retrieve
+      description: "\n        This endpoint allows an authenticated agent to retrieve\
+        \ all property types\n        "
+      summary: Retrieve property types
+      tags:
+      - Agent Dashboard
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                SuccessResponse:
+                  value:
+                    status: success
+                    message: Successfully retrieved property types
+                    data:
+                    - id: 68d42228-703f-4f8c-8843-6ebc452198a7
+                      name: Villa
+                    - id: 6aec02ba-8c5c-445d-bca4-6d3a555095b5
+                      name: Apartment
+                    - id: 6501bbd6-c66d-440b-9b9d-38d18547dbfa
+                      name: House
+                  summary: Success response
+          description: Successfully retrieved property types
+  /api/v1/social_auth/google-auth:
+    post:
+      operationId: social_auth_google_auth_create
+      description: "\n                This endpoint allows users to authenticate through\
+        \ Google and automatically creates a profile for them if it doesn't exist.\n\
+        \                "
+      summary: Google Authentication Endpoint for registering and logging in
+      tags:
+      - Social Authentication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GoogleSocialAuth'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GoogleSocialAuth'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GoogleSocialAuth'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                Success:
+                  value:
+                    status: success
+                    message: Successfully authenticated
+                    data:
+                      tokens:
+                        access: <access-token>
+                        refresh: <refresh-token>
+                      data:
+                        user_id: 1ef90d88-5d53-4120-b1b3-0f6066a08994
+                        id: a8e4f007-ad35-435e-b43c-6e37b35f92f3
+                        full_name: John Doe
+                        username: john
+                        date_of_birth: ''
+                        email: johndoe@gmail.com
+                        avatar: ''
+                        referral_code: KZYLH731OI
+                        followers: 0
+          description: Success
+        '500':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+              examples:
+                Error:
+                  value:
+                    status: failure
+                    message: Unable to retrieve user data. Please try again later.
+                    code: server_error
+          description: Server Error
+components:
+  schemas:
+    AdStatusEnum:
+      enum:
+      - PENDING
+      - APPROVED
+      - REJECTED
+      type: string
+      description: |-
+        * `PENDING` - Pending
+        * `APPROVED` - Approved
+        * `REJECTED` - Rejected
+    ChangeEmail:
+      type: object
+      properties:
+        email:
+          type: string
+        otp:
+          type: integer
+      required:
+      - email
+      - otp
+    ChangePassword:
+      type: object
+      properties:
+        password:
+          type: string
+          writeOnly: true
+          maxLength: 50
+          minLength: 6
+      required:
+      - password
+    CompanyProfile:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          readOnly: true
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        full_name:
+          type: string
+        company_name:
+          type: string
+        email:
+          type: string
+          format: email
+          readOnly: true
+        image:
+          type: string
+          format: uri
+        background_image:
+          type: string
+          format: uri
+        phone_number:
+          type: string
+        license_number:
+          type: string
+        location:
+          type: string
+        website:
+          type: string
+      required:
+      - background_image
+      - company_name
+      - email
+      - full_name
+      - id
+      - image
+      - license_number
+      - location
+      - phone_number
+      - user_id
+      - website
+    CompanyRegister:
+      type: object
+      properties:
+        company_name:
+          type: string
+        full_name:
+          type: string
+        licence_number:
+          type: string
+        email:
+          type: string
+        phone_number:
+          type: string
+        password:
+          type: string
+          writeOnly: true
+      required:
+      - company_name
+      - email
+      - full_name
+      - licence_number
+      - password
+      - phone_number
+    CreatePropertyAd:
+      type: object
+      properties:
+        property_type:
+          type: string
+          format: uuid
+        property_state:
+          type: string
+          format: uuid
+        ad_category:
+          type: string
+          format: uuid
+        name:
+          type: string
+        city:
+          type: string
+        floors:
+          type: integer
+        ground_level:
+          type: boolean
+          default: false
+        street:
+          type: string
+        street_number:
+          type: string
+        area:
+          type: string
+        number_of_rooms:
+          type: integer
+        surface_build:
+          type: integer
+        total_surface:
+          type: integer
+        price:
+          type: number
+          format: double
+          maximum: 100000000
+          minimum: -100000000
+          exclusiveMaximum: true
+          exclusiveMinimum: true
+        discount:
+          type: integer
+        entry_date:
+          type: string
+          format: date
+        number_of_balcony:
+          type: integer
+        car_parking:
+          type: integer
+        features:
+          type: array
+          items:
+            type: string
+            format: uuid
+        description:
+          type: string
+        matterport_view_link:
+          type: string
+        media:
+          type: array
+          items:
+            type: string
+            format: uri
+          maxItems: 30
+        name_of_lister:
+          type: string
+        reachable_phone_number:
+          type: string
+      required:
+      - ad_category
+      - area
+      - car_parking
+      - city
+      - description
+      - discount
+      - entry_date
+      - features
+      - floors
+      - matterport_view_link
+      - media
+      - name
+      - name_of_lister
+      - number_of_balcony
+      - number_of_rooms
+      - price
+      - property_state
+      - property_type
+      - reachable_phone_number
+      - street
+      - street_number
+      - surface_build
+      - total_surface
+    GoogleSocialAuth:
+      type: object
+      properties:
+        id_token:
+          type: string
+      required:
+      - id_token
+    Login:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+          writeOnly: true
+        is_agent:
+          type: boolean
+          default: false
+      required:
+      - email
+      - password
+    NormalProfile:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          readOnly: true
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        full_name:
+          type: string
+        email:
+          type: string
+          format: email
+          readOnly: true
+        phone_number:
+          type: string
+        date_of_birth:
+          type: string
+          format: date
+        image:
+          type: string
+          format: uri
+      required:
+      - date_of_birth
+      - email
+      - full_name
+      - id
+      - image
+      - phone_number
+      - user_id
+    NormalRegister:
+      type: object
+      properties:
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+        phone_number:
+          type: string
+        password:
+          type: string
+          writeOnly: true
+      required:
+      - email
+      - first_name
+      - last_name
+      - password
+      - phone_number
+    PatchedCompanyProfile:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          readOnly: true
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        full_name:
+          type: string
+        company_name:
+          type: string
+        email:
+          type: string
+          format: email
+          readOnly: true
+        image:
+          type: string
+          format: uri
+        background_image:
+          type: string
+          format: uri
+        phone_number:
+          type: string
+        license_number:
+          type: string
+        location:
+          type: string
+        website:
+          type: string
+    PatchedCreatePropertyAd:
+      type: object
+      properties:
+        property_type:
+          type: string
+          format: uuid
+        property_state:
+          type: string
+          format: uuid
+        ad_category:
+          type: string
+          format: uuid
+        name:
+          type: string
+        city:
+          type: string
+        floors:
+          type: integer
+        ground_level:
+          type: boolean
+          default: false
+        street:
+          type: string
+        street_number:
+          type: string
+        area:
+          type: string
+        number_of_rooms:
+          type: integer
+        surface_build:
+          type: integer
+        total_surface:
+          type: integer
+        price:
+          type: number
+          format: double
+          maximum: 100000000
+          minimum: -100000000
+          exclusiveMaximum: true
+          exclusiveMinimum: true
+        discount:
+          type: integer
+        entry_date:
+          type: string
+          format: date
+        number_of_balcony:
+          type: integer
+        car_parking:
+          type: integer
+        features:
+          type: array
+          items:
+            type: string
+            format: uuid
+        description:
+          type: string
+        matterport_view_link:
+          type: string
+        media:
+          type: array
+          items:
+            type: string
+            format: uri
+          maxItems: 30
+        name_of_lister:
+          type: string
+        reachable_phone_number:
+          type: string
+    PatchedNormalProfile:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          readOnly: true
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        full_name:
+          type: string
+        email:
+          type: string
+          format: email
+          readOnly: true
+        phone_number:
+          type: string
+        date_of_birth:
+          type: string
+          format: date
+        image:
+          type: string
+          format: uri
+    PatchedRegisterCompanyAgent:
+      type: object
+      properties:
+        full_name:
+          type: string
+        phone_number:
+          type: string
+        profile_picture:
+          type: string
+          format: uri
+    PropertyAd:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        media_urls:
+          type: string
+          readOnly: true
+        discounted_price:
+          type: string
+          readOnly: true
+        lister:
+          type: string
+          format: uuid
+        lister_name:
+          type: string
+          readOnly: true
+        property_type:
+          type: string
+          format: uuid
+        property_type_name:
+          type: string
+          readOnly: true
+        property_state:
+          type: string
+          format: uuid
+        property_state_name:
+          type: string
+          readOnly: true
+        ad_category:
+          type: string
+          format: uuid
+        ad_category_name:
+          type: string
+          readOnly: true
+        features:
+          type: array
+          items:
+            type: string
+            format: uuid
+        feature_names:
+          type: array
+          items:
+            type: string
+        name:
+          type: string
+          maxLength: 255
+        city:
+          type: string
+          maxLength: 255
+        floors:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        ground_level:
+          type: boolean
+        street:
+          type: string
+          maxLength: 255
+        street_number:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        area:
+          type: string
+          maxLength: 255
+        number_of_rooms:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        surface_build:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        total_surface:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        price:
+          type: number
+          format: double
+          maximum: 100000000
+          minimum: -100000000
+          exclusiveMaximum: true
+          exclusiveMinimum: true
+        discount:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        entry_date:
+          type: string
+          format: date
+          nullable: true
+        number_of_balcony:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        car_parking:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        description:
+          type: string
+        matterport_view_link:
+          type: string
+          nullable: true
+          maxLength: 255
+        name_of_lister:
+          type: string
+          nullable: true
+          maxLength: 255
+        reachable_phone_number:
+          type: string
+          nullable: true
+          maxLength: 255
+        ad_status:
+          $ref: '#/components/schemas/AdStatusEnum'
+        terminated:
+          type: boolean
+      required:
+      - ad_category
+      - ad_category_name
+      - area
+      - city
+      - description
+      - discounted_price
+      - feature_names
+      - features
+      - id
+      - lister
+      - lister_name
+      - media_urls
+      - name
+      - price
+      - property_state
+      - property_state_name
+      - property_type
+      - property_type_name
+      - street
+    RegisterCompanyAgent:
+      type: object
+      properties:
+        full_name:
+          type: string
+        phone_number:
+          type: string
+        profile_picture:
+          type: string
+          format: uri
+      required:
+      - full_name
+      - phone_number
+      - profile_picture
+    RequestNewPasswordCode:
+      type: object
+      properties:
+        email:
+          type: string
+      required:
+      - email
+    ResendEmailVerificationCode:
+      type: object
+      properties:
+        email:
+          type: string
+      required:
+      - email
+    SendNewEmailVerificationCode:
+      type: object
+      properties:
+        email:
+          type: string
+      required:
+      - email
+    TokenBlacklist:
+      type: object
+      properties:
+        refresh:
+          type: string
+          writeOnly: true
+      required:
+      - refresh
+    TokenRefresh:
+      type: object
+      properties:
+        access:
+          type: string
+          readOnly: true
+        refresh:
+          type: string
+          writeOnly: true
+      required:
+      - access
+      - refresh
+    VerifyEmail:
+      type: object
+      properties:
+        email:
+          type: string
+        otp:
+          type: integer
+      required:
+      - email
+      - otp
+  securitySchemes:
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
