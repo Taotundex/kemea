@@ -1,5 +1,5 @@
 import React from 'react'
-import ProHeading from '../HEADING/ProHeading'
+import ProHeading from '../../HEADING/ProHeading'
 import Notification from './Notification'
 
 function MyNotification() {

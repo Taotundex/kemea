@@ -1,19 +1,19 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Property.css'
-import disable from '../images/disable.svg'
-import elevator from '../images/elevator.svg'
-import renovated from '../images/renovated.svg'
-import airconditioner from '../images/airconditioner.svg'
-import furniture from '../images/furniture.svg'
-import mamad from '../images/mamad.svg'
-import bars from '../images/bars.svg'
-import unit from '../images/unit.svg'
-import mazgan from '../images/mazgan.svg'
-import heater from '../images/heater.svg'
-import kitchen from '../images/kitchen.svg'
-import storage from '../images/storage.svg'
-import trash from '../images/trash.svg'
-import add from '../images/add.svg'
+import disable from '../../images/disable.svg'
+import elevator from '../../images/elevator.svg'
+import renovated from '../../images/renovated.svg'
+import airconditioner from '../../images/airconditioner.svg'
+import furniture from '../../images/furniture.svg'
+import mamad from '../../images/mamad.svg'
+import bars from '../../images/bars.svg'
+import unit from '../../images/unit.svg'
+import mazgan from '../../images/mazgan.svg'
+import heater from '../../images/heater.svg'
+import kitchen from '../../images/kitchen.svg'
+import storage from '../../images/storage.svg'
+import trash from '../../images/trash.svg'
+import add from '../../images/add.svg'
 import { HiOutlineBuildingOffice2 } from 'react-icons/hi2'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,9 +21,22 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
 import ReactCountryFlag from 'react-country-flag'
+import $ from 'jquery';
 // import '../ACCOUNT/Account.css'
 
 function RentProperty() {
+    useEffect(() => {
+      $('.select2').select2();
+  
+      return () => {
+        $('.select2').each(function () {
+          if ($(this).data('select2')) {
+            $(this).select2('destroy');
+          }
+        });
+      };
+    }, []);
+
     const [countryCode, setCountryCode] = useState('');
 
   const handleCountryChange = (event) => {
@@ -49,12 +62,12 @@ function RentProperty() {
             <Swiper ref={swiperRef} pagination={{ type: 'progressbar' }} className="mySwiper">
                 <SwiperSlide>
                     <h5><b>Step 1 - </b>Property’s address</h5>
-                    <form action="" className='py-5'>
+                    <form action="" className='py-5 select'>
                         <div className="row gx-5">
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="What type of property ?*">What type of property ?*</label>
-                                    <select name="propertyType" id="propertyType">
+                                    <select className='select2' name="propertyType" id="propertyType">
                                         <option value="apartment" className='d-flex align-items-center gap-2'>
                                             <HiOutlineBuildingOffice2 />Apartment
                                         </option>
@@ -64,7 +77,7 @@ function RentProperty() {
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="State of the property*">State of the property*</label>
-                                    <select name="propertyState" id="propertyState">
+                                    <select className='select2' name="propertyState" id="propertyState">
                                         <option value="renovated">
                                             Renovated
                                         </option>
@@ -103,7 +116,7 @@ function RentProperty() {
                                         on
                                         <input type="text" name="ouOf" id="ouOf" placeholder='12' />
                                     </div>
-                                    <label htmlFor="ground floor" className='gap-1'>
+                                    <label htmlFor="ground floor" className='d-flex gap-1'>
                                         <input type="checkbox" name="groundfloor" id="groundfloor" checked />
                                         Ground floor
                                     </label>
@@ -112,7 +125,7 @@ function RentProperty() {
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Area*">Area*</label>
-                                    <select name="area" id="area">
+                                    <select className='select2' name="area" id="area">
                                         <option value="south">
                                             South Est
                                         </option>
@@ -140,7 +153,7 @@ function RentProperty() {
                             <div className="col col-lg-5 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Number of rooms*">Number of rooms*</label>
-                                    <select name="roomsNumber" id="roomsNumber">
+                                    <select className='select2' name="roomsNumber" id="roomsNumber">
                                         <option value="0">
                                             0
                                         </option>
@@ -344,7 +357,7 @@ function RentProperty() {
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Number of payments*">Number of payments*</label>
-                                    <select name="payments" id="payments">
+                                    <select className='select2' name="payments" id="payments">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                     </select>
@@ -471,7 +484,7 @@ function RentProperty() {
                                                     </div>
                                                 )}
                                             </div>
-                                            <select onChange={handleCountryChange}>
+                                            <select className='select2' style={{border: 'none  !important'}} onChange={handleCountryChange}>
                                                 <option > ----- </option>
                                                 <option value="US">+1</option>
                                                 <option value="CA">+1</option>
@@ -484,7 +497,7 @@ function RentProperty() {
                             </div>
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
-                                    <label htmlFor="confirm">
+                                    <label htmlFor="confirm" className='d-flex gap-2'>
                                         <input type="checkbox" name="confirm" id="confirm" checked />
                                         I confirm the receipt of advertising mail related to the ad I published on the Kemea website
                                     </label>
@@ -492,7 +505,7 @@ function RentProperty() {
                             </div>
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
-                                    <label htmlFor="terms">
+                                    <label htmlFor="terms" className='d-flex gap-2'>
                                         <input type="checkbox" name="terms" id="terms" checked />
                                         I have read and agreed the <Link className='text-decoration-none' to='/terms-and-conditions'> Terms & Conditions</Link>
                                     </label>
@@ -500,7 +513,7 @@ function RentProperty() {
                             </div>
                         </div>
                         <div className="input">
-                            <label htmlFor="update">
+                            <label htmlFor="update" className='d-flex gap-2'>
                                 <input type="checkbox" name="update" id="update" />
                                 I would love to receive updates, publications, suggestions or tips regarding the Kemea bulletin board
                             </label>
@@ -512,7 +525,7 @@ function RentProperty() {
                                 <IoIosArrowBack />Back
                             </button>
                         {/* </Link> */}
-                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center justify-content-center bg-primary">
+                        <button style={{padding: '0 75px', border: '1px solid transparent !important'}} className="gap-1 d-flex align-items-center justify-content-center bg-primary">
                             Send<IoIosArrowForward />
                         </button>
                     </div>

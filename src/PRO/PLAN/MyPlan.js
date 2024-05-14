@@ -1,6 +1,6 @@
 import React from 'react'
 import Plan from './Plan'
-import ProHeading from '../HEADING/ProHeading'
+import ProHeading from '../../HEADING/ProHeading'
 
 function MyPlan() {
   return (

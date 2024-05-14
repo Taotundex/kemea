@@ -12,14 +12,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Heading() {
   return (
     <div>
-        <Navbar expand="lg" className="py-3 nav">
+        <Navbar expand="lg" className="py-3 nav text-center">
             <Container>
-                <Navbar.Brand as={Link} to="/home" className='me-lg-5 me-0'><img src={logo} alt='Logo' /></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/" className='me-lg-5 me-0'><img src={logo} alt='Logo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav className="me-auto my-2 my-lg-0">
                         <NavDropdown className='mx-3' title="Buy" id="navbarScrollingDropdown">
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/home">Homes for Sales</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/">Homes for Sales</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/new-projects">New Projects</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="">Exceptional properties</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
@@ -37,8 +37,8 @@ function Heading() {
                                 <div className="col col-4">
                                     <div className="landlords">
                                         <h5>Landlords</h5>
-                                        <NavDropdown.Item className='navdrop-items' as={Link} to="/sell-out">Sell out</NavDropdown.Item>
-                                        <NavDropdown.Item className='navdrop-items' as={Link} to="/rent-out">Rent out</NavDropdown.Item>
+                                        <NavDropdown.Item className='navdrop-items' as={Link} to="">Sell out</NavDropdown.Item>
+                                        <NavDropdown.Item className='navdrop-items' as={Link} to="">Rent out</NavDropdown.Item>
                                     </div>
                                 </div>
                                 <div className="col col-8">

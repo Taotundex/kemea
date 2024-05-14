@@ -1,7 +1,7 @@
 import React from 'react'
 import { GoPlus } from 'react-icons/go'
 import { RiSearchLine } from 'react-icons/ri'
-import image from '../images/image.png'
+import image from '../../images/image.png'
 import './ProStyle.css'
 import { PiHouseFill } from 'react-icons/pi'
 import { GiHourglass } from 'react-icons/gi'
@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 function ProHome() {
   return (
-    <div className='pro'>
+    <div className='pro' style={{marginTop: '70px'}}>
         <h2 className='header'>
             <div className="container py-5">
                 We are happy to have you back <span>David Doe</span>

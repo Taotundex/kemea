@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './Promote.css';
 import { IoIosArrowBack, IoIosArrowForward, IoMdAlarm } from 'react-icons/io';
-import RentoutImg from '../images/rent-out-img.png';
+import RentoutImg from '../../images/rent-out-img.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';

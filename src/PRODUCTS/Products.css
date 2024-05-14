@@ -16,10 +16,19 @@
     border-radius: 10px;
     z-index: 0 !important;
 }
-.card .reaction-sale p {
+.card .reaction-sale{
+    z-index: 1000000 !important;
     position: absolute;
-    top: 15px;
-    left: 20px;
+    top: 12.5%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 90%;
+}
+.card .linked {
+    /* z-index: -1 !important; */
+    position: relative;
+}
+.card .reaction-sale p {
     font-size: 12px;
     color: white;
     padding: 5px 10px;
@@ -27,9 +36,10 @@
     background: #1DBF73;
 }
 .card .img .heart{
-    position: absolute;
+    margin-top: -15px;
+    /* position: absolute;
     top: 20px;
-    right: 20px;
+    right: 20px; */
     font-size: 25px;
     color: white;
 }

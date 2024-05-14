@@ -122,7 +122,13 @@
     padding: 0 15px;
     outline: none;
 }
-
+.navdrop-items {
+    color: #191C1F !important;
+}
+.navdrop-items:hover {
+    background: transparent !important;
+    color: #191C1F !important;
+}
 
 
 @media screen and (max-width: 767px) {

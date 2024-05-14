@@ -1,9 +1,9 @@
 import React from 'react'
-import '../HOME/HomeContent.css'
+import '../../HOME/HomeContent.css'
 import Container from 'react-bootstrap/Container';
-import RentFavorites from '../PRODUCTS/RentFavorites';
-import SellFavorites from '../PRODUCTS/SellFavorites';
-import ShortTermFavorites from '../PRODUCTS/ShortTermFavorites';
+import RentFavorites from '../../PRODUCTS/RentFavorites';
+import SellFavorites from '../../PRODUCTS/SellFavorites';
+import ShortTermFavorites from '../../PRODUCTS/ShortTermFavorites';
 
 function Favorites() {
   return (

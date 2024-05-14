@@ -1,5 +1,5 @@
 import React from 'react'
-import ProHeading from '../HEADING/ProHeading'
+import ProHeading from '../../HEADING/ProHeading'
 import ProHome from './ProHome'
 
 function MyProHome() {

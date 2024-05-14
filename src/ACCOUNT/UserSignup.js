@@ -1,11 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ReactCountryFlag } from 'react-country-flag';
 import { Link } from 'react-router-dom'
 import './Account.css'
 import { RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from 'react-icons/ri';
+import $ from 'jquery';
 
 
 function UserSignup() {
+    useEffect(() => {
+      $('.select2').select2();
+  
+      return () => {
+        $('.select2').each(function () {
+          if ($(this).data('select2')) {
+            $(this).select2('destroy');
+          }
+        });
+      };
+    }, []);
     const [countryCode, setCountryCode] = useState('');
 
   const handleCountryChange = (event) => {
@@ -14,7 +26,7 @@ function UserSignup() {
   return (
     <div className='account'>
         <div className="row g-0">
-            <div className="col col-lg-6 col-md-6 col-12 left">
+            <div className="col col-lg-6 col-md-6 col-12">
                 <div className="to-know">
                     <div className="know">
                         <h1>By entering in your Kemea account...</h1>
@@ -38,7 +50,7 @@ function UserSignup() {
                     <div className="mylogin">
                         <div className="head d-flex align-items-center gap-2 mt-4 ms-auto" style={{width: 'fit-content'}}>
                             <form action="">
-                                <select name="language" id="language">
+                                <select name="language" id="language" className='select2'>
                                     <option value="EN">EN</option>
                                 </select>
                             </form>
@@ -76,7 +88,7 @@ function UserSignup() {
                                                     </div>
                                                 )}
                                             </div>
-                                            <select onChange={handleCountryChange}>
+                                            <select onChange={handleCountryChange} className='select2'>
                                                 <option > ----- </option>
                                                 <option value="US">+1</option>
                                                 <option value="CA">+1</option>
@@ -93,10 +105,10 @@ function UserSignup() {
                                     </div>
                                     <div className="inputs d-flex gap-2">
                                         <input type="checkbox" name="terms" id="terms" />
-                                        <p>I accept the <Link to='/'>Terms of Service</Link> and the <Link to='/'>Kemea Privacy Policy.</Link></p>
+                                        <p>I accept the <Link to='/confidentialité'>Terms of Service</Link> and the <Link to='/confidentialité'>Kemea Privacy Policy.</Link></p>
                                     </div>
                                 </div>
-                                <Link to='/usr-home'><button type='submit' className='my-3'>Sign up</button></Link>
+                                <Link to='/user-home'><button type='submit' className='my-3'>Sign up</button></Link>
                             </form>
                         </div>
                     </div>

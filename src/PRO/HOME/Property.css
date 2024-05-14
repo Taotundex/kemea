@@ -147,3 +147,13 @@ input[type="date"]{
     border-top-left-radius: 10px !important;
     border-bottom-left-radius: 10px !important;
 }
+
+
+.rent-property .select2-selection {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    border: 2px solid #E2E8F0 !important;
+    border-radius: 20px !important;
+    padding: 0 15px !important;
+}

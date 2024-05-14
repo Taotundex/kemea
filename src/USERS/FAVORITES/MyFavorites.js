@@ -1,7 +1,7 @@
 import React from 'react'
-import UserHeading from '../HEADING/UserHeading'
+import UserHeading from '../../HEADING/UserHeading'
 import Favorites from './Favorites'
-import Footer from '../HOME/Footer'
+import Footer from '../../HOME/Footer'
 
 function MyFavorites() {
   return (

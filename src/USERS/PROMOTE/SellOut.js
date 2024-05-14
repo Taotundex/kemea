@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './Promote.css';
 import { IoIosArrowBack, IoIosArrowForward, IoMdAlarm } from 'react-icons/io';
-import SelloutImg from '../images/sell-out-img.png';
+import SelloutImg from '../../images/sell-out-img.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';

@@ -1,5 +1,5 @@
 import React from 'react'
-import ProHeading from '../HEADING/ProHeading'
+import ProHeading from '../../HEADING/ProHeading'
 import Profile from './Profile'
 
 function MyProfile() {

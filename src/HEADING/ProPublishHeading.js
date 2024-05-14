@@ -9,7 +9,7 @@ function ProPublishHeading() {
     <div>
         <Navbar expand="lg" className="py-3 nav text-center">
             <Container>
-                <Navbar.Brand as={Link} to="/home" className='me-lg-5 me-0'><img src={Prologo} alt='Logo' /></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/pro-home" className='me-lg-5 me-0'><img src={Prologo} alt='Logo' /></Navbar.Brand>
                 <button className='bg-transparent text-dark save'>
                     Save & Exit
                 </button>

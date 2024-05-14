@@ -1,20 +1,30 @@
 body {
     font-family: "Poppins", sans-serif !important;
 }
-.container {
+body {
+    margin: 0 auto !important;
     width: 1440px !important;
 }
 select {
-    background-color: #ffffff !important; /* Your desired background color */
-    border-radius: 50px !important; /* Your desired background color */
-    -webkit-background-color: #ffffff !important; /* Safari/Chrome */
-    -moz-background-color: #ffffff !important; /* Firefox */
-    -ms-background-color: #ffffff !important; /* Internet Explorer */
-    -o-background-color: #ffffff !important; /* Opera */
-    -webkit-border-radius: 50px; /* Safari/Chrome */
+    background-color: transparent !important; /* Your desired background color */
+    /* border-radius: 50px !important; Your desired background color */
+    -webkit-background-color: transparent !important; /* Safari/Chrome */
+    -moz-background-color: transparent !important; /* Firefox */
+    -ms-background-color: transparent !important; /* Internet Explorer */
+    -o-background-color: transparent !important; /* Opera */
+    /* -webkit-border-radius: 50px; Safari/Chrome */
 }
 @media screen and (max-width: 767px) {
-    .container {
+    body {
         width: 100% !important;
     }
+    /* .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 45px;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        translate: 150% -50%;
+        width: 20px;
+        display: none !important;
+    } */
 }

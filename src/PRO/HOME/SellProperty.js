@@ -1,19 +1,19 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Property.css'
-import disable from '../images/disable.svg'
-import elevator from '../images/elevator.svg'
-import renovated from '../images/renovated.svg'
-import airconditioner from '../images/airconditioner.svg'
-import furniture from '../images/furniture.svg'
-import mamad from '../images/mamad.svg'
-import bars from '../images/bars.svg'
-import unit from '../images/unit.svg'
-import mazgan from '../images/mazgan.svg'
-import heater from '../images/heater.svg'
-import kitchen from '../images/kitchen.svg'
-import storage from '../images/storage.svg'
-import trash from '../images/trash.svg'
-import add from '../images/add.svg'
+import disable from '../../images/disable.svg'
+import elevator from '../../images/elevator.svg'
+import renovated from '../../images/renovated.svg'
+import airconditioner from '../../images/airconditioner.svg'
+import furniture from '../../images/furniture.svg'
+import mamad from '../../images/mamad.svg'
+import bars from '../../images/bars.svg'
+import unit from '../../images/unit.svg'
+import mazgan from '../../images/mazgan.svg'
+import heater from '../../images/heater.svg'
+import kitchen from '../../images/kitchen.svg'
+import storage from '../../images/storage.svg'
+import trash from '../../images/trash.svg'
+import add from '../../images/add.svg'
 import { HiOutlineBuildingOffice2 } from 'react-icons/hi2'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,9 +21,22 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
 import ReactCountryFlag from 'react-country-flag'
-// import '../ACCOUNT/Account.css'
+import $ from 'jquery';
+
 
 function SellProperty() {
+    useEffect(() => {
+      $('.select2').select2();
+  
+      return () => {
+        $('.select2').each(function () {
+          if ($(this).data('select2')) {
+            $(this).select2('destroy');
+          }
+        });
+      };
+    }, []);
+
     const [countryCode, setCountryCode] = useState('');
 
   const handleCountryChange = (event) => {
@@ -49,12 +62,15 @@ function SellProperty() {
             <Swiper ref={swiperRef} pagination={{ type: 'progressbar' }} className="mySwiper">
                 <SwiperSlide>
                     <h5><b>Step 1 - </b>Property’s address</h5>
-                    <form action="" className='py-5'>
+                    <form action="" className='py-5 select'>
                         <div className="row gx-5">
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="What type of property ?*">What type of property ?*</label>
-                                    <select name="propertyType" id="propertyType">
+                                    <select className='select2' name="propertyType" id="propertyType">
+                                        <option value="Home Type" className='d-flex align-items-center gap-2'>
+                                            <HiOutlineBuildingOffice2 />Home Type
+                                        </option>
                                         <option value="apartment" className='d-flex align-items-center gap-2'>
                                             <HiOutlineBuildingOffice2 />Apartment
                                         </option>
@@ -64,7 +80,7 @@ function SellProperty() {
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="State of the property*">State of the property*</label>
-                                    <select name="propertyState" id="propertyState">
+                                    <select className='select2' name="propertyState" id="propertyState">
                                         <option value="renovated">
                                             Renovated
                                         </option>
@@ -112,7 +128,7 @@ function SellProperty() {
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Area*">Area*</label>
-                                    <select name="area" id="area">
+                                    <select className='select2' name="area" id="area">
                                         <option value="south">
                                             South Est
                                         </option>
@@ -140,7 +156,7 @@ function SellProperty() {
                             <div className="col col-lg-5 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Number of rooms*">Number of rooms*</label>
-                                    <select name="roomsNumber" id="roomsNumber">
+                                    <select className='select2' name="roomsNumber" id="roomsNumber">
                                         <option value="0">
                                             0
                                         </option>
@@ -344,7 +360,7 @@ function SellProperty() {
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Number of payments*">Number of payments*</label>
-                                    <select name="payments" id="payments">
+                                    <select className='select2' name="payments" id="payments">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                     </select>
@@ -471,7 +487,7 @@ function SellProperty() {
                                                     </div>
                                                 )}
                                             </div>
-                                            <select onChange={handleCountryChange}>
+                                            <select className='select2' onChange={handleCountryChange}>
                                                 <option > ----- </option>
                                                 <option value="US">+1</option>
                                                 <option value="CA">+1</option>

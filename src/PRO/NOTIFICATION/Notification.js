@@ -1,7 +1,7 @@
 import React from 'react'
 import'./Notification.css'
 import { BiSearch } from 'react-icons/bi'
-import tick from '../images/tick.svg'
+import tick from '../../images/tick.svg'
 import { Link } from 'react-router-dom'
 
 function Notification() {

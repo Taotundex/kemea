@@ -1,5 +1,5 @@
 import React from 'react'
-import ProPublishHeading from '../HEADING/ProPublishHeading'
+import ProPublishHeading from '../../HEADING/ProPublishHeading'
 import SellProperty from './SellProperty'
 
 function MySellProperty() {

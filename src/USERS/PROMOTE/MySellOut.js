@@ -1,11 +1,11 @@
 import React from 'react'
-import Heading from '../HEADING/Heading'
 import SellOut from './SellOut'
+import UserHeading from '../../HEADING/UserHeading'
 
 function MySellOut() {
   return (
     <div>
-        <Heading />
+        <UserHeading />
         <SellOut />
     </div>
   )

@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Account.css'
 import { RiAppleLine, RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from 'react-icons/ri'
 import { FaGoogle } from 'react-icons/fa'
+import $ from 'jquery';
 // import loginImg from '../images/login-img.png'
 
 function UserLogin() {
+    useEffect(() => {
+      $('.select2').select2();
+  
+      return () => {
+        $('.select2').each(function () {
+          if ($(this).data('select2')) {
+            $(this).select2('destroy');
+          }
+        });
+      };
+    }, []);
   return (
     <div className='account'>
         <div className="row g-0">
@@ -33,7 +45,7 @@ function UserLogin() {
                     <div className="mylogin">
                         <div className="head d-flex align-items-center gap-2 mt-4 ms-auto" style={{width: 'fit-content'}}>
                             <form action="">
-                                <select name="language" id="language">
+                                <select name="language" id="language" className='select2'>
                                     <option value="EN">EN</option>
                                 </select>
                             </form>
@@ -54,12 +66,12 @@ function UserLogin() {
                                     <input type="password" name="password" id="password" placeholder='............' />
                                 </div>
                                 <Link to="" className='small mt-lg-2 mt-0 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
-                                <Link to='/user-home'><button type='submit' className='my-5'>Log in</button></Link>
-                                <center className="mb-4">or</center>
-                                <button className="or d-flex align-items-center justify-content-center my-2 gap-2">
+                                <Link to='/user-home'><button type='submit' className='my-5 mb-3'>Log in</button></Link>
+                                <center className="mb-3">or</center>
+                                <button className="or d-flex align-items-center justify-content-center my-3 gap-2">
                                     <FaGoogle />Continue with Google
                                 </button>
-                                <button className="or d-flex align-items-center justify-content-center my-2 gap-2">
+                                <button className="or d-flex align-items-center justify-content-center my-3 gap-2">
                                     <RiAppleLine />Continue with Apple
                                 </button>
                             </form>

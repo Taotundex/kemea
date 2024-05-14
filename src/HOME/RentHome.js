@@ -1,13 +1,25 @@
-import React from 'react'
-import './HomeContent.css'
+import React, { useEffect } from 'react';
+import './HomeContent.css';
 import Container from 'react-bootstrap/Container';
-import { IoFilterOutline } from "react-icons/io5";
-import { IoSearchOutline } from "react-icons/io5";
-import { IoMdNotificationsOutline } from "react-icons/io";
+import { IoFilterOutline } from 'react-icons/io5';
+import { IoSearchOutline } from 'react-icons/io5';
+import { IoMdNotificationsOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
 
 
 function RentHome() {
+    useEffect(() => {
+      $('.select2').select2();
+  
+      return () => {
+        $('.select2').each(function () {
+          if ($(this).data('select2')) {
+            $(this).select2('destroy');
+          }
+        });
+      };
+    }, []);
     // const [isSelect, setIsSelect] = useState(false);
     // const handleSelectClick = () => {
     //     setIsSelect(!isSelect);
@@ -19,7 +31,7 @@ function RentHome() {
                 <h2>Find the right property, right away</h2>
                 <p>Kemea supports your property research in Israel at every stage</p>
             </div>
-            <div className='d-flex gap-5 lists sticky-top py-3 bg-white'>
+            <div className='d-flex align-items-center justify-content-between gap-5 lists sticky-top py-3 bg-white'>
                 <div className='firstList'>
                     <div className='d-flex gap-3 listing'>
                         <form className='d-flex align-items-center border-1 border-black rounded-5 form' >
@@ -30,48 +42,18 @@ function RentHome() {
                             <Link to='/home' className='text-decoration-none'><button className='rounded-start-5'>Buy</button></Link>
                             <Link to='/rent-home' className='text-decoration-none'><button className='rounded-end-5 bg-dark text-white'>Rent</button></Link>
                         </div>
-                        {/* <div className="select">
-                            <div className="options">
-                                <div className="d-flex align-items-center justify-content-between hometype" onClick={handleSelectClick}>
-                                    Home Type
-                                    <IoIosArrowDown />
-                                </div>
-                                {
-                                    isSelect ? 
-                                <div className="selection">
-                                    <label className='d-flex gap-2' htmlFor="apartment">
-                                        <input type="checkbox" name="apartment" id="apartment" />
-                                        Apartment
-                                    </label>
-                                    <label className='d-flex gap-2' htmlFor="Penthouse">
-                                        <input type="checkbox" name="Penthouse" id="Penthouse" />
-                                        Penthouse
-                                    </label>
-                                    <label className='d-flex gap-2' htmlFor="Private house">
-                                        <input type="checkbox" name="private-house" id="private-house" />
-                                        Private house
-                                    </label>
-                                </div>
-                                : 
-                                ''
-                            }
-                            </div>
-                        </div> */}
-                        <form className='select'>
-                            <select className='select'>
-                                <option value='select'>
-                                    <label htmlFor="apartment1" className='d-flex'>
-                                        <input type="checkbox" id="apartment1" name="apartment1" value="apartment1" />
-                                        Apartment 1
-                                    </label>
-                                </option>
+                        <form className="select">
+                            <select className="select2" style={{ width: '150px', height: '100%' }}>
+                                <option value="apartment1">Apartment 1</option>
+                                <option value="apartment2">Apartment 2</option>
+                                <option value="apartment3">Apartment 3</option>
                             </select>
                         </form>
-                        <div className='select'>
-                            <select name='select' id='select'>
-                                <option value='select'>Price Range</option>
+                        <form className="select">
+                            <select className="select2" style={{ width: '150px', height: '100%' }}>
+                                <option value="select">Price Range</option>
                             </select>
-                        </div>
+                        </form>
                         <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5'>
                             <IoFilterOutline className="custom-icon" />All filter
                         </div>
@@ -102,8 +84,8 @@ function RentHome() {
             </div>
             <div className='btm d-flex align-items-center justify-content-between py-3'>
                 <p><span>1 - 8</span> out of <span>2000</span></p>
-                <form>
-                    <select className='rounded-5'>
+                <form className='select'>
+                    <select className="select2 rounded-5" style={{border:'1px solid #E9ECEF !important'}}>
                         <option value="Default order">Default order</option>
                         <option value="Date">Date</option>
                         <option value="Ascending Price">Ascending Price</option>

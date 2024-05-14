@@ -18,20 +18,25 @@ import MyNewProjectDescription from './HOME/MyNewProjectDescription';
 import MyNadlanProject from './NADLAN/MyNadlanPage';
 import UserLogin from './ACCOUNT/UserLogin';
 import UserSignup from './ACCOUNT/UserSignup';
-import MyUserHome from './USERS/HOME/MyUserHome';
-import MyExceptionalProperties from './USERS/HOME/MyExceptionalProperties';
-import MySellOut from './PROMOTE/MySellOut';
-import MyStudy from './STUDY/MyStudy';
-import MyFavorites from './FAVORITES/MyFavorites';
-import MyRentOut from './PROMOTE/MyRentOut';
-import MyProHome from './PRO/MyProHome';
-import MyPublish from './PRO/MyPublish';
-import MyRentProperty from './PRO/MyRentProperty';
-import MySellProperty from './PRO/MySellProperty';
+import MyUserHome from './USERS/BUY/MyUserHome';
+import MyExceptionalProperties from './USERS/BUY/MyExceptionalProperties';
+import MyStudy from './USERS/STUDY/MyStudy';
+import MyFavorites from './USERS/FAVORITES/MyFavorites';
+import MySellOut from './USERS/PROMOTE/MySellOut';
+import MyRentOut from './USERS/PROMOTE/MyRentOut';
+import MyProHome from './PRO/HOME/MyProHome';
+import MyPublish from './PRO/HOME/MyPublish';
+import MyRentProperty from './PRO/HOME/MyRentProperty';
+import MySellProperty from './PRO/HOME/MySellProperty';
 import MyRentHome from './HOME/MyRentHome';
-import MyPlan from './PRO/MyPlan';
-import MyProfile from './PRO/MyProfile';
-import MyNotification from './PRO/MyNotification';
+import MyPlan from './PRO/PLAN/MyPlan';
+import MyProfile from './PRO/PROFILE/MyProfile';
+import MyNotification from './PRO/NOTIFICATION/MyNotification';
+import MyUserNewProject from './USERS/BUY/MyUserNewProject';
+import MyUserRentHome from './USERS/RENT/MyUserRentHome';
+import MyUserShortTermRent from './USERS/RENT/MyUserShortTermRent';
+import MyUserKemea from './USERS/KEMEA/MyUserKemea';
+import MyCalculator from './USERS/BUY/MyCalculator';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -54,7 +59,7 @@ function App() {
           <Route path="/fonctionnement-du-site" element={<Myfonctionnementdenotresite />} />
           <Route path="/infos-sur-lentreprise" element={<Myinfossurlentreprise />} />
           
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/description" element={<MyDescription />} />
           <Route path="/new-projects" element={<MyNewProject />} />
           <Route path="/new-project-description" element={<MyNewProjectDescription />} />
@@ -66,13 +71,18 @@ function App() {
           <Route path="/short-term-rent" element={<MyShortTermRent />} />
           <Route path="/short-term-description" element={<MyShortTermDescription />} />
 
-          <Route path="/" element={<MyLanding/>} />
+          <Route path="/landing" element={<MyLanding/>} />
           <Route path="/nadlan" element={<MyNadlanProject />} />
 
           <Route path="/login" element={<UserLogin />} />
           <Route path="/signup" element={<UserSignup />} />
           <Route path="/user-home" element={<MyUserHome />} />
+          <Route path="/user-rent-home" element={<MyUserRentHome />} />
+          <Route path="/user-new-projects" element={<MyUserNewProject />} />
+          <Route path="/user-short-term-rent" element={<MyUserShortTermRent />} />
           <Route path="/exceptional-properties" element={<MyExceptionalProperties />} />
+          <Route path="/user-kemea" element={<MyUserKemea />} />
+          <Route path="/user-affordability-calculator" element={<MyCalculator />} />
           <Route path='/study' element={<MyStudy />} />
           <Route path='/favorites' element={<MyFavorites />} />
           <Route path="/sell-out" element={<MySellOut />} />

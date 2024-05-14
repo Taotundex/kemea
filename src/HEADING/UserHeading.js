@@ -18,24 +18,24 @@ function UserHeading() {
     <div>
         <Navbar expand="lg" className="py-3 nav text-center">
             <Container>
-                <Navbar.Brand as={Link} to="/home" className='me-lg-5 me-0'><img src={logo} alt='Logo' /></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/user-home" className='me-lg-5 me-0'><img src={logo} alt='Logo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav className="me-auto my-2 my-lg-0">
                         <NavDropdown className='mx-3' title="Buy" id="navbarScrollingDropdown">
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/home">Homes for Sales</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/new-projects">New Projects</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/user-home">Homes for Sales</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/user-new-projects">New Projects</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/exceptional-properties">Exceptional properties</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/affordability-calculator">Affordability calculator</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/user-kemea">My Kemea - assisted search services</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/user-affordability-calculator">Affordability calculator</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown className='mx-3' title="Rent" id="navbarScrollingDropdown">
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/home">Homes for rent</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/short-term-rent">Short Term rent</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/user-rent-home">Homes for rent</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/user-short-term-rent">Short Term rent</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/exceptional-properties">Exceptional properties</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/user-kemea">My Kemea - assisted search services</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link className='mx-3' as={Link} to="/my-kemea">My Kemea</Nav.Link>
+                        <Nav.Link className='mx-3' as={Link} to="/user-kemea">My Kemea</Nav.Link>
                         <NavDropdown className='mx-3' title="Promote with us" id="navbarScrollingDropdown">
                             <div className="row" style={{width: '400px'}}>
                                 <div className="col col-4">

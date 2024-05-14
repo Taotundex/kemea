@@ -16,7 +16,7 @@ function ProHeading() {
     <div>
         <Navbar expand="lg" className="py-3 nav text-center fixed-top bg-white">
             <Container>
-                <Navbar.Brand as={Link} to="/home" className='me-lg-5 me-0'><img src={Prologo} alt='Logo' /></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/pro-home" className='me-lg-5 me-0'><img src={Prologo} alt='Logo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav className="m-auto my-2 my-lg-0">
@@ -33,17 +33,17 @@ function ProHeading() {
                             </div>
                         {/* </div> */}
                         <ul class="dropdown-menu dropdown-menu-lg-end">
-                            <li>
+                            <li className='py-1'>
                                 <Link to='/notifications' className='text-decoration-none'>
                                     <button class="dropdown-item d-flex gap-2 align-items-center" type="button"><MdOutlineNotificationsActive />Notifications</button>
                                 </Link>
                             </li>
-                            <li>
+                            <li className='py-1'>
                                 <Link to='/profile' className='text-decoration-none'>
                                     <button class="dropdown-item d-flex gap-2 align-items-center" type="button"><FaRegUser />Profile</button>
                                 </Link>
                             </li>
-                            <li>
+                            <li className='py-1'>
                                 <Link to='/' className='text-decoration-none'>
                                     <button class="dropdown-item d-flex gap-2 align-items-center" type="button"><FiLogOut />Log out</button>
                                 </Link>

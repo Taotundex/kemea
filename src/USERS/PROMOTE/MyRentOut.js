@@ -1,11 +1,11 @@
 import React from 'react'
-import Heading from '../HEADING/Heading'
 import RentOut from './RentOut'
+import UserHeading from '../../HEADING/UserHeading'
 
 function MyRentOut() {
   return (
     <div>        
-        <Heading />
+        <UserHeading />
         <RentOut />
     </div>
   )
