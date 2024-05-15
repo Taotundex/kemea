@@ -21,7 +21,7 @@ function UserSignup() {
         console.warn(userData);
 
         try {
-            const response = await fetch('api/v1/auth/user-account/create', {
+            const response = await fetch('/api/v1/auth/user-account/create', {
                 method: 'POST',
                 body: JSON.stringify(userData),
                 headers: { 
