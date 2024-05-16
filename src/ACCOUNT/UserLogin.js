@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './Account.css'
 import { RiAppleLine, RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from 'react-icons/ri'
 import { FaGoogle } from 'react-icons/fa'
@@ -7,33 +7,6 @@ import $ from 'jquery';
 // import loginImg from '../images/login-img.png'
 
 function UserLogin() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-  
-    const handleSubmit = async (event) => {
-      event.preventDefault();
-  
-      try {
-        const response = await fetch('/api/v1/auth/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email, password })
-        });
-  
-        if (!response.ok) {
-        //   throw new Error('Failed to log in');
-        navigate('/user-home');
-        }
-  
-        navigate('/user-home');
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
     useEffect(() => {
       $('.select2').select2();
   
@@ -83,17 +56,17 @@ function UserLogin() {
                                 <h2>Login <br />& Registration</h2>
                                 <p>Log in or create your account to find Kemea opportunities</p>
                             </div>
-                            <form action="" onSubmit={handleSubmit}>
+                            <form action="">
                                 <div className="input">
                                     <label htmlFor="email">E-mail</label>
-                                    <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
+                                    <input type="email" name="email" id="email" placeholder='Ex: juliette.dupont@mail.com' />
                                 </div>
                                 <div className="input">
                                     <label htmlFor="password">Password</label>
-                                    <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+                                    <input type="password" name="password" id="password" placeholder='............' />
                                 </div>
                                 <Link to="" className='small mt-lg-2 mt-0 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
-                                <button type='submit' className='my-5 mb-3'>Log in</button>
+                                <Link to='/user-home'><button type='submit' className='my-5 mb-3'>Log in</button></Link>
                                 <center className="mb-3">or</center>
                                 <button className="or d-flex align-items-center justify-content-center my-3 gap-2">
                                     <FaGoogle />Continue with Google
