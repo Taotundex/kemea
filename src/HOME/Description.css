@@ -157,13 +157,15 @@ img{
     line-height: 25px;
 }
 .more-info .msg {
+    width: 100%;
     border: 1px solid #E2E8F0;
     border-radius: 10px;
     color: #191C1F;
     font-weight: 400;
-}
-.more-info .msg P{
-    line-height: 20px;
+    line-height: 30px;
+    height: 141px;
+    resize: none;
+    padding: 5px 15px;
 }
 .more-info form input {
     width: 100%;
@@ -254,9 +256,8 @@ footer .footer {
     background: #E2E8F0;
 }
 .financing .donut-chart {
-    height: 250px;
+    height: 200px;
     width: 100%;
-    border: 1px solid #191c1f;
 }
 .financing ol {
     margin: 0;

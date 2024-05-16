@@ -1,0 +1,61 @@
+.modal-header-custom {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .modal-header-custom .close {
+    position: absolute;
+    left: 10px; /* Adjust this value to your preference */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+.modal .modal-body-custom {
+    height: 500px !important;
+    overflow-y: scroll !important;
+}
+.modal .modal-body-custom::-webkit-scrollbar {
+    display: none;
+}
+.modal .modal-body-custom input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #0666EB;
+    color: #0666EB;
+    background: red;
+}
+.modal .modal-body-custom .input label {
+    color: #222222 !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    margin-bottom: 15px;
+}
+.modal .modal-body-custom .input .label{
+    color: #222222;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    margin-bottom: 0;
+}
+.modal .modal-body-custom .others input[type='checkbox']{
+    height: 15px !important;
+    width: 15px !important;
+}
+
+
+.modal-body-custom .buttons {
+    flex-wrap: wrap;
+}
+.modal-body-custom .buttons button {
+    width: fit-content;
+    font-size: 13px;
+    padding: 13px 25px;
+    border-radius: 50px;
+    background: white;
+    color: #191C1F;
+    border: 1px solid #191C1F;
+    outline: none;
+}
+.modal-body-custom .select2-selection {
+    border: 2px solid #E2E8F0 !important;
+    border-radius: 20px !important;
+}

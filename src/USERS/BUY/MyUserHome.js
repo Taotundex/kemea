@@ -1,14 +1,14 @@
 import React from 'react'
 import Products from '../../PRODUCTS/Products'
 import UserHeading from '../../HEADING/UserHeading'
-import HomeContent from '../../HOME/HomeContent'
 import Footer from '../../HOME/Footer'
+import UserHomeContent from './UserHomeContent'
 
 function MyUserHome() {
   return (
     <div>
         <UserHeading />
-        <HomeContent />
+        <UserHomeContent />
         <Products />
         <Footer />
     </div>

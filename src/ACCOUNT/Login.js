@@ -19,7 +19,7 @@ function Login() {
                                     <option value="EN">EN</option>
                                 </select>
                             </form>
-                            <Link to="/pro-signup"><button>Sign up</button></Link>
+                            <Link to="/pro/signup"><button>Sign up</button></Link>
                         </div>
                         <div className="login">
                             <div className='top text-center'>
@@ -36,8 +36,8 @@ function Login() {
                                     <input type="password" name="password" id="password" placeholder='............' />
                                 </div>
                                 <Link to="" className='small mt-lg-2 mt-0 text-decoration-none' style={{float: 'right'}}>Forgot your password ?</Link>
-                                <Link to='/pro-home'><button type='submit' className='my-5'>Log in</button></Link>
-                                <p>Don not have an account ? <Link to='/pro-signup' className='small text-decoration-none'>Sign up</Link></p>
+                                <Link to='/pro/home'><button type='submit' className='my-5'>Log in</button></Link>
+                                <p>Don not have an account ? <Link to='/pro/signup' className='small text-decoration-none'>Sign up</Link></p>
                             </form>
                         </div>
                     </div>

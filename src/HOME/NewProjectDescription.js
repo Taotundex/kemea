@@ -15,20 +15,32 @@ import { FaShower } from 'react-icons/fa';
 import { GiElevator, GiKitchenTap } from 'react-icons/gi';
 import { RiPaintBrushLine } from 'react-icons/ri';
 import { MdStorage } from 'react-icons/md';
-import { BiCabinet, BiSolidMessageDetail } from 'react-icons/bi';
+import { BiCabinet } from 'react-icons/bi';
 import { CgSmartHomeBoiler } from "react-icons/cg";
 import { IoCallOutline, IoCheckmarkCircleSharp } from 'react-icons/io5';
-// import { IoCallOutline, IoCheckmarkCircleSharp } from 'react-icons/io5';
+import MapComponent from '../MAP/MapComponent';
+// import DonutChart from '../CHART/DoughnutChart';
+import ReqestTourModal from '../MODAL/RequestTourModal';
 
 function NewProjectDescription() {
+    const [modalShow, setModalShow] = useState(false);
+
+    const [isRequested, setIsRequested] = useState(false);
+    const handleRequestedClick = () => {
+        setModalShow(true);
+        setIsRequested(true);
+    }
+    const handleClose = () => setModalShow(false);
+
+
     const [isLiked, setIsLiked] = useState(false);
     const handleReactionClick = () => {
         setIsLiked(!isLiked);
     };
-    const [isSent, setIsSent] = useState(false);
-    const handleSentClick = () => {
-        setIsSent(!isSent);
-    };
+    // const [isSent, setIsSent] = useState(false);
+    // const handleSentClick = () => {
+    //     setIsSent(!isSent);
+    // };
   return (
     <div className='description' style={{overflowX: 'hidden'}}>
         <div className="container">
@@ -87,7 +99,7 @@ function NewProjectDescription() {
                                                 
                         <div className="details">
                             <div className="up py-5">
-                                <h1>From 2 300 000 ₪</h1>
+                                <h1>22 700 000 ₪ </h1>
                                 <small>Eliezer Yaffe Street, Ra’anana District, Israel</small>
                                 <div className="mt-3 d-flex gap-3 btns">
                                     <button className='d-flex align-items-center justify-content-center gap-2'>
@@ -170,14 +182,15 @@ function NewProjectDescription() {
                 <div className="col col-lg-4 col-md-6 col-12">
                     <div className="more-info">
                         <div className="shadow-lg px-4 py-4 rounded-5 mb-3">
-                            <div className='request' onClick={handleSentClick}>
-                                {isSent ? 
+                            <div className='request' onClick={handleRequestedClick} >
+                                {isRequested ?
                                     <button className="success req d-flex align-items-center justify-content-center gap-2">
-                                        <IoCheckmarkCircleSharp className='fs-4' />Brochure sent
+                                        <IoCheckmarkCircleSharp className='fs-4' />Tour requested
                                     </button>
-                                 : 
-                                    <button className="req d-flex align-items-center justify-content-center gap-2">
-                                        <BiSolidMessageDetail className='fs-4' />Send me the brochure
+                                 :
+                                    <button className="req d-flex flex-column align-items-center justify-content-center">
+                                        <p>Request a tour</p>
+                                        <small>As early as today 11:00 am</small>
                                     </button>
                                 }
                             </div>
@@ -186,15 +199,11 @@ function NewProjectDescription() {
                             </button>
                         </div>
                         <div className="shadow-lg px-4 py-4 rounded-5 mb-3">
-                            <div className="img mb-3">
+                            <Link to='/nadlan' className="img mb-3">
                                 <img src={levyImg} className='levy' width='100%' alt="" />
-                            </div>
-                            <div className='msg p-3'>
-                                <p>Good morning,</p>
-                                <p>I would like more information about this property. <br />Please contact me for this.</p>
-                                <p>Cordially</p>
-                            </div>
+                            </Link>
                             <form action="">
+                                <textarea name="text" id="msg" className='msg' value='Good morning, I would like more information about this property. Please contact me for this.Cordially'></textarea>
                                 <input type="text" name="name" id='name' value="Name *" />
                                 <input type="email" name="email" id='email' value="E-mail *" />
                                 <input type="text" name="number" id='number' value="Phone number" />
@@ -207,7 +216,8 @@ function NewProjectDescription() {
             </div>
             <div className="mymapp py-5">
                 <h3>Where is this property located</h3>
-                <div className="my-4 mapp">
+                <div className="my-4">
+                    <MapComponent />
                     {/* <div id="map" style={{ height: '500px', width: '100%' }} /> */}
                 </div>
                 <div className="last-text">
@@ -220,6 +230,7 @@ function NewProjectDescription() {
                 </div>
             </footer>
         </div>
+        <ReqestTourModal show={modalShow} handleClose={handleClose} />
     </div>
   )
 }

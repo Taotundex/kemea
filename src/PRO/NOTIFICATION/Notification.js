@@ -19,7 +19,7 @@ function Notification() {
                 <img src={tick} alt="" className='mb-4' />
                 <h5>Aucune nouvelle notification</h5>
                 <p>Nous vous souhaitons Bea’tslaha dans vos projets </p>
-                <Link to='/pro-home' className='text-decoration-none'><button>Retourner à la page d’accueil</button></Link>
+                <Link to='/pro/home' className='text-decoration-none'><button>Retourner à la page d’accueil</button></Link>
             </div>
         </div>
     </div>

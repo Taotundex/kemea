@@ -10,7 +10,7 @@ import Myconditionsgénérales from './POLICY/MyConditionsGénérales';
 import Myfonctionnementdenotresite from './POLICY/MyFonctionnementDeNotreSite';
 import Myinfossurlentreprise from './POLICY/MyInfosSurLentreprise';
 import MyDescription from './HOME/MyDescription';
-import MyLanding from './LANDING/MyLanding';
+import MyRemax from './REMAX/MyRemax';
 import MyNewProject from './HOME/MyNewProject';
 import MyShortTermRent from './HOME/MyShortTermRent';
 import MyShortTermDescription from './HOME/MyShortTermDescription';
@@ -37,6 +37,9 @@ import MyUserRentHome from './USERS/RENT/MyUserRentHome';
 import MyUserShortTermRent from './USERS/RENT/MyUserShortTermRent';
 import MyUserKemea from './USERS/KEMEA/MyUserKemea';
 import MyCalculator from './USERS/BUY/MyCalculator';
+import MyUserRentExceptionalProperties from './USERS/RENT/MyUserRentExceptionalProperties';
+import MyBuyExceptionalProperties from './HOME/MyBuyExceptionalProperties';
+import MyRentExceptionalProperties from './HOME/MyRentExceptionalProperties';
 // import Products from './PRODUCTS/Products';
 // import Data from './EXPORT/Export'
 // import NotFound from './components/NotFound';
@@ -62,6 +65,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/description" element={<MyDescription />} />
           <Route path="/new-projects" element={<MyNewProject />} />
+          <Route path="/buy-exceptional-properties" element={<MyBuyExceptionalProperties />} />
+          <Route path="/rent-exceptional-properties" element={<MyRentExceptionalProperties />} />
           <Route path="/new-project-description" element={<MyNewProjectDescription />} />
           <Route path="/my-kemea" element={<Mykemea />} />
           <Route path="/affordability-calculator" element={<Calculator />} />
@@ -71,18 +76,19 @@ function App() {
           <Route path="/short-term-rent" element={<MyShortTermRent />} />
           <Route path="/short-term-description" element={<MyShortTermDescription />} />
 
-          <Route path="/landing" element={<MyLanding/>} />
+          <Route path="/remax" element={<MyRemax/>} />
           <Route path="/nadlan" element={<MyNadlanProject />} />
 
           <Route path="/login" element={<UserLogin />} />
           <Route path="/signup" element={<UserSignup />} />
-          <Route path="/user-home" element={<MyUserHome />} />
-          <Route path="/user-rent-home" element={<MyUserRentHome />} />
-          <Route path="/user-new-projects" element={<MyUserNewProject />} />
-          <Route path="/user-short-term-rent" element={<MyUserShortTermRent />} />
-          <Route path="/exceptional-properties" element={<MyExceptionalProperties />} />
-          <Route path="/user-kemea" element={<MyUserKemea />} />
-          <Route path="/user-affordability-calculator" element={<MyCalculator />} />
+          <Route path="/user/buy-home" element={<MyUserHome />} />
+          <Route path="/user/rent-home" element={<MyUserRentHome />} />
+          <Route path="/user/new-projects" element={<MyUserNewProject />} />
+          <Route path="/user/short-term-rent" element={<MyUserShortTermRent />} />
+          <Route path="/user/buy-exceptional-properties" element={<MyExceptionalProperties />} />
+          <Route path="/user/rent-exceptional-properties" element={<MyUserRentExceptionalProperties />} />
+          <Route path="/user/kemea" element={<MyUserKemea />} />
+          <Route path="/user/affordability-calculator" element={<MyCalculator />} />
           <Route path='/study' element={<MyStudy />} />
           <Route path='/favorites' element={<MyFavorites />} />
           <Route path="/sell-out" element={<MySellOut />} />
@@ -90,10 +96,10 @@ function App() {
 
 
 
-          <Route path="/pro-login" element={<Login />} />
-          <Route path="/pro-signup" element={<Signup />} />
-          <Route path='/pro-home' element={<MyProHome />} />
-          <Route path='/pro-publish' element={<MyPublish />} />
+          <Route path="/pro/login" element={<Login />} />
+          <Route path="/pro/signup" element={<Signup />} />
+          <Route path='/pro/home' element={<MyProHome />} />
+          <Route path='/pro/publish' element={<MyPublish />} />
           <Route path='/plan' element={<MyPlan />} />
           <Route path='/profile' element={<MyProfile />} />
           <Route path='/notifications' element={<MyNotification />} />

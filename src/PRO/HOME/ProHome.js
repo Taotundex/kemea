@@ -20,7 +20,7 @@ function ProHome() {
             <div className='myads'>
                 <div className="d-flex align-items-center justify-content-between py-3 ads">
                     <h4>2 ads</h4>
-                    <Link to='/pro-publish' className="button d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                    <Link to='/pro/publish' className="button d-flex align-items-center justify-content-center gap-2 text-decoration-none">
                         <GoPlus className='fs-5' />Créer une annonce
                     </Link>
                 </div>

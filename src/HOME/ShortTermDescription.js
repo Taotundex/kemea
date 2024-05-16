@@ -17,6 +17,7 @@ import { RiPaintBrushLine } from 'react-icons/ri';
 import { MdStorage } from 'react-icons/md';
 import { BiCabinet } from 'react-icons/bi';
 import { CgSmartHomeBoiler } from "react-icons/cg";
+import MapComponent from '../MAP/MapComponent';
 // import { IoCallOutline, IoCheckmarkCircleSharp } from 'react-icons/io5';
 
 function ShortTermDescription() {
@@ -172,11 +173,7 @@ function ShortTermDescription() {
                                     <p>Member since 2024</p>
                                 </div>
                             </div>
-                            <div className='msg p-3'>
-                                <p>Good morning,</p>
-                                <p>I would like more information about this property. <br />Please contact me for this.</p>
-                                <p>Cordially</p>
-                            </div>
+                            <textarea name="text" id="msg" className='msg' value='Good morning, I would like more information about this property. Please contact me for this.Cordially'></textarea>
                             <div className='msg p-3 mt-3'>
                                 <table>
                                     <tr>
@@ -211,7 +208,8 @@ function ShortTermDescription() {
             </div>
             <div className="mymapp py-5">
                 <h3>Where is this property located</h3>
-                <div className="my-4 mapp">
+                <div className="my-4">
+                    <MapComponent />
                     {/* <div id="map" style={{ height: '500px', width: '100%' }} /> */}
                 </div>
                 <div className="last-text">

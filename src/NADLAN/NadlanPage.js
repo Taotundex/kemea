@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
-import '../LANDING/Landing.css'
+import '../REMAX/Remax.css'
 import levyHero from '../images/levy-hero.png'
 import levyImg from '../images/Levy.png'
 import { FaPhoneAlt } from 'react-icons/fa'

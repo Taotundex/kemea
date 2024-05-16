@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import {Link} from 'react-router-dom'
-import './Landing.css'
+import './Remax.css'
 import RemaxHero from '../images/remax-hero.png'
 import RemaxSm from '../images/remax-sm.png'
 import { MdLocationOn } from 'react-icons/md'
@@ -22,7 +22,7 @@ import { CiHeart } from 'react-icons/ci'
 import { AiOutlineDownload } from 'react-icons/ai'
 import { IoCallOutline, IoCheckmarkCircleSharp } from 'react-icons/io5';
 
-function Landing() {
+function Remax() {
     const pagination = {
         clickable: true,
         renderBullet: function (index, className) {
@@ -4949,4 +4949,4 @@ function Landing() {
   )
 }
 
-export default Landing
+export default Remax

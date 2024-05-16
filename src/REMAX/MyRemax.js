@@ -1,16 +1,16 @@
 import React from 'react'
 import Heading from '../HEADING/Heading'
-import Landing from './Landing'
+import Remax from './Remax'
 import Footer from '../FOOTER/Footer'
 
-function MyLanding() {
+function MyRemax() {
   return (
     <div>
         <Heading />
-        <Landing />
+        <Remax />
         <Footer />
     </div>
   )
 }
 
-export default MyLanding
+export default MyRemax

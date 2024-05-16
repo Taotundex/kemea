@@ -23,7 +23,7 @@ function Publish() {
                     </Link>
                 </div>
             </div>
-            <Link to='/pro-home' className="back d-flex align-items-center gap-1 text-dark">
+            <Link to='/pro/home' className="back d-flex align-items-center gap-1 text-dark">
                 <IoIosArrowBack />Back
             </Link>
         </div>

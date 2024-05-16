@@ -135,7 +135,7 @@ function RentProperty() {
                         </div>
                     </form>
                     <div className="btns d-flex align-items-center justify-content-between w-100 mt-4">
-                        <Link to='/pro-publish' className='text-decoration-none'>
+                        <Link to='/pro/publish' className='text-decoration-none'>
                             <button className="bg-transparent gap-1 d-flex align-items-center justify-content-center px-4">
                                 <IoIosArrowBack />Back
                             </button>
@@ -304,7 +304,7 @@ function RentProperty() {
                         </div>
                     </form>
                     <div className="btns d-flex align-items-center justify-content-between w-100 mt-4">
-                        {/* <Link to='/pro-publish' className='text-decoration-none'> */}
+                        {/* <Link to='/pro/publish' className='text-decoration-none'> */}
                             <button className="bg-transparent gap-1 d-flex align-items-center justify-content-center px-4" onClick={handlePrev}>
                                 <IoIosArrowBack />Back
                             </button>
@@ -419,7 +419,7 @@ function RentProperty() {
                         </div>
                     </form>
                     <div className="btns d-flex align-items-center justify-content-between w-100 mt-4">
-                        {/* <Link to='/pro-publish' className='text-decoration-none'> */}
+                        {/* <Link to='/pro/publish' className='text-decoration-none'> */}
                             <button className="bg-transparent gap-1 d-flex align-items-center justify-content-center px-4" onClick={handlePrev}>
                                 <IoIosArrowBack />Back
                             </button>
@@ -448,7 +448,7 @@ function RentProperty() {
                         <input type="text" name="link" id="link" value='https://' />
                     </form>
                     <div className="btns d-flex align-items-center justify-content-between w-100" style={{marginTop: '75px'}}>
-                        {/* <Link to='/pro-publish' className='text-decoration-none'> */}
+                        {/* <Link to='/pro/publish' className='text-decoration-none'> */}
                             <button className="bg-transparent gap-1 d-flex align-items-center justify-content-center px-4" onClick={handlePrev}>
                                 <IoIosArrowBack />Back
                             </button>
@@ -520,7 +520,7 @@ function RentProperty() {
                         </div>
                     </form>
                     <div className="btns d-flex align-items-center justify-content-between w-100" style={{marginTop: '175px'}}>
-                        {/* <Link to='/pro-publish' className='text-decoration-none'> */}
+                        {/* <Link to='/pro/publish' className='text-decoration-none'> */}
                             <button className="bg-transparent gap-1 d-flex align-items-center justify-content-center px-4" onClick={handlePrev}>
                                 <IoIosArrowBack />Back
                             </button>

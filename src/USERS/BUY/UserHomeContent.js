@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import './HomeContent.css';
+import React, { useEffect } from 'react';
+import '../../HOME/HomeContent.css';
 import Container from 'react-bootstrap/Container';
-import { IoFilterOutline, IoSearchOutline } from 'react-icons/io5';
+import { IoFilterOutline } from 'react-icons/io5';
+import { IoSearchOutline } from 'react-icons/io5';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
-import FilterModal from '../MODAL/FilterModal';
-import AlertModal from '../MODAL/AlertModal';
 
-
-<FilterModal />
-function HomeContent() {
-<AlertModal />
-  const [modalShow, setModalShow] = useState(false);
-  const [modalShow1, setModalShow1] = useState(false);
-
+function UserHomeContent() {
   useEffect(() => {
     $('.select2').select2();
 
@@ -42,10 +35,10 @@ function HomeContent() {
                 <input type="text" name="search" id="search" placeholder="In what city?" />
               </form>
               <div className="d-flex buy">
-                <Link to="/" className="text-decoration-none">
+                <Link to="/user/buy-home" className="text-decoration-none">
                   <button className="rounded-start-5 bg-dark text-white">Buy</button>
                 </Link>
-                <Link to="/rent-home" className="text-decoration-none">
+                <Link to="/user/rent-home" className="text-decoration-none">
                   <button className="rounded-end-5">Rent</button>
                 </Link>
               </div>
@@ -61,7 +54,7 @@ function HomeContent() {
                   <option value="select">Price Range</option>
                 </select>
               </form>
-              <div className="d-flex align-items-center justify-content-center gap-2 myfilter rounded-5" onClick={() => setModalShow(true)}>
+              <div className="d-flex align-items-center justify-content-center gap-2 myfilter rounded-5">
                 <IoFilterOutline className="custom-icon" />All filter
               </div>
               <div className="searchBtn">
@@ -74,7 +67,7 @@ function HomeContent() {
           </div>
           <div className="secondList">
             <div className="d-flex gap-3">
-              <button className="btn text-white bg-dark border-dark rounded-5 d-flex d-flex align-items-center justify-content-center gap-2" onClick={() => setModalShow1(true)}>
+              <button className="btn text-white bg-dark border-dark rounded-5 d-flex d-flex align-items-center justify-content-center gap-2">
                 <IoMdNotificationsOutline className="custom-icon" />Add an alert
               </button>
               <div className="d-flex align-items-center justify-content-center gap-2">
@@ -103,11 +96,8 @@ function HomeContent() {
           </form>
         </div>
       </Container>
-
-      <FilterModal show={modalShow} onHide={() => setModalShow(false)} />
-      <AlertModal show={modalShow1} onHide={() => setModalShow1(false)} />
     </div>
   );
 }
 
-export default HomeContent;
+export default UserHomeContent;

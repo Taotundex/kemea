@@ -1,10 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ReactCountryFlag } from 'react-country-flag';
 import { Link } from 'react-router-dom'
 import './Account.css'
 import signupImg from '../images/signup-img.png'
+import $ from 'jquery';
 
 function Signup() {
+    useEffect(() => {
+      $('.select2').select2();
+  
+      return () => {
+        $('.select2').each(function () {
+          if ($(this).data('select2')) {
+            $(this).select2('destroy');
+          }
+        });
+      };
+    }, []);
     const [countryCode, setCountryCode] = useState('');
 
   const handleCountryChange = (event) => {
@@ -22,11 +34,11 @@ function Signup() {
                     <div className="mylogin">
                         <div className="head d-flex align-items-center gap-2 mt-4 ms-auto" style={{width: 'fit-content'}}>
                             <form action="">
-                                <select name="language" id="language">
+                                <select name="language" className='select2' id="language">
                                     <option value="EN">EN</option>
                                 </select>
                             </form>
-                            <Link to="/pro-login"><button>Log in</button></Link>
+                            <Link to="/pro/login"><button>Log in</button></Link>
                         </div>
                         <div className="login" style={{marginTop: '75px'}}>
                             <div className='top text-center'>
@@ -70,7 +82,7 @@ function Signup() {
                                                     </div>
                                                 )}
                                             </div>
-                                            <select onChange={handleCountryChange}>
+                                            <select onChange={handleCountryChange} className='select2'>
                                                 <option > ----- </option>
                                                 <option value="US">+1</option>
                                                 <option value="CA">+1</option>
@@ -90,7 +102,7 @@ function Signup() {
                                         <p>I accept the <Link to='/'>Terms of Service</Link> and the <Link to='/'>Kemea Privacy Policy.</Link></p>
                                     </div>
                                 </div>
-                                <Link to='/pro-home'><button type='submit' className='my-3'>Sign up</button></Link>
+                                <Link to='/pro/home'><button type='submit' className='my-3'>Sign up</button></Link>
                             </form>
                         </div>
                     </div>

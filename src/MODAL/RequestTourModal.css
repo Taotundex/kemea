@@ -1,0 +1,121 @@
+.modal-content {
+    width: 375px !important;
+  }
+.modal-body{
+  height: 450px !important;
+  overflow-y: scroll;
+  padding: 0 20px;
+}
+.modal-body::-webkit-scrollbar {
+display: none;
+}
+.multistep-modal .modal-header-custom {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-bottom: none;
+}
+  .multistep-modal .modal-header-custom .btn-close {
+    position: absolute;
+    left: 15px;
+  }
+  
+  .multistep-modal .modal-header-custom .modal-title {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .multistep-modal .head img{
+    width: 120px;
+    height: 100px;
+    border-radius: 8px;
+  }
+  .step-content {
+    text-align: left;
+  }
+  
+  
+  .property-title {
+    margin: 10px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .property-details {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .tip {
+    font-size: 0.9rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .tip i {
+    margin-right: 8px;
+  }
+  
+  .select-times-title {
+    font-weight: bold;
+    margin: 15px 0 10px;
+  }
+  
+  .date-button {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #E2ECF0;
+    color: #222222 !important;
+    background: transparent !important;
+  }
+  .date-button:hover{
+    background: #007bff;
+    border: 2px solid #007bff30;
+  }
+  
+  .custom-select, .custom-input {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.9rem;
+    resize: none;
+  }
+  .custom-select option {
+    border-radius: 10px !important;
+    padding: 20px 10px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .add-time-link {
+    color: #007bff;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+  }
+  
+  .custom-check {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-custom {
+    display: flex;
+    justify-content: space-between;
+    border-top: none;
+    padding: 20px;
+  }
+  
+  .footer-button {
+    width: 100%;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+  

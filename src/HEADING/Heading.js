@@ -21,14 +21,14 @@ function Heading() {
                         <NavDropdown className='mx-3' title="Buy" id="navbarScrollingDropdown">
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/">Homes for Sales</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/new-projects">New Projects</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="">Exceptional properties</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/buy-exceptional-properties">Exceptional properties</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/affordability-calculator">Affordability calculator</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown className='mx-3' title="Rent" id="navbarScrollingDropdown">
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/rent-home">Homes for rent</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/short-term-rent">Short Term rent</NavDropdown.Item>
-                            <NavDropdown.Item className='navdrop-items' as={Link} to="">Exceptional properties</NavDropdown.Item>
+                            <NavDropdown.Item className='navdrop-items' as={Link} to="/rent-exceptional-properties">Exceptional properties</NavDropdown.Item>
                             <NavDropdown.Item className='navdrop-items' as={Link} to="/my-kemea">My Kemea - assisted search services</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link className='mx-3' as={Link} to="/my-kemea">My Kemea</Nav.Link>

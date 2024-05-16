@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import {Link} from 'react-router-dom'
-import '../../LANDING/Landing.css'
+import '../../REMAX/Remax.css'
 import profileImg from '../../images/profile-img.png'
 import RemaxSm from '../../images/remax-sm.png'
 import { MdLocationOn } from 'react-icons/md'
@@ -72,11 +72,11 @@ function Profile() {
                     </div>
                     <div className="col col-lg-3 col-md-6 col-12">
                         <div className="contact p-3 rounded-4">
-                            <Link to='/' className="d-flex align-items-center gap-2 text-decoration-none">
+                            <Link to='' className="d-flex align-items-center gap-2 text-decoration-none">
                                 <RiExternalLinkLine className='fs-6' />https//:remax.co.il
                                 <Link to='' style={{marginLeft:'auto', fontWeight: '600'}}>Modify</Link>
                             </Link>
-                            <Link to='/' className="d-flex align-items-center gap-2 text-decoration-none">
+                            <Link to='' className="d-flex align-items-center gap-2 text-decoration-none">
                                 <FaPhoneAlt className='fs-6' />053 782 3232
                                 <Link to='' style={{marginLeft:'auto', fontWeight: '600'}}>Modify</Link>
                             </Link>

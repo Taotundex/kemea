@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import 'swiper/swiper-bundle.css';
 import 'select2/dist/css/select2.min.css';
 import 'select2'; // This imports the JavaScript functionality of Select2
+import 'leaflet/dist/leaflet.css';
 
 
 

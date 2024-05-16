@@ -4,7 +4,7 @@ import { IoMdNotificationsOutline } from 'react-icons/io'
 import { IoFilterOutline, IoSearchOutline } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 
-function ExceptionalProperties() {
+function UserRentExceptionalProperties() {
   return (
     <div className='homepage'>
         <Container>
@@ -19,8 +19,8 @@ function ExceptionalProperties() {
                             <input type='text' name='search' id='search' placeholder='In what city?' />
                         </form>
                         <div className='d-flex buy'>
-                            <Link to='/user/buy-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-start-5 bg-dark text-light'>Buy</button></Link>
-                            <Link to='/user/rent-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-end-5'>Rent</button></Link>
+                            <Link to='/user/buy-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-start-5'>Buy</button></Link>
+                            <Link to='/user/rent-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-end-5 bg-dark text-light'>Rent</button></Link>
                         </div>
                         <form className='select'>
                             <select className='select'>
@@ -81,4 +81,4 @@ function ExceptionalProperties() {
   )
 }
 
-export default ExceptionalProperties
+export default UserRentExceptionalProperties

@@ -3,7 +3,7 @@ body {
 }
 body {
     margin: 0 auto !important;
-    width: 1440px !important;
+    width: 100% !important;
 }
 select {
     background-color: transparent !important; /* Your desired background color */
@@ -13,6 +13,11 @@ select {
     -ms-background-color: transparent !important; /* Internet Explorer */
     -o-background-color: transparent !important; /* Opera */
     /* -webkit-border-radius: 50px; Safari/Chrome */
+}
+@media screen and (max-width: 1440px) {
+    body {
+        width: 1440px !important;
+    }
 }
 @media screen and (max-width: 767px) {
     body {

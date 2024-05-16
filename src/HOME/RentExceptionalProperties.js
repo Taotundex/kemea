@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { IoFilterOutline, IoSearchOutline } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
+import FilterModal from '../MODAL/FilterModal';
+import AlertModal from '../MODAL/AlertModal';
 
-function ExceptionalProperties() {
+
+<FilterModal />
+
+function RentExceptionalProperties() {
+    <AlertModal />
+      const [modalShow, setModalShow] = useState(false);
+      const [modalShow1, setModalShow1] = useState(false);
   return (
     <div className='homepage'>
         <Container>
@@ -19,8 +27,8 @@ function ExceptionalProperties() {
                             <input type='text' name='search' id='search' placeholder='In what city?' />
                         </form>
                         <div className='d-flex buy'>
-                            <Link to='/user/buy-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-start-5 bg-dark text-light'>Buy</button></Link>
-                            <Link to='/user/rent-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-end-5'>Rent</button></Link>
+                            <Link to='/buy-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-start-5'>Buy</button></Link>
+                            <Link to='/rent-exceptional-properties' className='text-decoration-none text-light'><button className='rounded-end-5 bg-dark text-light'>Rent</button></Link>
                         </div>
                         <form className='select'>
                             <select className='select'>
@@ -37,7 +45,7 @@ function ExceptionalProperties() {
                                 <option value='select'>Price Range</option>
                             </select>
                         </div>
-                        <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5'>
+                        <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5' onClick={() => setModalShow(true)}>
                             <IoFilterOutline className="custom-icon" />All filter
                         </div>
                         <div className='searchBtn'>
@@ -50,17 +58,17 @@ function ExceptionalProperties() {
                 </dive>
                 <div className='secondList'>
                     <div className='d-flex gap-3'>
-                        <button className="btn btn-primary rounded-5 d-flex d-flex align-items-center justify-content-center gap-2">
+                        <button className="btn border-dark bg-dark text-white rounded-5 d-flex d-flex align-items-center justify-content-center gap-2" onClick={() => setModalShow1(true)}>
                             <IoMdNotificationsOutline className="custom-icon" />Add an alert
                         </button>
                         <div className="d-flex align-items-center justify-content-center gap-2">
-                            <Link to=''>
-                                List
-                            </Link>
-                            <div className="vr"></div>
-                            <Link to=''>
-                                Map
-                            </Link>
+                        <Link to="" className="text-dark text-decoration-none">
+                            List
+                        </Link>
+                        <div className="vr"></div>
+                        <Link to="" className="text-dark text-decoration-none">
+                            Map
+                        </Link>
                         </div>
                     </div>
                 </div>
@@ -77,8 +85,11 @@ function ExceptionalProperties() {
                 </form>
             </div>
         </Container>
+
+<FilterModal show={modalShow} onHide={() => setModalShow(false)} />
+<AlertModal show={modalShow1} onHide={() => setModalShow1(false)} />
     </div>
   )
 }
 
-export default ExceptionalProperties
+export default RentExceptionalProperties

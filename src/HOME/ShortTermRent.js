@@ -1,12 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './HomeContent.css';
 import Container from 'react-bootstrap/Container';
 import { IoFilterOutline } from 'react-icons/io5';
 import { IoSearchOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
+import FilterModal from '../MODAL/FilterModal';
+
+
+<FilterModal />
+
 
 function ShortTermRent() {
+  const [modalShow, setModalShow] = useState(false);
+
   useEffect(() => {
     $('.select2').select2();
 
@@ -40,8 +47,8 @@ function ShortTermRent() {
                   <option value='Private_house'>Private house</option>
                 </select>
               </form>
-              <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5'>
-                <IoFilterOutline className="custom-icon" />All filter
+              <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5' onClick={() => setModalShow(true)}>
+                  <IoFilterOutline className="custom-icon" />All filter
               </div>
               <div className='searchBtn'>
                 <button className='btn btn-primary rounded-5 d-flex align-items-center justify-content-center gap-2' variant="btn">
@@ -77,6 +84,7 @@ function ShortTermRent() {
           </form>
         </div>
       </Container>
+<FilterModal show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   )
 }

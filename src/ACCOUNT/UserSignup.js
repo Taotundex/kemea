@@ -108,7 +108,7 @@ function UserSignup() {
                                         <p>I accept the <Link to='/confidentialité'>Terms of Service</Link> and the <Link to='/confidentialité'>Kemea Privacy Policy.</Link></p>
                                     </div>
                                 </div>
-                                <Link to='/user-home'><button type='submit' className='my-3'>Sign up</button></Link>
+                                <Link to='/user/buy-home'><button type='submit' className='my-3'>Sign up</button></Link>
                             </form>
                         </div>
                     </div>

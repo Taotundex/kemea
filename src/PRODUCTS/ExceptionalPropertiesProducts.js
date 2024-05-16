@@ -25,7 +25,7 @@ function ExceptionalPropertiesProducts() {
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
                         <div className="img">
-                            <Link to='/new-project-description' className='linked'>
+                            <Link to='/description' className='linked'>
                                 <Swiper spaceBetween={0} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
@@ -54,7 +54,7 @@ function ExceptionalPropertiesProducts() {
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
                         <div className="img">
-                            <Link to='/new-project-description' className='linked'>
+                            <Link to='/description' className='linked'>
                                 <Swiper spaceBetween={30} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
@@ -83,7 +83,7 @@ function ExceptionalPropertiesProducts() {
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
                         <div className="img">
-                            <Link to='/new-project-description' className='linked'>
+                            <Link to='/description' className='linked'>
                                 <Swiper spaceBetween={30} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
@@ -112,7 +112,7 @@ function ExceptionalPropertiesProducts() {
                 <div className="col-lg-3 col-md-4 col-6">
                     <div className='card'>
                         <div className="img">
-                            <Link to='/new-project-description' className='linked'>
+                            <Link to='/description' className='linked'>
                                 <Swiper spaceBetween={30} pagination={{ clickable: true, }} modules={[Pagination]} className="mySwiper" >
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>
                                     <SwiperSlide><img src={product1} alt='Product1' width='100%' /></SwiperSlide>

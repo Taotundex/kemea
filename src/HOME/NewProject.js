@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './HomeContent.css';
 import Container from 'react-bootstrap/Container';
 import { IoFilterOutline } from 'react-icons/io5';
@@ -6,8 +6,18 @@ import { IoSearchOutline } from 'react-icons/io5';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
+import FilterModal from '../MODAL/FilterModal';
+import AlertModal from '../MODAL/AlertModal';
+
+
+<FilterModal />
 
 function NewProject() {
+  <AlertModal />
+  const [modalShow, setModalShow] = useState(false);
+  const [modalShow1, setModalShow1] = useState(false);
+
+
   useEffect(() => {
     $('.select2').select2();
 
@@ -43,7 +53,7 @@ function NewProject() {
                   <option value='select'>Price Range</option>
                 </select>
               </div>
-              <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5'>
+              <div className='d-flex align-items-center justify-content-center gap-2 myfilter rounded-5' onClick={() => setModalShow(true)}>
                 <IoFilterOutline className="custom-icon" />All filter
               </div>
               <div className='searchBtn'>
@@ -56,7 +66,7 @@ function NewProject() {
           </div>
           <div className='secondList'>
             <div className='d-flex gap-3'>
-              <button className="btn btn-primary rounded-5 d-flex d-flex align-items-center justify-content-center gap-2">
+              <button className="btn border-dark bg-black rounded-5 d-flex align-items-center justify-content-center gap-2" onClick={() => setModalShow1(true)}>
                 <IoMdNotificationsOutline className="custom-icon" />Add an alert
               </button>
               <div className="d-flex align-items-center justify-content-center gap-2">
@@ -83,6 +93,9 @@ function NewProject() {
           </form>
         </div>
       </Container>
+
+      <FilterModal show={modalShow} onHide={() => setModalShow(false)} />
+      <AlertModal show={modalShow1} onHide={() => setModalShow1(false)} />
     </div>
   )
 }

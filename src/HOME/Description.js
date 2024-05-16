@@ -7,7 +7,7 @@ import descImg3 from '../images/Group → Link → d6cb196f-6cde-4d6e-ab96-862b0
 import descImg4 from '../images/Group → Link → db5f28f5-c390-426f-af73-bb33ff57c198.jpg.png'
 import descImg5 from '../images/Group → Link → 7cfc6a37-460a-4aea-add7-52c3c71151e9.jpeg.png'
 import remaxSm from '../images/remax-sm.png';
-import { GoHeart, GoHeartFill } from "react-icons/go";
+import { GoHeart, GoHeartFill, GoQuestion } from "react-icons/go";
 import { FiDownload } from "react-icons/fi";
 import { LiaBedSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom';
@@ -19,16 +19,29 @@ import { MdStorage } from 'react-icons/md';
 import { BiCabinet } from 'react-icons/bi';
 import { CgSmartHomeBoiler } from "react-icons/cg";
 import { IoCallOutline, IoCheckmarkCircleSharp } from 'react-icons/io5';
+import MapComponent from '../MAP/MapComponent';
+import DonutChart from '../CHART/DoughnutChart';
+import ReqestTourModal from '../MODAL/RequestTourModal';
+
 
 function Description() {
+    const [modalShow, setModalShow] = useState(false);
+
+    const [isRequested, setIsRequested] = useState(false);
+    const handleRequestedClick = () => {
+        setModalShow(true);
+        setIsRequested(true);
+    }
+    const handleClose = () => setModalShow(false);
+
     const [isLiked, setIsLiked] = useState(false);
     const handleReactionClick = () => {
         setIsLiked(!isLiked);
     };
-    const [isRequested, setIsRequested] = useState(false);
-    const handleRequestedClick = () => {
-        setIsRequested(!isRequested);
-    };
+    // const [isRequested, setIsRequested] = useState(false);
+    // const handleRequestedClick = () => {
+    //     setIsRequested(!isRequested);
+    // };
     const [value, setValue] = useState(0);
     const handleChange = (event) => {
         setValue(event.target.value);
@@ -37,63 +50,6 @@ function Description() {
     const handleClick = (tab) => {
         setActiveTab(tab);
     };
-
-    // const data = {
-    //     labels: ['Red', 'Blue', 'Yellow'],
-    //     datasets: [
-    //       {
-    //         label: '# of Votes',
-    //         data: [12, 19, 3],
-    //         backgroundColor: [
-    //           'rgba(255, 99, 132, 0.5)',
-    //           'rgba(54, 162, 235, 0.5)',
-    //           'rgba(255, 206, 86, 0.5)',
-    //         ],
-    //         borderColor: [
-    //           'rgba(255, 99, 132, 1)',
-    //           'rgba(54, 162, 235, 1)',
-    //           'rgba(255, 206, 86, 1)',
-    //         ],
-    //         borderWidth: 1,
-    //       },
-    //     ],
-    // };
-
-    // const options = {
-    //     title: {
-    //       display: true,
-    //       text: 'My Doughnut Chart',
-    //       fontSize: 20,
-    //     },
-    //     legend: {
-    //       display: true,
-    //       position: 'bottom',
-    //     },
-    //     tooltips: {
-    //       enabled: true,
-    //     },
-    //     animation: {
-    //       duration: 2000,
-    //       easing: 'easeInOutQuart',
-    //     },
-    //     responsive: true,
-    //     cutoutPercentage: 50,
-    //     rotation: -0.5 * Math.PI,
-    // };
-
-    // const [map, setMap] = useState(null);
-    // useEffect(() => {
-    //     if (map) {
-    //         map.remove();
-    //     }
-    //     const mapElement = document.getElementById('map');
-    //     const newMap = L.map(mapElement).setView([51.505, -0.09], 13);
-    //     L.tileLayer('https://{s}.(link unavailable)', {
-    //     attribution: '&copy; <a href="(link unavailable)">OpenStreetMap</a>',
-    //     subdomains: ['a', 'b', 'c']
-    //     }).addTo(newMap);
-    //     setMap(newMap);
-    // }, [map]);
   return (
     <div className='description' style={{overflowX: 'hidden'}}>
         <div className="container">
@@ -183,8 +139,20 @@ function Description() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="donut-chart my-4">
-                                        {/* <Doughnut data={data} options={options} /> */}
+                                    <div className="donut-chart my-4 d-flex justify-content-center align-items-center gap-5">
+                                        <DonutChart />
+                                        <div className="legend">
+                                            <div className="one d-flex align-items-center gap-2 py-2">
+                                                <div className="round" style={{width: '18px', height: '18px', borderRadius: '50%', background: '#0066ff'}}></div>
+                                                Montant emprunte
+                                                <GoQuestion />
+                                            </div>
+                                            <div className="one d-flex align-items-center gap-2 py-2">
+                                                <div className="round" style={{width: '18px', height: '18px', borderRadius: '50%', background: '#80bfff'}}></div>
+                                                Montant emprunte
+                                                <GoQuestion />
+                                            </div>
+                                        </div>
                                     </div>
                                     <ol>
                                         <li className='text-decoration-underline'>Simulation non contractuelle</li>
@@ -354,12 +322,12 @@ function Description() {
                 <div className="col col-lg-4 col-md-6 col-12">
                     <div className="more-info">
                         <div className="shadow-lg px-4 py-4 rounded-5 mb-3">
-                            <div className='request' onClick={handleRequestedClick}>
-                                {isRequested ? 
+                            <div className='request' onClick={handleRequestedClick} >
+                                {isRequested ?
                                     <button className="success req d-flex align-items-center justify-content-center gap-2">
                                         <IoCheckmarkCircleSharp className='fs-4' />Tour requested
                                     </button>
-                                 : 
+                                 :
                                     <button className="req d-flex flex-column align-items-center justify-content-center">
                                         <p>Request a tour</p>
                                         <small>As early as today 11:00 am</small>
@@ -371,16 +339,12 @@ function Description() {
                             </button>
                         </div>
                         <div className="shadow-lg px-4 py-4 rounded-5 mb-3">
-                            <div className="img d-flex align-items-center gap-2">
+                            <Link to='/remax' className="img d-flex align-items-center gap-2 text-decoration-none text-dark">
                                 <img src={remaxSm} width='100%' alt="" />
                                 <p>RE/MAX Agency</p>
-                            </div>
-                            <div className='msg p-3'>
-                                <p>Good morning,</p>
-                                <p>I would like more information about this property. <br />Please contact me for this.</p>
-                                <p>Cordially</p>
-                            </div>
+                            </Link>
                             <form action="">
+                                <textarea name="text" id="msg" className='msg' value='Good morning, I would like more information about this property. Please contact me for this.Cordially'></textarea>
                                 <input type="text" name="name" id='name' placeholder="Name *" />
                                 <input type="email" name="email" id='email' placeholder="E-mail *" />
                                 <input type="text" name="number" id='number' placeholder="Phone number" />
@@ -393,7 +357,8 @@ function Description() {
             </div>
             <div className="mymapp py-5">
                 <h3>Where is this property located</h3>
-                <div className="my-4 mapp">
+                <div className="my-4">
+                    <MapComponent />
                     {/* <div id="map" style={{ height: '500px', width: '100%' }} /> */}
                 </div>
                 <div className="last-text">
@@ -406,6 +371,7 @@ function Description() {
                 </div>
             </footer>
         </div>
+        <ReqestTourModal show={modalShow} handleClose={handleClose} />
     </div>
   )
 }

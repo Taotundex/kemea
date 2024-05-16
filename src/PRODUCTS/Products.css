@@ -17,7 +17,7 @@
     z-index: 0 !important;
 }
 .card .reaction-sale{
-    z-index: 1000000 !important;
+    z-index: 10 !important;
     position: absolute;
     top: 12.5%;
     left: 50%;
@@ -37,9 +37,6 @@
 }
 .card .img .heart{
     margin-top: -15px;
-    /* position: absolute;
-    top: 20px;
-    right: 20px; */
     font-size: 25px;
     color: white;
 }

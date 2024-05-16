@@ -16,11 +16,11 @@ function ProHeading() {
     <div>
         <Navbar expand="lg" className="py-3 nav text-center fixed-top bg-white">
             <Container>
-                <Navbar.Brand as={Link} to="/pro-home" className='me-lg-5 me-0'><img src={Prologo} alt='Logo' /></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/pro/home" className='me-lg-5 me-0'><img src={Prologo} alt='Logo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav className="m-auto my-2 my-lg-0">
-                        <Nav.Link className='mx-3' as={Link} to="/pro-home">Home</Nav.Link>
+                        <Nav.Link className='mx-3' as={Link} to="/pro/home">Home</Nav.Link>
                         <Nav.Link className='mx-3' as={Link} to="/plan">My Plan</Nav.Link>
                         <Nav.Link className='mx-3' as={Link} to="/profile">Profile Page</Nav.Link>
                     </Nav>
