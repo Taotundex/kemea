@@ -11,8 +11,8 @@ function Study() {
   return (
     <div className='homepage'>
         {isGot ? '' : 
-        <div className="py-3" style={{background: '#E9E9E980'}}>
-            <div className="d-flex justify-content-between align-items-center container">
+        <div className="py-3 dis" style={{background: '#E9E9E980'}}>
+            <div className="d-flex justify-content-between align-items-center container got">
                 <p style={{color: '#191C1F', fontSize: '16px', fontWeight: '400', marginTop: '10px'}}>Make your selection by selecting or putting in favorite the properties offered.</p>
                 <button onClick={handleReactionClick} className='bg-primary text-light py-2 px-4 rounded-5 border-0'>Got it</button>
             </div>
@@ -25,7 +25,7 @@ function Study() {
             <div className='d-flex gap-5 lists sticky-top py-3 bg-white'>
                 <p className='bg-dark text-white rounded-end-5 py-3 px-4' style={{fontSize: '14px'}}>Properties for sell</p>
             </div>
-            <div className='btm d-flex align-items-center justify-content-between'>
+            <div className='btm d-flex align-items-center justify-content-between pb-3'>
                 <p><span>1 - 2</span> out of <span>2</span></p>
                 <form>
                     <select className='rounded-5'>

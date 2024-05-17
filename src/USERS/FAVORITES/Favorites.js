@@ -10,7 +10,7 @@ function Favorites() {
     <div className='homepage' style={{marginBottom: '100px'}}>
         <Container>
             <div className="py-4">
-                <h2>To Study</h2>
+                <h2>Favorites</h2>
             </div>
             <div className='py-3 bg-white'>
                 <p className='bg-dark text-white rounded-end-5 py-3 px-4' style={{fontSize: '14px', width: 'fit-content'}}>Properties for rent</p>

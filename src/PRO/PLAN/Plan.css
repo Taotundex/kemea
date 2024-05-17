@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 70px;
 }
 .empty {
     height: 75px;
@@ -25,12 +26,14 @@
     border-radius: 10px;
     margin-top: -25px;
     background: white;
+    z-index: 10 !important;
 }
 .plan .all-plans .growth {
     border: 1px solid #E9EEF1;
     border-radius: 10px;
     margin-top: -90px;
     background: white;
+    z-index: 10 !important;
 }
 .plan .all-plans h4 {
     font-size: 24px;
@@ -112,4 +115,50 @@
     font-size: 14px;
     font-weight: 400;
     margin-top: 12px;
+}
+
+
+
+@media screen and (max-width: 767px){
+    .plan .hero {
+        height: 100%;
+        width: 100%;
+        margin-top: 70px;
+        padding: 75px 0 ;
+    }
+    .plan .hero h1 {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+    .plan .hero small {
+        font-size: 14px;
+    }
+    .plan .all-plans .starter {
+        margin-top: 0px;
+    }
+    .plan .all-plans .growth {
+        margin-top: 0px;
+    }
+    .plan .all-plans h4 {
+        font-size: 24px !important;
+    }
+    .plan .all-plans h2 {
+        font-size: 47px !important;
+        margin: 10px 0;
+    }
+    .plan .all-plans p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .plan .all-plans ul li{
+        gap: 10px;
+        margin: 0 !important;
+        width: 100% !important;
+    }    
+    .plan .text-center button {
+        width: 100% !important;
+        font-size: 14px !important;
+        height: 50px !important;
+    }
 }

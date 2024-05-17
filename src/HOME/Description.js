@@ -343,8 +343,8 @@ function Description() {
                                 <img src={remaxSm} width='100%' alt="" />
                                 <p>RE/MAX Agency</p>
                             </Link>
-                            <form action="">
-                                <textarea name="text" id="msg" className='msg' value='Good morning, I would like more information about this property. Please contact me for this.Cordially'></textarea>
+                            <form action="" className='mt-3'>
+                                <textarea name="text" id="msg" className='msg' placeholder='Good morning, I would like more information about this property. Please contact me for this.Cordially'></textarea>
                                 <input type="text" name="name" id='name' placeholder="Name *" />
                                 <input type="email" name="email" id='email' placeholder="E-mail *" />
                                 <input type="text" name="number" id='number' placeholder="Phone number" />

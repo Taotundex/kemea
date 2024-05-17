@@ -36,3 +36,11 @@
 .navbar-nav .nav-link.dropdown-toggle::after {
     display: none;
 }
+
+
+@media screen and (max-width: 767px) {
+    .account-btn{
+        margin: 0 auto;
+        width: fit-content;
+    }
+}

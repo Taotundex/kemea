@@ -35,8 +35,8 @@ const ReqestTourModal = ({ show, handleClose }) => {
                 <p className="property-details">3,024 sqft | 2 bd | 3 ba</p>
               </div>
             </div>
-            <p className="tip">
-            <IoBulbOutline className='fs-2 text-primary me-3 py-3' /> Tip: Selecting multiple times helps schedule your tour faster
+            <p className="tip py-3">
+            <IoBulbOutline className='fs-1 text-primary mx-3' />Tip: Selecting multiple times helps schedule your tour faster
             </p>
             <p>Select up to 3 times</p>
             <Row className="mb-3">

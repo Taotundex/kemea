@@ -27,3 +27,22 @@
     background: #0047FF;
     color: white;
 }
+
+
+@media screen and (max-width: 767px) {
+    .publish .container .details {
+        width: 90%;
+        padding: 50px 0 100px 0;
+    }
+    .publish p {
+        font-size: 18px !important;
+    }
+    .publish .housing {
+        gap: 20px !important;
+    }
+    .publish .property {
+        width: fit-content;
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}

@@ -21,7 +21,7 @@ function Plan() {
                             <h2>FREE</h2>
                             <p>Lifetime</p>
                             <small>0% transaction fee</small>
-                            <p className='py-5'>Up to $7,500/mo from affiliates</p>
+                            <p className='py-lg-5 py-md-4 py-4'>Up to $7,500/mo from affiliates</p>
                             <ul>
                                 <li><IoCheckmarkCircleOutline className='check' />Unlimited affiliates</li>
                                 <li><IoCheckmarkCircleOutline className='check' />Unlimited visitors</li>

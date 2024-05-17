@@ -56,7 +56,7 @@ function SellOut() {
                             <div className="col col-lg-7 col-md-6 col-12">
                                 <div className="text">
                                     <form action="">
-                                        <div className="row gx-5">
+                                        <div className="row gx-lg-5 gx-md-4 gx-3">
                                             <div className="col col-6">
                                                 <div className="input">
                                                     <label htmlFor="Where is it located ?*">Where is it located ?*</label>
@@ -120,7 +120,7 @@ function SellOut() {
                             <div className="col col-lg-7 col-md-6 col-12">
                                 <div className="text">
                                     <form action="">
-                                        <div className="row gx-5">
+                                        <div className="row gx-lg-5 gx-md-4 gx-3">
                                             <div className="col col-6">
                                                 <div className="input">
                                                     <label htmlFor="What is your name ?*">What is your name ?*</label>

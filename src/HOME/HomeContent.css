@@ -136,6 +136,9 @@
 
 
 @media screen and (max-width: 767px) {
+    .homepage {
+        margin-bottom: 50px !important;
+    }
     .homepage h2 {
         font-size: 36px !important;
     }
@@ -145,5 +148,15 @@
     }
     .homepage .lists::-webkit-scrollbar {
         display: none !important;
+    }
+    .dis{
+        padding: 15px 0 !important;
+    }
+    .got p {
+        font-size: 14px !important;
+    }
+    .got button {
+        width: 150px !important;
+        padding: 7px !important;
     }
 }

@@ -63,8 +63,8 @@ function RentProperty() {
                 <SwiperSlide>
                     <h5><b>Step 1 - </b>Property’s address</h5>
                     <form action="" className='py-5 select'>
-                        <div className="row gx-5">
-                            <div className="col col-lg-6 col-md-6 col-12">
+                        <div className="row gx-lg-5 gx-md-4 gx-3">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="input">
                                     <label htmlFor="What type of property ?*">What type of property ?*</label>
                                     <select className='select2' name="propertyType" id="propertyType">
@@ -74,7 +74,7 @@ function RentProperty() {
                                     </select>
                                 </div>
                             </div>
-                            <div className="col col-lg-6 col-md-6 col-12">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="input">
                                     <label htmlFor="State of the property*">State of the property*</label>
                                     <select className='select2' name="propertyState" id="propertyState">
@@ -84,15 +84,15 @@ function RentProperty() {
                                     </select>
                                 </div>
                             </div>
-                            <div className="col col-lg-6 col-md-6 col-12">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="input">
                                     <label htmlFor="What city?*">What city?*</label>
                                     <input type="text" name="city" id="city" placeholder='Tel Aviv' />
                                 </div>
                             </div>
-                            <div className="col col-lg-6 col-md-6 col-12">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="inputs">
-                                    <div className="row">
+                                    <div className="row g-lg-3 g-2">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="What city?*">What city?*</label>
@@ -149,7 +149,7 @@ function RentProperty() {
                 <SwiperSlide>
                     <h5><b>Step 2 - </b>About the property</h5>
                     <form action="" className='py-5'>
-                        <div className="row gx-5">
+                        <div className="row gx-lg-5 gx-md-4 gx-3">
                             <div className="col col-lg-5 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Number of rooms*">Number of rooms*</label>
@@ -162,7 +162,7 @@ function RentProperty() {
                             </div>
                             <div className="col col-lg-7 col-md-6 col-12">
                                 <div className="inputs">
-                                    <div className="row g-5">
+                                    <div className="row g-lg-5 g-md-4 g-3">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="Number of balcony*">Number of balcony*</label>
@@ -200,9 +200,9 @@ function RentProperty() {
                             </div>
                             <div className="col col-lg-7 col-md-6 col-12">
                                 <div className="input">
-                                    <label htmlFor="More about the property*">More about the property*</label>
-                                    <div className="row g-4">
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                    <h6>More about the property*</h6>
+                                    <div className="row g-lg-4 g-md-4 g-3">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={disable} alt="" />
@@ -210,7 +210,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={elevator} alt="" />
@@ -218,7 +218,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={renovated} alt="" />
@@ -226,7 +226,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={airconditioner} alt="" />
@@ -234,7 +234,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={furniture} alt="" />
@@ -242,7 +242,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={mamad} alt="" />
@@ -250,7 +250,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={bars} alt="" />
@@ -258,7 +258,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={unit} alt="" />
@@ -266,7 +266,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={mazgan} alt="" />
@@ -274,7 +274,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={heater} alt="" />
@@ -282,7 +282,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={kitchen} alt="" />
@@ -290,7 +290,7 @@ function RentProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={storage} alt="" />
@@ -318,10 +318,10 @@ function RentProperty() {
                 <SwiperSlide>
                     <h5><b>Step 3 - </b>Payments, dates and more</h5>
                     <form action="" className='py-5'>
-                        <div className="row gx-5">
+                        <div className="row gx-lg-5 gx-md-4 gx-3">
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="inputs">
-                                    <div className="row g-5">
+                                    <div className="row g-lg-5 g-md-4 g-3">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="Surface build*">Surface build*</label>
@@ -374,7 +374,7 @@ function RentProperty() {
                             </div>
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="inputs">
-                                    <div className="row g-5">
+                                    <div className="row g-lg-5 g-md-4 g-3">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="Arnona for 2 months">Arnona for 2 months</label>
@@ -400,7 +400,7 @@ function RentProperty() {
                                 <div className="input">
                                     <label htmlFor="Entry date*">Entry date*</label>
                                     <input type="date" name="entrydate" id="entrydate" />
-                                    <div className="d-flex align-items-center gap-5">
+                                    <div className="d-flex align-items-center gap-5 mt-2">
                                         <label className='d-flex gap-1 date-label' htmlFor="immediately">
                                             <input checked type="checkbox" name="immediately" id="immediately" />
                                             Immediately

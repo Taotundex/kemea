@@ -50,7 +50,7 @@ function Heading() {
                             </div>
                         </NavDropdown>                
                     </Nav>
-                    <Form className="d-flex gap-3">
+                    <Form className="d-flex gap-3 account-btn">
                         <Link to='/login'><Button variant="btn" className='px-4 border-0'>Login</Button></Link>
                         <Link to='/signup'><Button className='rounded-5 px-4' variant="btn btn-primary">Signup</Button></Link>
                     </Form>

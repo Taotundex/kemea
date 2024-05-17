@@ -64,6 +64,7 @@
     width: 200px;
     height: 40px;
     border: 1px solid #191C1F;
+    color: #191C1F;
     font-size: 14px;
 }
 
@@ -71,11 +72,15 @@
 
 
 @media screen and (max-width: 767px) {   
+    .products {
+        margin-bottom: 50px;
+    }
     .card .img {
         height: 225px;
     }
     .card .img img{
-        border-radius: 5px;
+        height: 225px;
+        border-radius: 7px;
     } 
     .card .reaction-sale p {
         top: 7px;
@@ -104,6 +109,7 @@
     }
     .card .details .call {
         width: 100%;
+        font-size: 12px;
     }
     
 }

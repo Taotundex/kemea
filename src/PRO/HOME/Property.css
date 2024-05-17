@@ -157,3 +157,26 @@ input[type="date"]{
     border-radius: 20px !important;
     padding: 0 15px !important;
 }
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .rent-property .input label {
+        font-size: 12px !important;
+    }
+    .rent-property .bt button {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 13px;
+        height: 45px;
+        gap: 10px !important;
+    }
+    .input textarea {
+        height: 175px;
+    }
+    .rent-property .input p small {
+        font-size: 10px !important;
+    };
+}

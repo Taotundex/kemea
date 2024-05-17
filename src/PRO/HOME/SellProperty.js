@@ -63,21 +63,18 @@ function SellProperty() {
                 <SwiperSlide>
                     <h5><b>Step 1 - </b>Property’s address</h5>
                     <form action="" className='py-5 select'>
-                        <div className="row gx-5">
-                            <div className="col col-lg-6 col-md-6 col-12">
+                        <div className="row gx-lg-5 gx-md-4 gx-3">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="input">
                                     <label htmlFor="What type of property ?*">What type of property ?*</label>
                                     <select className='select2' name="propertyType" id="propertyType">
-                                        <option value="Home Type" className='d-flex align-items-center gap-2'>
-                                            <HiOutlineBuildingOffice2 />Home Type
-                                        </option>
                                         <option value="apartment" className='d-flex align-items-center gap-2'>
                                             <HiOutlineBuildingOffice2 />Apartment
                                         </option>
                                     </select>
                                 </div>
                             </div>
-                            <div className="col col-lg-6 col-md-6 col-12">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="input">
                                     <label htmlFor="State of the property*">State of the property*</label>
                                     <select className='select2' name="propertyState" id="propertyState">
@@ -87,15 +84,15 @@ function SellProperty() {
                                     </select>
                                 </div>
                             </div>
-                            <div className="col col-lg-6 col-md-6 col-12">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="input">
                                     <label htmlFor="What city?*">What city?*</label>
                                     <input type="text" name="city" id="city" placeholder='Tel Aviv' />
                                 </div>
                             </div>
-                            <div className="col col-lg-6 col-md-6 col-12">
+                            <div className="col col-lg-6 col-md-6 col-6">
                                 <div className="inputs">
-                                    <div className="row">
+                                    <div className="row g-lg-3 g-2">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="What city?*">What city?*</label>
@@ -119,7 +116,7 @@ function SellProperty() {
                                         on
                                         <input type="text" name="ouOf" id="ouOf" placeholder='12' />
                                     </div>
-                                    <label htmlFor="ground floor" className='gap-1'>
+                                    <label htmlFor="ground floor" className='d-flex gap-1'>
                                         <input type="checkbox" name="groundfloor" id="groundfloor" checked />
                                         Ground floor
                                     </label>
@@ -152,7 +149,7 @@ function SellProperty() {
                 <SwiperSlide>
                     <h5><b>Step 2 - </b>About the property</h5>
                     <form action="" className='py-5'>
-                        <div className="row gx-5">
+                        <div className="row gx-lg-5 gx-md-4 gx-3">
                             <div className="col col-lg-5 col-md-6 col-12">
                                 <div className="input">
                                     <label htmlFor="Number of rooms*">Number of rooms*</label>
@@ -165,7 +162,7 @@ function SellProperty() {
                             </div>
                             <div className="col col-lg-7 col-md-6 col-12">
                                 <div className="inputs">
-                                    <div className="row g-5">
+                                    <div className="row g-lg-5 g-md-4 g-3">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="Number of balcony*">Number of balcony*</label>
@@ -203,9 +200,9 @@ function SellProperty() {
                             </div>
                             <div className="col col-lg-7 col-md-6 col-12">
                                 <div className="input">
-                                    <label htmlFor="More about the property*">More about the property*</label>
-                                    <div className="row g-4">
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                    <h6>More about the property*</h6>
+                                    <div className="row g-lg-4 g-md-4 g-3">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={disable} alt="" />
@@ -213,7 +210,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={elevator} alt="" />
@@ -221,7 +218,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={renovated} alt="" />
@@ -229,7 +226,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={airconditioner} alt="" />
@@ -237,7 +234,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={furniture} alt="" />
@@ -245,7 +242,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={mamad} alt="" />
@@ -253,7 +250,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={bars} alt="" />
@@ -261,7 +258,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={unit} alt="" />
@@ -269,7 +266,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={mazgan} alt="" />
@@ -277,7 +274,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={heater} alt="" />
@@ -285,7 +282,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={kitchen} alt="" />
@@ -293,7 +290,7 @@ function SellProperty() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="col col-lg-4 col-md-6 col-12">
+                                        <div className="col col-lg-4 col-md-6 col-6">
                                             <div className="bt">
                                                 <button className="d-flex gap-3 align-items-center px-4">
                                                     <img src={storage} alt="" />
@@ -321,10 +318,10 @@ function SellProperty() {
                 <SwiperSlide>
                     <h5><b>Step 3 - </b>Payments, dates and more</h5>
                     <form action="" className='py-5'>
-                        <div className="row gx-5">
+                        <div className="row gx-lg-5 gx-md-4 gx-3">
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="inputs">
-                                    <div className="row g-5">
+                                    <div className="row g-lg-5 g-md-4 g-3">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="Surface build*">Surface build*</label>
@@ -377,7 +374,7 @@ function SellProperty() {
                             </div>
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="inputs">
-                                    <div className="row g-5">
+                                    <div className="row g-lg-5 g-md-4 g-3">
                                         <div className="col col-6">
                                             <div className="input">
                                                 <label htmlFor="Arnona for 2 months">Arnona for 2 months</label>
@@ -403,7 +400,7 @@ function SellProperty() {
                                 <div className="input">
                                     <label htmlFor="Entry date*">Entry date*</label>
                                     <input type="date" name="entrydate" id="entrydate" />
-                                    <div className="d-flex align-items-center gap-5">
+                                    <div className="d-flex align-items-center gap-5 mt-2">
                                         <label className='d-flex gap-1 date-label' htmlFor="immediately">
                                             <input checked type="checkbox" name="immediately" id="immediately" />
                                             Immediately
@@ -427,7 +424,7 @@ function SellProperty() {
                                 <IoIosArrowBack />Back
                             </button>
                         {/* </Link> */}
-                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center justify-content-center" onClick={handleNext}>
+                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center border-0 justify-content-center" onClick={handleNext}>
                             Next<IoIosArrowForward />
                         </button>
                     </div>
@@ -487,7 +484,7 @@ function SellProperty() {
                                                     </div>
                                                 )}
                                             </div>
-                                            <select className='select2' onChange={handleCountryChange}>
+                                            <select className='select2' style={{border: 'none  !important'}} onChange={handleCountryChange}>
                                                 <option > ----- </option>
                                                 <option value="US">+1</option>
                                                 <option value="CA">+1</option>
@@ -500,7 +497,7 @@ function SellProperty() {
                             </div>
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
-                                    <label htmlFor="confirm">
+                                    <label htmlFor="confirm" className='d-flex gap-2'>
                                         <input type="checkbox" name="confirm" id="confirm" checked />
                                         I confirm the receipt of advertising mail related to the ad I published on the Kemea website
                                     </label>
@@ -508,7 +505,7 @@ function SellProperty() {
                             </div>
                             <div className="col col-lg-6 col-md-6 col-12">
                                 <div className="input">
-                                    <label htmlFor="terms">
+                                    <label htmlFor="terms" className='d-flex gap-2'>
                                         <input type="checkbox" name="terms" id="terms" checked />
                                         I have read and agreed the <Link className='text-decoration-none' to='/terms-and-conditions'> Terms & Conditions</Link>
                                     </label>
@@ -516,7 +513,7 @@ function SellProperty() {
                             </div>
                         </div>
                         <div className="input">
-                            <label htmlFor="update">
+                            <label htmlFor="update" className='d-flex gap-2'>
                                 <input type="checkbox" name="update" id="update" />
                                 I would love to receive updates, publications, suggestions or tips regarding the Kemea bulletin board
                             </label>
@@ -528,7 +525,7 @@ function SellProperty() {
                                 <IoIosArrowBack />Back
                             </button>
                         {/* </Link> */}
-                        <button style={{padding: '0 75px'}} className="gap-1 d-flex align-items-center border-0 justify-content-center bg-primary">
+                        <button style={{padding: '0 75px', border: '1px solid transparent !important'}} className="gap-1 d-flex align-items-center justify-content-center bg-primary">
                             Send<IoIosArrowForward />
                         </button>
                     </div>

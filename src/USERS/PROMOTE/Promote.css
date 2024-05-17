@@ -32,6 +32,7 @@
 .promote .navigate:last-child{
     height: 50px;
     width: 200px;
+    border: 1px solid transparent !important;
 }
 .input input[type='text'], .input select, .input input[type='tel']{
     width: 100%;
@@ -82,4 +83,21 @@
 }
 .promote input[type="tel"]{
     border-radius: 0 20px 20px 0 !important;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .promote h1 {
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 50px;
+    }
+    .promote .text p {
+        font-size: 18px !important;
+        line-height: 25px;
+    }
+    .promote .input label {
+        font-size: 13px !important;
+    }
 }
