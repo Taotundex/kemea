@@ -17,14 +17,16 @@ function Favorites() {
             </div>
             <div className='btm d-flex align-items-center justify-content-between mb-2'>
                 <p><span>1 - 3</span> out of <span>3</span></p>
-                <form>
-                    <select className='rounded-5'>
-                        <option value="Default order">Default order</option>
-                        <option value="Date">Date</option>
-                        <option value="Ascending Price">Ascending Price</option>
-                        <option value="Descending Price">Descending Price</option>
-                    </select>
-                </form>
+                <div class="dropdown-center" style={{width:'150px !important', height:'40px'}}>
+            <button class="btn dropdown-toggle myselect d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Default order
+            </button>
+            <ul class="dropdown-menu px-3 py-2" style={{width:'150px !important'}}>
+              <li>Date</li>
+              <li>Ascending Price</li>
+              <li>Descending Price</li>
+            </ul>
+          </div>
             </div>
             <div className="rent-fav">
                 <RentFavorites />
@@ -34,14 +36,16 @@ function Favorites() {
             </div>
             <div className='btm d-flex align-items-center justify-content-between mb-2'>
                 <p><span>1 - 2</span> out of <span>2</span></p>
-                <form>
-                    <select className='rounded-5'>
-                        <option value="Default order">Default order</option>
-                        <option value="Date">Date</option>
-                        <option value="Ascending Price">Ascending Price</option>
-                        <option value="Descending Price">Descending Price</option>
-                    </select>
-                </form>
+                <div class="dropdown-center" style={{width:'150px !important', height:'40px'}}>
+            <button class="btn dropdown-toggle myselect d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Default order
+            </button>
+            <ul class="dropdown-menu px-3 py-2" style={{width:'150px !important'}}>
+              <li>Date</li>
+              <li>Ascending Price</li>
+              <li>Descending Price</li>
+            </ul>
+          </div>
             </div>
             <div className="sell-fav">
                 <SellFavorites />
@@ -51,14 +55,16 @@ function Favorites() {
             </div>
             <div className='btm d-flex align-items-center justify-content-between mb-2'>
                 <p><span>1 - 1</span> out of <span>1</span></p>
-                <form>
-                    <select className='rounded-5'>
-                        <option value="Default order">Default order</option>
-                        <option value="Date">Date</option>
-                        <option value="Ascending Price">Ascending Price</option>
-                        <option value="Descending Price">Descending Price</option>
-                    </select>
-                </form>
+                <div class="dropdown-center" style={{width:'150px !important', height:'40px'}}>
+            <button class="btn dropdown-toggle myselect d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Default order
+            </button>
+            <ul class="dropdown-menu px-3 py-2" style={{width:'150px !important'}}>
+              <li>Date</li>
+              <li>Ascending Price</li>
+              <li>Descending Price</li>
+            </ul>
+          </div>
             </div>
             <div className="shortterm-fav">
                 <ShortTermFavorites />

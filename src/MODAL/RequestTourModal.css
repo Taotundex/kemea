@@ -1,6 +1,7 @@
-.modal-content {
-    width: 375px !important;
-  }
+/* .modal-content {
+    width: 575px !important;
+    margin: 0 auto;
+  } */
 .modal-body{
   height: 450px !important;
   overflow-y: scroll;

@@ -21,8 +21,11 @@ import { BiSolidMessageDetail } from 'react-icons/bi'
 import { CiHeart } from 'react-icons/ci'
 import { AiOutlineDownload } from 'react-icons/ai'
 import { IoCallOutline, IoCheckmarkCircleSharp } from 'react-icons/io5';
+import ContactModal from '../MODAL/ContactModal';
+
 
 function Remax() {
+<ContactModal />
     const pagination = {
         clickable: true,
         renderBullet: function (index, className) {
@@ -38,12 +41,15 @@ function Remax() {
     
     const [isContact, setIsContact] = useState(false);
     const handleContactClick = () => {
+        
         setIsContact(!isContact);
     };
-
+    
+    const [modalShow, setModalShow] = useState(false);
     const [messageSent, setMessageSent] = useState(false);
 
   const handleMessageClick = () => {
+  setModalShow(true);
     setMessageSent(!messageSent);
   };
   return (
@@ -4945,6 +4951,9 @@ function Remax() {
                 </div>
             </div>
         </div>
+        {/* <div className="style" style={{width:'375px !important'}}> */}
+            <ContactModal style={{width:'375px !important'}} show={modalShow} onHide={() => setModalShow(false)} />
+        {/* </div> */}
     </div>
   )
 }

@@ -1,5 +1,7 @@
 .products {
     margin-bottom: 100px;
+    /* position: relative;
+    z-index: -1 !important; */
 }
 .card {
     border: none !important;
@@ -67,6 +69,23 @@
     color: #191C1F;
     font-size: 14px;
 }
+.card .details .call:hover {
+    background: #191C1F !important;
+    color: white;
+}
+
+
+
+
+@media screen and (max-width: 1399px) {   
+    .card .img {
+        height: 250px;
+    }
+    .card .img img{
+        height: 250px;
+        border-radius: 10px;
+    } 
+}
 
 
 
@@ -96,7 +115,7 @@
     }
     .card .details h4 {
         font-size: 16px !important;
-        height: 50px;
+        /* height: 50px; */
     }
     .card .details h5 {
         font-size: 14px !important;

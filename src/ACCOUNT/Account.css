@@ -21,7 +21,7 @@
     color: #1D234E;
     font-weight: 400;
     height: 35px;
-    width: 50px;
+    width: fit-content;
     outline: none;
 }
 .account .right .head button {

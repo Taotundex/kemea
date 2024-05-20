@@ -27,7 +27,7 @@ function UserHomeContent() {
           <h2>Find the right property, right away</h2>
           <p>Kemea supports your property research in Israel at every stage</p>
         </div>
-        <div className="d-flex align-items-center justify-content-between gap-5 lists sticky-top py-3 bg-white">
+        <div className="d-flex align-items-center justify-content-between lists sticky-top py-3 bg-white">
           <div className="firstList">
             <div className="d-flex gap-3 listing">
               <form className="d-flex align-items-center border-1 border-black rounded-5 form">
@@ -42,18 +42,36 @@ function UserHomeContent() {
                   <button className="rounded-end-5">Rent</button>
                 </Link>
               </div>
-              <form className="select">
-                <select className="select2" style={{ width: '150px', height: '100%' }}>
-                  <option value="apartment1">Apartment 1</option>
-                  <option value="apartment2">Apartment 2</option>
-                  <option value="apartment3">Apartment 3</option>
-                </select>
-              </form>
-              <form className="select">
-                <select className="select2" style={{ width: '150px', height: '100%' }}>
-                  <option value="select">Price Range</option>
-                </select>
-              </form>
+              <div class="dropdown-center" style={{width:'150px !important'}}>
+                  <button class="btn btn-secondary dropdown-toggle myselect d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Home type
+                  </button>
+                  <ul class="dropdown-menu px-3 py-2" style={{width:'150px !important'}}>
+                    <li>
+                      <label htmlFor="" className="d-flex gap-2">
+                        <input type="checkbox" name="apartment" id="" />Apartment
+                      </label>
+                    </li>
+                    <li>
+                      <label htmlFor="" className="d-flex gap-2">
+                        <input type="checkbox" name="apartment" id="" />Apartment
+                      </label>
+                    </li>
+                    <li>
+                      <label htmlFor="" className="d-flex gap-2">
+                        <input type="checkbox" name="apartment" id="" />Apartment
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown-center" style={{width:'150px !important'}}>
+                  <button class="btn btn-secondary dropdown-toggle myselect d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Price range
+                  </button>
+                  <ul class="dropdown-menu px-3 py-2" style={{width:'150px !important'}}>
+                    <li>Price range</li>
+                  </ul>
+                </div>
               <div className="d-flex align-items-center justify-content-center gap-2 myfilter rounded-5">
                 <IoFilterOutline className="custom-icon" />All filter
               </div>
@@ -86,14 +104,16 @@ function UserHomeContent() {
           <p>
             <span>1 - 8</span> out of <span>2000</span>
           </p>
-          <form className='select'>
-            <select className="select2 rounded-5" style={{border:'1px solid #E9ECEF !important'}}>
-              <option value="Default order">Default order</option>
-              <option value="Date">Date</option>
-              <option value="Ascending Price">Ascending Price</option>
-              <option value="Descending Price">Descending Price</option>
-            </select>
-          </form>
+          <div class="dropdown-center" style={{width:'150px !important'}}>
+            <button class="btn dropdown-toggle myselect d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Default order
+            </button>
+            <ul class="dropdown-menu px-3 py-2" style={{width:'150px !important'}}>
+              <li>Date</li>
+              <li>Ascending Price</li>
+              <li>Descending Price</li>
+            </ul>
+          </div>
         </div>
       </Container>
     </div>

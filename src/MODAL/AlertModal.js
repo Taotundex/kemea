@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import './RequestTourModal.css';
 import './Modal.css';
 import { Button, Modal } from 'react-bootstrap';
 import $ from 'jquery';
@@ -18,7 +19,7 @@ function AlertModal(props) {
       }, []);
     return (
         <div className="filtermodal">
-            <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+            <Modal {...props} style={{width:'650px !important'}} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
                 <Modal.Header className="modal-header-custom">
                     <Button variant="close" onClick={props.onHide} className="close">
                         <span aria-hidden="true">&times;</span>

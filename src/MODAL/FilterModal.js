@@ -1,4 +1,5 @@
 import React from 'react'
+import './RequestTourModal.css';
 import './Modal.css'
 import { Button, Modal } from 'react-bootstrap';
 

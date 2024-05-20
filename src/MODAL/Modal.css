@@ -1,9 +1,14 @@
+/* .modal-content {
+    width: 650px !important;
+  } */
 .modal-header-custom {
     display: flex;
     justify-content: center;
     position: relative;
   }
-  
+  .modal{
+    background: #22222280;
+  }
   .modal-header-custom .close {
     position: absolute;
     left: 10px; /* Adjust this value to your preference */
@@ -22,7 +27,7 @@
     height: 20px;
     border: 1px solid #0666EB;
     color: #0666EB;
-    background: red;
+    /* background: red; */
 }
 .modal .modal-body-custom .input label {
     color: #222222 !important;

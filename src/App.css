@@ -14,11 +14,12 @@ select {
     -o-background-color: transparent !important; /* Opera */
     /* -webkit-border-radius: 50px; Safari/Chrome */
 }
-@media screen and (max-width: 1440px) {
+/* @media screen and (max-width: 1440px) {
     body {
         width: 1440px !important;
+        margin: 0  auto !important;
     }
-}
+} */
 @media screen and (max-width: 767px) {
     body {
         width: 100% !important;
